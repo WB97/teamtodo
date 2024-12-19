@@ -7,8 +7,10 @@ import lombok.Getter;
 @Getter
 @Builder
 public class ResponseResult<T> {
-    @Schema(title = "결과 메시지")
-    private String resultMessage;
-    @Schema(title = "결과 내용")
-    private T resultData;
+    @Schema(title = "상태 코드")
+    private String code;
+    @Schema(title = "결과 메세지")
+    private String message;
+    @Schema(title = "응답 데이터")
+    private T data;
 }
