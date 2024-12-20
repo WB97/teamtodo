@@ -4,6 +4,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
+import p1.teamtodo.common.ResponseCode;
 import p1.teamtodo.common.ResponseResult;
 import p1.teamtodo.user.model.dto.UserDto;
 
@@ -11,7 +12,7 @@ import p1.teamtodo.user.model.dto.UserDto;
 @Setter
 public class SignUpRes extends ResponseResult {
 
-    public SignUpRes(int code, String message) {
-        super(code, message);
+    public SignUpRes() {
+        super(ResponseCode.OK.getCode());
     }
 }

@@ -16,28 +16,28 @@ public class UserService {
     private UserMapper userMapper;
 
     public ResponseResult signUp(SignUpReq req, MultipartFile pic) {
-        // 이메일 중복 검증
+         //이메일 중복 검증
 //        boolean isDuplicateEmail = userMapper.checkDuplicateEmail();
-        boolean isDuplicateEmail = true;
+        boolean isDuplicateEmail = false;
         if(!isDuplicateEmail) {
-            return ResponseResult.badRequest("이미 존재하는 이메일 입니다.");
+            return ResponseResult.duplicateEmail();
         }
         // 닉네임 중복 검증
 //        boolean isDuplicateNick = userMapper.checkDuplicateNick();
         boolean isDuplicateNick = true;
         if(!isDuplicateNick) {
-            return ResponseResult.badRequest("이미 존재하는 닉네임 입니다.");
+            return ResponseResult.duplicateNickname();
         }
         // 비밀번호 형식 검증
         int passwordLen = req.getPassword().length();
         if(!(passwordLen >= 8 && passwordLen < 16)) {
-            return ResponseResult.badRequest("비밀번호 형식이 맞지 않습니다.");
+            return ResponseResult.passwordFormatError();
         }
         // passwordConfirm 일치 여부
         if(!(req.getPassword().equals(req.getPasswordConfirm()))) {
-            return ResponseResult.badRequest("비밀번호가 체크가 맞지 않습니다.");
+            return ResponseResult.passwordCheckError();
         }
         // 프로필 사진 저장
-        return new SignUpRes(200, "회원가입 완료");
+        return ResponseResult.success();
     }
 }

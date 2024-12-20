@@ -2,7 +2,6 @@ package p1.teamtodo.user;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
-import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
@@ -14,7 +13,6 @@ import p1.teamtodo.user.model.req.SignUpReq;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("user")
-@Tag(name = "1. 회원")
 public class UserController {
 
     private final UserService userService;
@@ -23,6 +21,7 @@ public class UserController {
     @Operation(summary = "회원 가입")
     public ResponseResult signUp(@RequestPart SignUpReq req,
                                  @RequestPart MultipartFile pic) {
+        log.info("req = {}", req);
         return userService.signUp(req, pic);
     }
 }

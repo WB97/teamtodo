@@ -19,7 +19,7 @@ public class HomeGetReq {
     private long signedUserNo;
 
     @NotNull
-    @Pattern(regexp = "^[0-9]{4}[-]{1}[0-9]{2}[-]{1}[0-9]{2}", message = "날짜 형식이 맞지않습니다.")
+    @Pattern(regexp = "^[0-9]{4}[-]{1}[0-9]{2}[-]{1}[0-9]{2}")
     @Schema(name = "date", description = "달력 날짜", type= "string", example = "YYYY-mm-dd", requiredMode = Schema.RequiredMode.REQUIRED)
     private String date;
 }

@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import p1.teamtodo.user.model.dto.UserDto;
 
 import java.util.List;
 
@@ -15,5 +16,5 @@ public class ProjectDto {
     private String projectName;
     private String createdAt;
     private String deadline;
-    private List<String> memberPics;
+    private List<UserDto> memberPics;
 }

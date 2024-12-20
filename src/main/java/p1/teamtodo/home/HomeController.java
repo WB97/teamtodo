@@ -8,17 +8,17 @@ import p1.teamtodo.common.ResponseResult;
 import p1.teamtodo.home.model.req.HomeGetReq;
 
 @Slf4j
-@RequestMapping("main")
 @RestController
+@RequestMapping("main")
 @RequiredArgsConstructor
 public class HomeController {
 
     private final HomeService homeService;
 
     @GetMapping
-    public ResponseResult getHome(@RequestBody HomeGetReq req) {
+    public ResponseResult getHome(@Valid @RequestBody HomeGetReq req) {
         log.info("req = {}", req);
         return homeService.getHome(req);
     }
-
 }
+
