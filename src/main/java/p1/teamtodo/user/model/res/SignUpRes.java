@@ -10,10 +10,8 @@ import p1.teamtodo.user.model.dto.UserDto;
 @Getter
 @Setter
 public class SignUpRes extends ResponseResult {
-    private UserDto userDto;
 
-    public SignUpRes(int code, String message, UserDto userDto) {
+    public SignUpRes(int code, String message) {
         super(code, message);
-        this.userDto = userDto;
     }
 }

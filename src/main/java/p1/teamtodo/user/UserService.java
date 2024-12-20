@@ -20,25 +20,24 @@ public class UserService {
 //        boolean isDuplicateEmail = userMapper.checkDuplicateEmail();
         boolean isDuplicateEmail = true;
         if(!isDuplicateEmail) {
-            return new ResponseResult(400, "이미 존재하는 이메일 입니다.");
+            return ResponseResult.badRequest("이미 존재하는 이메일 입니다.");
         }
-        return ResponseResult.serverError();
         // 닉네임 중복 검증
 //        boolean isDuplicateNick = userMapper.checkDuplicateNick();
+        boolean isDuplicateNick = true;
         if(!isDuplicateNick) {
-            return new ResponseResult(400, "이미 존재하는 닉네임 입니다.");
+            return ResponseResult.badRequest("이미 존재하는 닉네임 입니다.");
         }
         // 비밀번호 형식 검증
         int passwordLen = req.getPassword().length();
         if(!(passwordLen >= 8 && passwordLen < 16)) {
-            return new ResponseResult(400, "비밀번호 형식이 맞지 않습니다.");
+            return ResponseResult.badRequest("비밀번호 형식이 맞지 않습니다.");
         }
         // passwordConfirm 일치 여부
         if(!(req.getPassword().equals(req.getPasswordConfirm()))) {
-            return new ResponseResult(400, "비밀번호 체크 오류 입니다.");
+            return ResponseResult.badRequest("비밀번호가 체크가 맞지 않습니다.");
         }
-        UserDto userDto = new UserDto();
         // 프로필 사진 저장
-        return new SignUpRes(200, "회원가입 완료", userDto);
+        return new SignUpRes(200, "회원가입 완료");
     }
 }

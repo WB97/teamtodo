@@ -1,6 +1,7 @@
 package p1.teamtodo.user.model.req;
 
 import io.swagger.v3.oas.annotations.media.Schema;
+import jakarta.validation.constraints.Email;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -11,6 +12,7 @@ import lombok.ToString;
 @Schema(title = "회원 가입")
 public class SignUpReq {
 
+//    @Email
     @Schema(name = "email", description = "유저 이메일", type= "string", example = "test@email.com", requiredMode = Schema.RequiredMode.REQUIRED)
     private String email;
     @Schema(name = "nickname", description = "유저 닉네임", type= "string", example = "nick", requiredMode = Schema.RequiredMode.REQUIRED)
