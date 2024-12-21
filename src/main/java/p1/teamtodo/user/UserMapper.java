@@ -1,11 +1,14 @@
 package p1.teamtodo.user;
 
+import org.apache.ibatis.annotations.Mapper;
 import p1.teamtodo.user.model.dto.UserDto;
 
-//@Mapper
+@Mapper
 public interface UserMapper {
 
-    UserDto selUser();
+    void insertUser(UserDto userDto);
+
+    UserDto selUser(String nickname);
 
     boolean checkDuplicateEmail();
 

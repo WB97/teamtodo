@@ -1,0 +1,1143 @@
+[2024-12-21 15:26:09 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-21 15:26:09 INFO main] [p1.teamtodo.TeamtodoApplication] Starting TeamtodoApplication using Java 17.0.13 with PID 22888 (C:\Users\rmwl2\spring\teamtodo\build\classes\java\main started by rmwl2 in C:\Users\rmwl2\spring\teamtodo)
+[2024-12-21 15:26:09 INFO main] [p1.teamtodo.TeamtodoApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-21 15:26:11 WARN main] [org.mybatis.spring.mapper.ClassPathMapperScanner] No MyBatis mapper was found in '[p1.teamtodo]' package. Please check your configuration.
+[2024-12-21 15:26:11 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-21 15:26:11 INFO main] [org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"]
+[2024-12-21 15:26:11 INFO main] [org.apache.catalina.core.StandardService] Starting service [Tomcat]
+[2024-12-21 15:26:11 INFO main] [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/10.1.33]
+[2024-12-21 15:26:11 INFO main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
+[2024-12-21 15:26:11 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 1693 ms
+[2024-12-21 15:26:12 INFO main] [org.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"]
+[2024-12-21 15:26:12 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 8080 (http) with context path '/'
+[2024-12-21 15:26:12 INFO main] [p1.teamtodo.TeamtodoApplication] Started TeamtodoApplication in 3.452 seconds (process running for 4.654)
+[2024-12-21 15:29:41 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-21 15:29:41 INFO main] [p1.teamtodo.TeamtodoApplication] Starting TeamtodoApplication using Java 17.0.13 with PID 24916 (C:\Users\rmwl2\spring\teamtodo\build\classes\java\main started by rmwl2 in C:\Users\rmwl2\spring\teamtodo)
+[2024-12-21 15:29:42 INFO main] [p1.teamtodo.TeamtodoApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-21 15:29:43 WARN main] [org.mybatis.spring.mapper.ClassPathMapperScanner] No MyBatis mapper was found in '[p1.teamtodo]' package. Please check your configuration.
+[2024-12-21 15:29:43 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-21 15:29:43 INFO main] [org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"]
+[2024-12-21 15:29:43 INFO main] [org.apache.catalina.core.StandardService] Starting service [Tomcat]
+[2024-12-21 15:29:43 INFO main] [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/10.1.33]
+[2024-12-21 15:29:43 INFO main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
+[2024-12-21 15:29:43 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 1632 ms
+[2024-12-21 15:29:44 INFO main] [org.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"]
+[2024-12-21 15:29:44 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 8080 (http) with context path '/'
+[2024-12-21 15:29:44 INFO main] [p1.teamtodo.TeamtodoApplication] Started TeamtodoApplication in 4.292 seconds (process running for 6.85)
+[2024-12-21 15:30:05 INFO http-nio-8080-exec-1] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2024-12-21 15:30:05 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+[2024-12-21 15:30:05 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 2 ms
+[2024-12-21 15:30:05 WARN http-nio-8080-exec-1] [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver] Resolved [org.springframework.web.multipart.support.MissingServletRequestPartException: Required part 'pic' is not present.]
+[2024-12-21 15:30:41 INFO http-nio-8080-exec-4] [p1.teamtodo.user.UserController] req = SignUpReq(email=wook@naver.com, nickname=wook, password=1234qwer, passwordConfirm=1234qwer)
+[2024-12-21 15:46:53 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-21 15:46:53 INFO main] [p1.teamtodo.TeamtodoApplication] Starting TeamtodoApplication using Java 17.0.13 with PID 7520 (C:\Users\rmwl2\spring\teamtodo\build\classes\java\main started by rmwl2 in C:\Users\rmwl2\spring\teamtodo)
+[2024-12-21 15:46:53 INFO main] [p1.teamtodo.TeamtodoApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-21 15:46:54 WARN main] [org.mybatis.spring.mapper.ClassPathMapperScanner] No MyBatis mapper was found in '[p1.teamtodo]' package. Please check your configuration.
+[2024-12-21 15:46:55 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-21 15:46:55 INFO main] [org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"]
+[2024-12-21 15:46:55 INFO main] [org.apache.catalina.core.StandardService] Starting service [Tomcat]
+[2024-12-21 15:46:55 INFO main] [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/10.1.33]
+[2024-12-21 15:46:55 INFO main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
+[2024-12-21 15:46:55 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 1678 ms
+[2024-12-21 15:46:56 INFO main] [org.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"]
+[2024-12-21 15:46:56 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 8080 (http) with context path '/'
+[2024-12-21 15:46:56 INFO main] [p1.teamtodo.TeamtodoApplication] Started TeamtodoApplication in 3.669 seconds (process running for 4.498)
+[2024-12-21 15:47:48 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-21 15:47:48 INFO main] [p1.teamtodo.TeamtodoApplication] Starting TeamtodoApplication using Java 17.0.13 with PID 25296 (C:\Users\rmwl2\spring\teamtodo\build\classes\java\main started by rmwl2 in C:\Users\rmwl2\spring\teamtodo)
+[2024-12-21 15:47:48 INFO main] [p1.teamtodo.TeamtodoApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-21 15:47:49 WARN main] [org.mybatis.spring.mapper.ClassPathMapperScanner] No MyBatis mapper was found in '[p1.teamtodo]' package. Please check your configuration.
+[2024-12-21 15:47:50 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-21 15:47:50 INFO main] [org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"]
+[2024-12-21 15:47:50 INFO main] [org.apache.catalina.core.StandardService] Starting service [Tomcat]
+[2024-12-21 15:47:50 INFO main] [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/10.1.33]
+[2024-12-21 15:47:50 INFO main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
+[2024-12-21 15:47:50 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 1544 ms
+[2024-12-21 15:47:51 INFO main] [org.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"]
+[2024-12-21 15:47:51 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 8080 (http) with context path '/'
+[2024-12-21 15:47:51 INFO main] [p1.teamtodo.TeamtodoApplication] Started TeamtodoApplication in 3.268 seconds (process running for 4.188)
+[2024-12-21 15:47:53 INFO http-nio-8080-exec-1] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2024-12-21 15:47:53 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+[2024-12-21 15:47:53 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 1 ms
+[2024-12-21 15:47:53 INFO http-nio-8080-exec-1] [p1.teamtodo.user.UserController] req = SignUpReq(email=wook@naver.com, nickname=test1, password=1234qwer, passwordConfirm=1234qwer)
+[2024-12-21 15:47:53 ERRORhttp-nio-8080-exec-1] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet]] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "p1.teamtodo.user.UserMapper.selUser(String)" because "this.userMapper" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "p1.teamtodo.user.UserMapper.selUser(String)" because "this.userMapper" is null
+	at p1.teamtodo.user.UserService.signUp(UserService.java:20)
+	at p1.teamtodo.user.UserController.signUp(UserController.java:25)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+[2024-12-21 15:48:17 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-21 15:48:17 INFO main] [p1.teamtodo.TeamtodoApplication] Starting TeamtodoApplication using Java 17.0.13 with PID 2248 (C:\Users\rmwl2\spring\teamtodo\build\classes\java\main started by rmwl2 in C:\Users\rmwl2\spring\teamtodo)
+[2024-12-21 15:48:17 INFO main] [p1.teamtodo.TeamtodoApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-21 15:48:18 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-21 15:48:18 INFO main] [org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"]
+[2024-12-21 15:48:18 INFO main] [org.apache.catalina.core.StandardService] Starting service [Tomcat]
+[2024-12-21 15:48:18 INFO main] [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/10.1.33]
+[2024-12-21 15:48:18 INFO main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
+[2024-12-21 15:48:18 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 1575 ms
+[2024-12-21 15:48:19 INFO main] [org.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"]
+[2024-12-21 15:48:19 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 8080 (http) with context path '/'
+[2024-12-21 15:48:19 INFO main] [p1.teamtodo.TeamtodoApplication] Started TeamtodoApplication in 3.297 seconds (process running for 4.223)
+[2024-12-21 15:48:21 INFO http-nio-8080-exec-1] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2024-12-21 15:48:21 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+[2024-12-21 15:48:21 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 1 ms
+[2024-12-21 15:48:21 INFO http-nio-8080-exec-1] [p1.teamtodo.user.UserController] req = SignUpReq(email=wook@naver.com, nickname=test1, password=1234qwer, passwordConfirm=1234qwer)
+[2024-12-21 15:48:21 ERRORhttp-nio-8080-exec-1] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet]] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "p1.teamtodo.user.UserMapper.selUser(String)" because "this.userMapper" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "p1.teamtodo.user.UserMapper.selUser(String)" because "this.userMapper" is null
+	at p1.teamtodo.user.UserService.signUp(UserService.java:20)
+	at p1.teamtodo.user.UserController.signUp(UserController.java:25)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+[2024-12-21 15:48:38 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-21 15:48:38 INFO main] [p1.teamtodo.TeamtodoApplication] Starting TeamtodoApplication using Java 17.0.13 with PID 7100 (C:\Users\rmwl2\spring\teamtodo\build\classes\java\main started by rmwl2 in C:\Users\rmwl2\spring\teamtodo)
+[2024-12-21 15:48:38 INFO main] [p1.teamtodo.TeamtodoApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-21 15:48:39 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-21 15:48:39 INFO main] [org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"]
+[2024-12-21 15:48:39 INFO main] [org.apache.catalina.core.StandardService] Starting service [Tomcat]
+[2024-12-21 15:48:39 INFO main] [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/10.1.33]
+[2024-12-21 15:48:39 INFO main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
+[2024-12-21 15:48:39 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 1611 ms
+[2024-12-21 15:48:40 INFO main] [org.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"]
+[2024-12-21 15:48:40 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 8080 (http) with context path '/'
+[2024-12-21 15:48:40 INFO main] [p1.teamtodo.TeamtodoApplication] Started TeamtodoApplication in 3.409 seconds (process running for 4.244)
+[2024-12-21 15:48:41 INFO http-nio-8080-exec-1] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2024-12-21 15:48:41 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+[2024-12-21 15:48:41 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 1 ms
+[2024-12-21 15:48:41 INFO http-nio-8080-exec-1] [p1.teamtodo.user.UserController] req = SignUpReq(email=wook@naver.com, nickname=test1, password=1234qwer, passwordConfirm=1234qwer)
+[2024-12-21 15:48:41 ERRORhttp-nio-8080-exec-1] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet]] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): p1.teamtodo.user.UserMapper.selUser] with root cause
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): p1.teamtodo.user.UserMapper.selUser
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:229)
+	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:53)
+	at org.apache.ibatis.binding.MapperProxy.lambda$cachedInvoker$0(MapperProxy.java:96)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at org.apache.ibatis.util.MapUtil.computeIfAbsent(MapUtil.java:36)
+	at org.apache.ibatis.binding.MapperProxy.cachedInvoker(MapperProxy.java:94)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy2/jdk.proxy2.$Proxy78.selUser(Unknown Source)
+	at p1.teamtodo.user.UserService.signUp(UserService.java:22)
+	at p1.teamtodo.user.UserController.signUp(UserController.java:25)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+[2024-12-21 15:49:15 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-21 15:49:15 INFO main] [p1.teamtodo.TeamtodoApplication] Starting TeamtodoApplication using Java 17.0.13 with PID 21456 (C:\Users\rmwl2\spring\teamtodo\build\classes\java\main started by rmwl2 in C:\Users\rmwl2\spring\teamtodo)
+[2024-12-21 15:49:15 INFO main] [p1.teamtodo.TeamtodoApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-21 15:49:16 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-21 15:49:16 INFO main] [org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"]
+[2024-12-21 15:49:16 INFO main] [org.apache.catalina.core.StandardService] Starting service [Tomcat]
+[2024-12-21 15:49:16 INFO main] [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/10.1.33]
+[2024-12-21 15:49:17 INFO main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
+[2024-12-21 15:49:17 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 1516 ms
+[2024-12-21 15:49:17 INFO main] [org.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"]
+[2024-12-21 15:49:17 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 8080 (http) with context path '/'
+[2024-12-21 15:49:17 INFO main] [p1.teamtodo.TeamtodoApplication] Started TeamtodoApplication in 3.242 seconds (process running for 3.948)
+[2024-12-21 15:49:19 INFO http-nio-8080-exec-2] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2024-12-21 15:49:19 INFO http-nio-8080-exec-2] [org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+[2024-12-21 15:49:19 INFO http-nio-8080-exec-2] [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 1 ms
+[2024-12-21 15:49:19 INFO http-nio-8080-exec-2] [p1.teamtodo.user.UserController] req = SignUpReq(email=wook@naver.com, nickname=test1, password=1234qwer, passwordConfirm=1234qwer)
+[2024-12-21 15:49:19 ERRORhttp-nio-8080-exec-2] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet]] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): p1.teamtodo.user.UserMapper.selUser] with root cause
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): p1.teamtodo.user.UserMapper.selUser
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:229)
+	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:53)
+	at org.apache.ibatis.binding.MapperProxy.lambda$cachedInvoker$0(MapperProxy.java:96)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at org.apache.ibatis.util.MapUtil.computeIfAbsent(MapUtil.java:36)
+	at org.apache.ibatis.binding.MapperProxy.cachedInvoker(MapperProxy.java:94)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy2/jdk.proxy2.$Proxy78.selUser(Unknown Source)
+	at p1.teamtodo.user.UserService.signUp(UserService.java:22)
+	at p1.teamtodo.user.UserController.signUp(UserController.java:25)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+[2024-12-21 15:50:54 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-21 15:50:54 INFO main] [p1.teamtodo.TeamtodoApplication] Starting TeamtodoApplication using Java 17.0.13 with PID 24696 (C:\Users\rmwl2\spring\teamtodo\build\classes\java\main started by rmwl2 in C:\Users\rmwl2\spring\teamtodo)
+[2024-12-21 15:50:54 INFO main] [p1.teamtodo.TeamtodoApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-21 15:50:56 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-21 15:50:56 INFO main] [org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"]
+[2024-12-21 15:50:56 INFO main] [org.apache.catalina.core.StandardService] Starting service [Tomcat]
+[2024-12-21 15:50:56 INFO main] [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/10.1.33]
+[2024-12-21 15:50:56 INFO main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
+[2024-12-21 15:50:56 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 1681 ms
+[2024-12-21 15:50:56 WARN main] [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController' defined in file [C:\Users\rmwl2\spring\teamtodo\build\classes\java\main\p1\teamtodo\user\UserController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userService' defined in file [C:\Users\rmwl2\spring\teamtodo\build\classes\java\main\p1\teamtodo\user\UserService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userMapper' defined in file [C:\Users\rmwl2\spring\teamtodo\build\classes\java\main\p1\teamtodo\user\UserMapper.class]: Cannot resolve reference to bean 'sqlSessionTemplate' while setting bean property 'sqlSessionTemplate'
+[2024-12-21 15:50:56 INFO main] [org.apache.catalina.core.StandardService] Stopping service [Tomcat]
+[2024-12-21 15:50:56 INFO main] [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[2024-12-21 15:50:56 ERRORmain] [org.springframework.boot.SpringApplication] Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController' defined in file [C:\Users\rmwl2\spring\teamtodo\build\classes\java\main\p1\teamtodo\user\UserController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userService' defined in file [C:\Users\rmwl2\spring\teamtodo\build\classes\java\main\p1\teamtodo\user\UserService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userMapper' defined in file [C:\Users\rmwl2\spring\teamtodo\build\classes\java\main\p1\teamtodo\user\UserMapper.class]: Cannot resolve reference to bean 'sqlSessionTemplate' while setting bean property 'sqlSessionTemplate'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1375)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1212)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:971)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at p1.teamtodo.TeamtodoApplication.main(TeamtodoApplication.java:10)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userService' defined in file [C:\Users\rmwl2\spring\teamtodo\build\classes\java\main\p1\teamtodo\user\UserService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userMapper' defined in file [C:\Users\rmwl2\spring\teamtodo\build\classes\java\main\p1\teamtodo\user\UserMapper.class]: Cannot resolve reference to bean 'sqlSessionTemplate' while setting bean property 'sqlSessionTemplate'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1375)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1212)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	... 19 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userMapper' defined in file [C:\Users\rmwl2\spring\teamtodo\build\classes\java\main\p1\teamtodo\user\UserMapper.class]: Cannot resolve reference to bean 'sqlSessionTemplate' while setting bean property 'sqlSessionTemplate'
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1705)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1454)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	... 33 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionTemplate' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionTemplate' parameter 0: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception with message: Failed to parse mapping resource: 'file [C:\Users\rmwl2\spring\teamtodo\build\resources\main\mapper\UserMapper.xml]'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:542)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1355)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365)
+	... 47 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception with message: Failed to parse mapping resource: 'file [C:\Users\rmwl2\spring\teamtodo\build\resources\main\mapper\UserMapper.xml]'
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:648)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1355)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	... 57 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception with message: Failed to parse mapping resource: 'file [C:\Users\rmwl2\spring\teamtodo\build\resources\main\mapper\UserMapper.xml]'
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:178)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:644)
+	... 71 common frames omitted
+Caused by: java.io.IOException: Failed to parse mapping resource: 'file [C:\Users\rmwl2\spring\teamtodo\build\resources\main\mapper\UserMapper.xml]'
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:695)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:572)
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:712)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:189)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:146)
+	... 72 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 2; columnNumber: 18; 루트 요소 유형 "mapper"에 대한 문서 유형 선언은 '>'로 끝나야 합니다.
+	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:262)
+	at org.apache.ibatis.parsing.XPathParser.<init>(XPathParser.java:127)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.<init>(XMLMapperBuilder.java:83)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:692)
+	... 80 common frames omitted
+Caused by: org.xml.sax.SAXParseException: 루트 요소 유형 "mapper"에 대한 문서 유형 선언은 '>'로 끝나야 합니다.
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:178)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1465)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.scanDoctypeDecl(XMLDocumentScannerImpl.java:682)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:908)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:605)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:542)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:889)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:825)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:247)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:342)
+	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:260)
+	... 83 common frames omitted
+[2024-12-21 15:52:03 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-21 15:52:03 INFO main] [p1.teamtodo.TeamtodoApplication] Starting TeamtodoApplication using Java 17.0.13 with PID 13080 (C:\Users\rmwl2\spring\teamtodo\build\classes\java\main started by rmwl2 in C:\Users\rmwl2\spring\teamtodo)
+[2024-12-21 15:52:03 INFO main] [p1.teamtodo.TeamtodoApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-21 15:52:05 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-21 15:52:05 INFO main] [org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"]
+[2024-12-21 15:52:05 INFO main] [org.apache.catalina.core.StandardService] Starting service [Tomcat]
+[2024-12-21 15:52:05 INFO main] [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/10.1.33]
+[2024-12-21 15:52:05 INFO main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
+[2024-12-21 15:52:05 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 1571 ms
+[2024-12-21 15:52:05 WARN main] [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController' defined in file [C:\Users\rmwl2\spring\teamtodo\build\classes\java\main\p1\teamtodo\user\UserController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userService' defined in file [C:\Users\rmwl2\spring\teamtodo\build\classes\java\main\p1\teamtodo\user\UserService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userMapper' defined in file [C:\Users\rmwl2\spring\teamtodo\build\classes\java\main\p1\teamtodo\user\UserMapper.class]: Cannot resolve reference to bean 'sqlSessionTemplate' while setting bean property 'sqlSessionTemplate'
+[2024-12-21 15:52:05 INFO main] [org.apache.catalina.core.StandardService] Stopping service [Tomcat]
+[2024-12-21 15:52:05 INFO main] [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[2024-12-21 15:52:05 ERRORmain] [org.springframework.boot.SpringApplication] Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController' defined in file [C:\Users\rmwl2\spring\teamtodo\build\classes\java\main\p1\teamtodo\user\UserController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userService' defined in file [C:\Users\rmwl2\spring\teamtodo\build\classes\java\main\p1\teamtodo\user\UserService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userMapper' defined in file [C:\Users\rmwl2\spring\teamtodo\build\classes\java\main\p1\teamtodo\user\UserMapper.class]: Cannot resolve reference to bean 'sqlSessionTemplate' while setting bean property 'sqlSessionTemplate'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1375)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1212)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:971)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at p1.teamtodo.TeamtodoApplication.main(TeamtodoApplication.java:10)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userService' defined in file [C:\Users\rmwl2\spring\teamtodo\build\classes\java\main\p1\teamtodo\user\UserService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userMapper' defined in file [C:\Users\rmwl2\spring\teamtodo\build\classes\java\main\p1\teamtodo\user\UserMapper.class]: Cannot resolve reference to bean 'sqlSessionTemplate' while setting bean property 'sqlSessionTemplate'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1375)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1212)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	... 19 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userMapper' defined in file [C:\Users\rmwl2\spring\teamtodo\build\classes\java\main\p1\teamtodo\user\UserMapper.class]: Cannot resolve reference to bean 'sqlSessionTemplate' while setting bean property 'sqlSessionTemplate'
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1705)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1454)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	... 33 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionTemplate' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionTemplate' parameter 0: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception with message: Failed to parse mapping resource: 'file [C:\Users\rmwl2\spring\teamtodo\build\resources\main\mapper\UserMapper.xml]'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:542)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1355)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365)
+	... 47 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception with message: Failed to parse mapping resource: 'file [C:\Users\rmwl2\spring\teamtodo\build\resources\main\mapper\UserMapper.xml]'
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:648)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1355)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	... 57 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception with message: Failed to parse mapping resource: 'file [C:\Users\rmwl2\spring\teamtodo\build\resources\main\mapper\UserMapper.xml]'
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:178)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:644)
+	... 71 common frames omitted
+Caused by: java.io.IOException: Failed to parse mapping resource: 'file [C:\Users\rmwl2\spring\teamtodo\build\resources\main\mapper\UserMapper.xml]'
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:695)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:572)
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:712)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:189)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:146)
+	... 72 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 2; columnNumber: 18; 루트 요소 유형 "mapper"에 대한 문서 유형 선언은 '>'로 끝나야 합니다.
+	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:262)
+	at org.apache.ibatis.parsing.XPathParser.<init>(XPathParser.java:127)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.<init>(XMLMapperBuilder.java:83)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:692)
+	... 80 common frames omitted
+Caused by: org.xml.sax.SAXParseException: 루트 요소 유형 "mapper"에 대한 문서 유형 선언은 '>'로 끝나야 합니다.
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:178)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1465)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.scanDoctypeDecl(XMLDocumentScannerImpl.java:682)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:908)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:605)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:542)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:889)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:825)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:247)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:342)
+	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:260)
+	... 83 common frames omitted
+[2024-12-21 15:52:49 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-21 15:52:49 INFO main] [p1.teamtodo.TeamtodoApplication] Starting TeamtodoApplication using Java 17.0.13 with PID 24220 (C:\Users\rmwl2\spring\teamtodo\build\classes\java\main started by rmwl2 in C:\Users\rmwl2\spring\teamtodo)
+[2024-12-21 15:52:49 INFO main] [p1.teamtodo.TeamtodoApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-21 15:52:51 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-21 15:52:51 INFO main] [org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"]
+[2024-12-21 15:52:51 INFO main] [org.apache.catalina.core.StandardService] Starting service [Tomcat]
+[2024-12-21 15:52:51 INFO main] [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/10.1.33]
+[2024-12-21 15:52:51 INFO main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
+[2024-12-21 15:52:51 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 1560 ms
+[2024-12-21 15:52:52 INFO main] [org.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"]
+[2024-12-21 15:52:52 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 8080 (http) with context path '/'
+[2024-12-21 15:52:52 INFO main] [p1.teamtodo.TeamtodoApplication] Started TeamtodoApplication in 3.313 seconds (process running for 4.003)
+[2024-12-21 15:52:54 INFO http-nio-8080-exec-2] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2024-12-21 15:52:54 INFO http-nio-8080-exec-2] [org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+[2024-12-21 15:52:54 INFO http-nio-8080-exec-2] [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 1 ms
+[2024-12-21 15:52:54 INFO http-nio-8080-exec-2] [p1.teamtodo.user.UserController] req = SignUpReq(email=wook@naver.com, nickname=test1, password=1234qwer, passwordConfirm=1234qwer)
+[2024-12-21 15:52:54 INFO http-nio-8080-exec-2] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-21 15:52:54 INFO http-nio-8080-exec-2] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@58d31449
+[2024-12-21 15:52:54 INFO http-nio-8080-exec-2] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-21 15:52:54 WARN http-nio-8080-exec-2] [org.mariadb.jdbc.message.server.ErrorPacket] Error: 1064-42000: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' email
+            , nickname
+            , password
+            , profile_pi...' at line 2
+[2024-12-21 15:52:54 ERRORhttp-nio-8080-exec-2] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+            , email
+            , nickname
+            , password
+            , profile_pic
+        FROM `user`
+        WHERE nickname = 'test1'
+ {FAILED after 2 msec}
+java.sql.SQLSyntaxErrorException: (conn=19) You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' email
+            , nickname
+            , password
+            , profile_pi...' at line 2
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:289)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:378)
+	at org.mariadb.jdbc.message.ClientMessage.readPacket(ClientMessage.java:172)
+	at org.mariadb.jdbc.client.impl.StandardClient.readPacket(StandardClient.java:915)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResults(StandardClient.java:854)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResponse(StandardClient.java:773)
+	at org.mariadb.jdbc.client.impl.StandardClient.execute(StandardClient.java:697)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:93)
+	at org.mariadb.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:276)
+	at net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy.execute(PreparedStatementSpy.java:443)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:65)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:80)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:65)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:336)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:158)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:110)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:90)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:154)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:142)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:75)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:333)
+	at jdk.proxy2/jdk.proxy2.$Proxy77.selectOne(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:154)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:87)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:141)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy2/jdk.proxy2.$Proxy78.selUser(Unknown Source)
+	at p1.teamtodo.user.UserService.signUp(UserService.java:22)
+	at p1.teamtodo.user.UserController.signUp(UserController.java:25)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+[2024-12-21 15:52:55 ERRORhttp-nio-8080-exec-2] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet]] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: (conn=19) You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' email
+            , nickname
+            , password
+            , profile_pi...' at line 2
+### The error may exist in file [C:\Users\rmwl2\spring\teamtodo\build\resources\main\mapper\UserMapper.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: SELECT             , email             , nickname             , password             , profile_pic         FROM `user`         WHERE nickname = ?
+### Cause: java.sql.SQLSyntaxErrorException: (conn=19) You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' email
+            , nickname
+            , password
+            , profile_pi...' at line 2
+; bad SQL grammar []] with root cause
+java.sql.SQLSyntaxErrorException: (conn=19) You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' email
+            , nickname
+            , password
+            , profile_pi...' at line 2
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:289)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:378)
+	at org.mariadb.jdbc.message.ClientMessage.readPacket(ClientMessage.java:172)
+	at org.mariadb.jdbc.client.impl.StandardClient.readPacket(StandardClient.java:915)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResults(StandardClient.java:854)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResponse(StandardClient.java:773)
+	at org.mariadb.jdbc.client.impl.StandardClient.execute(StandardClient.java:697)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:93)
+	at org.mariadb.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:276)
+	at net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy.execute(PreparedStatementSpy.java:443)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:65)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:80)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:65)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:336)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:158)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:110)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:90)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:154)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:142)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:75)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:333)
+	at jdk.proxy2/jdk.proxy2.$Proxy77.selectOne(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:154)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:87)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:141)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy2/jdk.proxy2.$Proxy78.selUser(Unknown Source)
+	at p1.teamtodo.user.UserService.signUp(UserService.java:22)
+	at p1.teamtodo.user.UserController.signUp(UserController.java:25)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+[2024-12-21 15:53:20 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-21 15:53:20 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-21 15:53:22 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-21 15:53:23 INFO main] [p1.teamtodo.TeamtodoApplication] Starting TeamtodoApplication using Java 17.0.13 with PID 14636 (C:\Users\rmwl2\spring\teamtodo\build\classes\java\main started by rmwl2 in C:\Users\rmwl2\spring\teamtodo)
+[2024-12-21 15:53:23 INFO main] [p1.teamtodo.TeamtodoApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-21 15:53:24 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-21 15:53:24 INFO main] [org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"]
+[2024-12-21 15:53:24 INFO main] [org.apache.catalina.core.StandardService] Starting service [Tomcat]
+[2024-12-21 15:53:24 INFO main] [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/10.1.33]
+[2024-12-21 15:53:24 INFO main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
+[2024-12-21 15:53:24 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 1555 ms
+[2024-12-21 15:53:25 INFO main] [org.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"]
+[2024-12-21 15:53:25 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 8080 (http) with context path '/'
+[2024-12-21 15:53:25 INFO main] [p1.teamtodo.TeamtodoApplication] Started TeamtodoApplication in 3.373 seconds (process running for 4.094)
+[2024-12-21 15:53:27 INFO http-nio-8080-exec-4] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2024-12-21 15:53:27 INFO http-nio-8080-exec-4] [org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+[2024-12-21 15:53:27 INFO http-nio-8080-exec-4] [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 1 ms
+[2024-12-21 15:53:27 INFO http-nio-8080-exec-4] [p1.teamtodo.user.UserController] req = SignUpReq(email=wook@naver.com, nickname=test1, password=1234qwer, passwordConfirm=1234qwer)
+[2024-12-21 15:53:27 INFO http-nio-8080-exec-4] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-21 15:53:27 INFO http-nio-8080-exec-4] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@798dc9e
+[2024-12-21 15:53:27 INFO http-nio-8080-exec-4] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-21 15:53:27 DEBUGhttp-nio-8080-exec-4] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+            email
+            , nickname
+            , password
+            , profile_pic
+        FROM `user`
+        WHERE nickname = 'test1'
+ {executed in 1 msec}
+[2024-12-21 15:53:27 INFO http-nio-8080-exec-4] [jdbc.resultsettable] 
+|----------------|---------|---------|------------|
+|email           |nickname |password |profile_pic |
+|----------------|---------|---------|------------|
+|test1@email.com |test1    |1234qwer |pic.jpg     |
+|----------------|---------|---------|------------|
+
+[2024-12-21 15:53:27 INFO http-nio-8080-exec-4] [p1.teamtodo.user.UserService] userDto: UserDto(email=test1@email.com, nickname=test1, password=1234qwer, passwordConfirm=null, pic=null)
+[2024-12-21 15:54:38 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-21 15:54:38 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-21 16:07:53 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-21 16:07:53 INFO main] [p1.teamtodo.TeamtodoApplication] Starting TeamtodoApplication using Java 17.0.13 with PID 25824 (C:\Users\rmwl2\spring\teamtodo\build\classes\java\main started by rmwl2 in C:\Users\rmwl2\spring\teamtodo)
+[2024-12-21 16:07:53 INFO main] [p1.teamtodo.TeamtodoApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-21 16:07:54 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-21 16:07:54 INFO main] [org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"]
+[2024-12-21 16:07:54 INFO main] [org.apache.catalina.core.StandardService] Starting service [Tomcat]
+[2024-12-21 16:07:54 INFO main] [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/10.1.33]
+[2024-12-21 16:07:54 INFO main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
+[2024-12-21 16:07:54 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 1532 ms
+[2024-12-21 16:07:55 INFO main] [org.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"]
+[2024-12-21 16:07:55 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 8080 (http) with context path '/'
+[2024-12-21 16:07:55 INFO main] [p1.teamtodo.TeamtodoApplication] Started TeamtodoApplication in 3.477 seconds (process running for 4.169)
+[2024-12-21 16:07:57 INFO http-nio-8080-exec-2] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2024-12-21 16:07:57 INFO http-nio-8080-exec-2] [org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+[2024-12-21 16:07:57 INFO http-nio-8080-exec-2] [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 1 ms
+[2024-12-21 16:07:58 INFO http-nio-8080-exec-2] [p1.teamtodo.user.UserController] req = SignUpReq(email=wook@naver.com, nickname=test1, password=1234qwer, passwordConfirm=1234qwer)
+[2024-12-21 16:07:58 INFO http-nio-8080-exec-2] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-21 16:07:58 INFO http-nio-8080-exec-2] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@2602e83d
+[2024-12-21 16:07:58 INFO http-nio-8080-exec-2] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-21 16:07:58 DEBUGhttp-nio-8080-exec-2] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+            email
+            , nickname
+            , password
+            , profile_pic
+        FROM `user`
+        WHERE nickname = 'test1'
+ {executed in 1 msec}
+[2024-12-21 16:07:58 INFO http-nio-8080-exec-2] [jdbc.resultsettable] 
+|----------------|---------|---------|------------|
+|email           |nickname |password |profile_pic |
+|----------------|---------|---------|------------|
+|test1@email.com |test1    |1234qwer |pic.jpg     |
+|----------------|---------|---------|------------|
+
+[2024-12-21 16:07:58 INFO http-nio-8080-exec-2] [p1.teamtodo.user.UserService] userDto: UserDto(email=test1@email.com, nickname=test1, password=1234qwer, passwordConfirm=null, pic=null)
+[2024-12-21 16:08:01 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-21 16:08:01 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-21 17:19:56 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-21 17:19:56 INFO main] [p1.teamtodo.TeamtodoApplication] Starting TeamtodoApplication using Java 17.0.13 with PID 26328 (C:\Users\rmwl2\spring\teamtodo\build\classes\java\main started by rmwl2 in C:\Users\rmwl2\spring\teamtodo)
+[2024-12-21 17:19:56 INFO main] [p1.teamtodo.TeamtodoApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-21 17:19:58 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-21 17:19:58 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 1642 ms
+[2024-12-21 17:19:59 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 8080 (http) with context path '/'
+[2024-12-21 17:19:59 INFO main] [p1.teamtodo.TeamtodoApplication] Started TeamtodoApplication in 3.587 seconds (process running for 4.62)
+[2024-12-21 17:20:05 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-21 17:20:05 INFO main] [p1.teamtodo.TeamtodoApplication] Starting TeamtodoApplication using Java 17.0.13 with PID 21196 (C:\Users\rmwl2\spring\teamtodo\build\classes\java\main started by rmwl2 in C:\Users\rmwl2\spring\teamtodo)
+[2024-12-21 17:20:05 INFO main] [p1.teamtodo.TeamtodoApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-21 17:20:06 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-21 17:20:06 INFO main] [org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"]
+[2024-12-21 17:20:06 INFO main] [org.apache.catalina.core.StandardService] Starting service [Tomcat]
+[2024-12-21 17:20:06 INFO main] [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/10.1.33]
+[2024-12-21 17:20:06 INFO main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
+[2024-12-21 17:20:06 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 1678 ms
+[2024-12-21 17:20:07 INFO main] [org.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"]
+[2024-12-21 17:20:07 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 8080 (http) with context path '/'
+[2024-12-21 17:20:07 INFO main] [p1.teamtodo.TeamtodoApplication] Started TeamtodoApplication in 3.541 seconds (process running for 4.255)
+[2024-12-21 17:20:49 INFO http-nio-8080-exec-2] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2024-12-21 17:20:49 INFO http-nio-8080-exec-2] [org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+[2024-12-21 17:20:49 INFO http-nio-8080-exec-2] [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 0 ms
+[2024-12-21 17:21:21 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-21 17:21:21 INFO main] [p1.teamtodo.TeamtodoApplication] Starting TeamtodoApplication using Java 17.0.13 with PID 21784 (C:\Users\rmwl2\spring\teamtodo\build\classes\java\main started by rmwl2 in C:\Users\rmwl2\spring\teamtodo)
+[2024-12-21 17:21:21 INFO main] [p1.teamtodo.TeamtodoApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-21 17:21:23 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-21 17:21:23 INFO main] [org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"]
+[2024-12-21 17:21:23 INFO main] [org.apache.catalina.core.StandardService] Starting service [Tomcat]
+[2024-12-21 17:21:23 INFO main] [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/10.1.33]
+[2024-12-21 17:21:23 INFO main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
+[2024-12-21 17:21:23 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 1711 ms
+[2024-12-21 17:21:24 INFO main] [org.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"]
+[2024-12-21 17:21:24 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 8080 (http) with context path '/'
+[2024-12-21 17:21:24 INFO main] [p1.teamtodo.TeamtodoApplication] Started TeamtodoApplication in 3.696 seconds (process running for 4.98)
+[2024-12-21 17:21:28 INFO http-nio-8080-exec-1] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2024-12-21 17:21:28 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+[2024-12-21 17:21:28 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 1 ms
+[2024-12-21 17:21:31 INFO http-nio-8080-exec-1] [p1.teamtodo.mail.MailController] Send mail to null
+[2024-12-21 17:21:33 WARN http-nio-8080-exec-1] [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver] Resolved [org.springframework.web.context.request.async.AsyncRequestNotUsableException: ServletOutputStream failed to flush: java.nio.channels.ClosedChannelException]
+[2024-12-21 17:21:52 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-21 17:21:52 INFO main] [p1.teamtodo.TeamtodoApplication] Starting TeamtodoApplication using Java 17.0.13 with PID 24752 (C:\Users\rmwl2\spring\teamtodo\build\classes\java\main started by rmwl2 in C:\Users\rmwl2\spring\teamtodo)
+[2024-12-21 17:21:52 INFO main] [p1.teamtodo.TeamtodoApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-21 17:21:54 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-21 17:21:54 INFO main] [org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"]
+[2024-12-21 17:21:54 INFO main] [org.apache.catalina.core.StandardService] Starting service [Tomcat]
+[2024-12-21 17:21:54 INFO main] [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/10.1.33]
+[2024-12-21 17:21:54 INFO main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
+[2024-12-21 17:21:54 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 1710 ms
+[2024-12-21 17:21:55 INFO main] [org.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"]
+[2024-12-21 17:21:55 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 8080 (http) with context path '/'
+[2024-12-21 17:21:55 INFO main] [p1.teamtodo.TeamtodoApplication] Started TeamtodoApplication in 3.678 seconds (process running for 4.459)
+[2024-12-21 17:21:56 INFO http-nio-8080-exec-1] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2024-12-21 17:21:56 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+[2024-12-21 17:21:56 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 1 ms
+[2024-12-21 17:21:56 INFO http-nio-8080-exec-1] [p1.teamtodo.mail.MailController] Send mail to wjddnr1gh@naver.com
+[2024-12-21 17:28:32 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-21 17:28:32 INFO main] [p1.teamtodo.TeamtodoApplication] Starting TeamtodoApplication using Java 17.0.13 with PID 1404 (C:\Users\rmwl2\spring\teamtodo\build\classes\java\main started by rmwl2 in C:\Users\rmwl2\spring\teamtodo)
+[2024-12-21 17:28:32 INFO main] [p1.teamtodo.TeamtodoApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-21 17:28:33 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-21 17:28:33 INFO main] [org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"]
+[2024-12-21 17:28:33 INFO main] [org.apache.catalina.core.StandardService] Starting service [Tomcat]
+[2024-12-21 17:28:33 INFO main] [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/10.1.33]
+[2024-12-21 17:28:33 INFO main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
+[2024-12-21 17:28:33 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 1568 ms
+[2024-12-21 17:28:34 INFO main] [org.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"]
+[2024-12-21 17:28:34 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 8080 (http) with context path '/'
+[2024-12-21 17:28:34 INFO main] [p1.teamtodo.TeamtodoApplication] Started TeamtodoApplication in 3.362 seconds (process running for 4.206)
+[2024-12-21 17:28:37 INFO http-nio-8080-exec-2] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2024-12-21 17:28:37 INFO http-nio-8080-exec-2] [org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+[2024-12-21 17:28:37 INFO http-nio-8080-exec-2] [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 1 ms
+[2024-12-21 17:28:37 INFO http-nio-8080-exec-2] [p1.teamtodo.mail.MailController] Send mail to wjddnr1gh@naver.com
+[2024-12-21 17:35:09 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-21 17:35:09 INFO main] [p1.teamtodo.TeamtodoApplication] Starting TeamtodoApplication using Java 17.0.13 with PID 17612 (C:\Users\rmwl2\spring\teamtodo\build\classes\java\main started by rmwl2 in C:\Users\rmwl2\spring\teamtodo)
+[2024-12-21 17:35:09 INFO main] [p1.teamtodo.TeamtodoApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-21 17:35:11 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-21 17:35:11 INFO main] [org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"]
+[2024-12-21 17:35:11 INFO main] [org.apache.catalina.core.StandardService] Starting service [Tomcat]
+[2024-12-21 17:35:11 INFO main] [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/10.1.33]
+[2024-12-21 17:35:11 INFO main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
+[2024-12-21 17:35:11 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 1715 ms
+[2024-12-21 17:35:12 INFO main] [org.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"]
+[2024-12-21 17:35:12 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 8080 (http) with context path '/'
+[2024-12-21 17:35:12 INFO main] [p1.teamtodo.TeamtodoApplication] Started TeamtodoApplication in 3.694 seconds (process running for 4.718)
+[2024-12-21 17:35:16 INFO http-nio-8080-exec-1] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2024-12-21 17:35:16 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+[2024-12-21 17:35:16 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 1 ms
+[2024-12-21 17:35:16 INFO http-nio-8080-exec-1] [p1.teamtodo.mail.MailController] Send mail to wjddnr1gh@naver.com
+[2024-12-21 17:37:10 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-21 17:37:10 INFO main] [p1.teamtodo.TeamtodoApplication] Starting TeamtodoApplication using Java 17.0.13 with PID 26572 (C:\Users\rmwl2\spring\teamtodo\build\classes\java\main started by rmwl2 in C:\Users\rmwl2\spring\teamtodo)
+[2024-12-21 17:37:10 INFO main] [p1.teamtodo.TeamtodoApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-21 17:37:12 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-21 17:37:12 INFO main] [org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"]
+[2024-12-21 17:37:12 INFO main] [org.apache.catalina.core.StandardService] Starting service [Tomcat]
+[2024-12-21 17:37:12 INFO main] [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/10.1.33]
+[2024-12-21 17:37:12 INFO main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
+[2024-12-21 17:37:12 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 1674 ms
+[2024-12-21 17:37:13 INFO main] [org.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"]
+[2024-12-21 17:37:13 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 8080 (http) with context path '/'
+[2024-12-21 17:37:13 INFO main] [p1.teamtodo.TeamtodoApplication] Started TeamtodoApplication in 3.806 seconds (process running for 4.633)
+[2024-12-21 17:37:16 INFO http-nio-8080-exec-2] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2024-12-21 17:37:16 INFO http-nio-8080-exec-2] [org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+[2024-12-21 17:37:16 INFO http-nio-8080-exec-2] [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 1 ms
+[2024-12-21 17:37:17 INFO http-nio-8080-exec-2] [p1.teamtodo.mail.MailController] Send mail to wjddnr1gh@naver.com
+[2024-12-21 18:07:02 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-21 18:07:02 INFO main] [p1.teamtodo.TeamtodoApplication] Starting TeamtodoApplication using Java 17.0.13 with PID 21580 (C:\Users\rmwl2\spring\teamtodo\build\classes\java\main started by rmwl2 in C:\Users\rmwl2\spring\teamtodo)
+[2024-12-21 18:07:02 INFO main] [p1.teamtodo.TeamtodoApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-21 18:07:04 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-21 18:07:04 INFO main] [org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"]
+[2024-12-21 18:07:04 INFO main] [org.apache.catalina.core.StandardService] Starting service [Tomcat]
+[2024-12-21 18:07:04 INFO main] [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/10.1.33]
+[2024-12-21 18:07:04 INFO main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
+[2024-12-21 18:07:04 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 1649 ms
+[2024-12-21 18:07:05 INFO main] [org.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"]
+[2024-12-21 18:07:05 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 8080 (http) with context path '/'
+[2024-12-21 18:07:05 INFO main] [p1.teamtodo.TeamtodoApplication] Started TeamtodoApplication in 3.673 seconds (process running for 4.942)
+[2024-12-21 18:07:07 INFO http-nio-8080-exec-1] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2024-12-21 18:07:07 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+[2024-12-21 18:07:07 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 0 ms
+[2024-12-21 18:07:07 INFO http-nio-8080-exec-1] [p1.teamtodo.mail.MailController] Send mail to wjddnr1gh@naver.com
+[2024-12-21 18:07:07 INFO http-nio-8080-exec-1] [p1.teamtodo.mail.MailService] send mail to wjddnr1gh@naver.com
+[2024-12-21 18:07:07 INFO Thread-1] [p1.teamtodo.mail.code.AuthCode] waiting... 1
+[2024-12-21 18:07:07 INFO Thread-1] [p1.teamtodo.mail.code.AuthCode] codes: {user=1}
+[2024-12-21 18:07:08 INFO Thread-1] [p1.teamtodo.mail.code.AuthCode] waiting... 2
+[2024-12-21 18:07:08 INFO Thread-1] [p1.teamtodo.mail.code.AuthCode] codes: {user=1}
+[2024-12-21 18:07:09 INFO Thread-1] [p1.teamtodo.mail.code.AuthCode] waiting... 3
+[2024-12-21 18:07:09 INFO Thread-1] [p1.teamtodo.mail.code.AuthCode] codes: {user=1}
+[2024-12-21 18:07:10 INFO Thread-1] [p1.teamtodo.mail.code.AuthCode] waiting... 4
+[2024-12-21 18:07:10 INFO Thread-1] [p1.teamtodo.mail.code.AuthCode] codes: {user=1}
+[2024-12-21 18:07:11 INFO Thread-1] [p1.teamtodo.mail.code.AuthCode] waiting... 5
+[2024-12-21 18:07:11 INFO Thread-1] [p1.teamtodo.mail.code.AuthCode] codes: {user=1}
+[2024-12-21 18:07:12 INFO Thread-1] [p1.teamtodo.mail.code.AuthCode] codes: {}
+[2024-12-21 18:32:53 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-21 18:32:53 INFO Test worker] [p1.teamtodo.mail.MailServiceTest] Starting MailServiceTest using Java 17.0.13 with PID 26720 (started by rmwl2 in C:\Users\rmwl2\spring\teamtodo)
+[2024-12-21 18:32:53 INFO Test worker] [p1.teamtodo.mail.MailServiceTest] No active profile set, falling back to 1 default profile: "default"
+[2024-12-21 18:32:57 INFO Test worker] [p1.teamtodo.mail.MailServiceTest] Started MailServiceTest in 4.263 seconds (process running for 6.287)
+[2024-12-21 18:32:58 INFO Thread-4] [p1.teamtodo.mail.code.AuthCode] email = testmail
+[2024-12-21 18:34:09 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-21 18:34:09 INFO Test worker] [p1.teamtodo.mail.MailServiceTest] Starting MailServiceTest using Java 17.0.13 with PID 24548 (started by rmwl2 in C:\Users\rmwl2\spring\teamtodo)
+[2024-12-21 18:34:09 INFO Test worker] [p1.teamtodo.mail.MailServiceTest] No active profile set, falling back to 1 default profile: "default"
+[2024-12-21 18:34:12 INFO Test worker] [p1.teamtodo.mail.MailServiceTest] Started MailServiceTest in 3.978 seconds (process running for 6.064)
+[2024-12-21 18:34:14 INFO Thread-4] [p1.teamtodo.mail.code.AuthCode] num = 2
+[2024-12-21 18:35:18 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-21 18:35:18 INFO Test worker] [p1.teamtodo.mail.MailServiceTest] Starting MailServiceTest using Java 17.0.13 with PID 25312 (started by rmwl2 in C:\Users\rmwl2\spring\teamtodo)
+[2024-12-21 18:35:18 INFO Test worker] [p1.teamtodo.mail.MailServiceTest] No active profile set, falling back to 1 default profile: "default"
+[2024-12-21 18:35:21 INFO Test worker] [p1.teamtodo.mail.MailServiceTest] Started MailServiceTest in 4.015 seconds (process running for 6.046)
+[2024-12-21 18:35:23 INFO Thread-4] [p1.teamtodo.mail.code.AuthCode] num = 6
+[2024-12-21 18:35:24 INFO Thread-4] [p1.teamtodo.mail.code.AuthCode] num = 4
+[2024-12-21 18:35:25 INFO Thread-4] [p1.teamtodo.mail.code.AuthCode] num = 2
+[2024-12-21 18:35:26 INFO Thread-4] [p1.teamtodo.mail.code.AuthCode] num = 4
+[2024-12-21 18:35:27 INFO Thread-4] [p1.teamtodo.mail.code.AuthCode] codes = {testmail=6424}
+[2024-12-21 18:35:28 INFO Thread-4] [p1.teamtodo.mail.code.AuthCode] codes: {testmail=6424}
+[2024-12-21 18:48:20 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-21 18:48:20 INFO main] [p1.teamtodo.TeamtodoApplication] Starting TeamtodoApplication using Java 17.0.13 with PID 27516 (C:\Users\rmwl2\spring\teamtodo\build\classes\java\main started by rmwl2 in C:\Users\rmwl2\spring\teamtodo)
+[2024-12-21 18:48:20 INFO main] [p1.teamtodo.TeamtodoApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-21 18:48:21 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-21 18:48:21 INFO main] [org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"]
+[2024-12-21 18:48:21 INFO main] [org.apache.catalina.core.StandardService] Starting service [Tomcat]
+[2024-12-21 18:48:21 INFO main] [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/10.1.33]
+[2024-12-21 18:48:21 INFO main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
+[2024-12-21 18:48:21 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 1572 ms
+[2024-12-21 18:48:22 INFO main] [org.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"]
+[2024-12-21 18:48:22 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 8080 (http) with context path '/'
+[2024-12-21 18:48:22 INFO main] [p1.teamtodo.TeamtodoApplication] Started TeamtodoApplication in 3.559 seconds (process running for 4.573)
+[2024-12-21 18:48:24 INFO http-nio-8080-exec-1] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2024-12-21 18:48:24 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+[2024-12-21 18:48:24 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 1 ms
+[2024-12-21 18:48:25 INFO http-nio-8080-exec-1] [p1.teamtodo.mail.MailController] Send mail to {
+    "email" : "wjddnr1gh@naver.com"
+}
+[2024-12-21 18:48:55 INFO Thread-1] [p1.teamtodo.mail.code.AuthCode] codes = {{
+    "email" : "wjddnr1gh@naver.com"
+}=3884}
+[2024-12-21 18:52:05 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-21 18:52:05 INFO main] [p1.teamtodo.TeamtodoApplication] Starting TeamtodoApplication using Java 17.0.13 with PID 27248 (C:\Users\rmwl2\spring\teamtodo\build\classes\java\main started by rmwl2 in C:\Users\rmwl2\spring\teamtodo)
+[2024-12-21 18:52:05 INFO main] [p1.teamtodo.TeamtodoApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-21 18:52:07 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-21 18:52:07 INFO main] [org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"]
+[2024-12-21 18:52:07 INFO main] [org.apache.catalina.core.StandardService] Starting service [Tomcat]
+[2024-12-21 18:52:07 INFO main] [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/10.1.33]
+[2024-12-21 18:52:07 INFO main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
+[2024-12-21 18:52:07 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 1535 ms
+[2024-12-21 18:52:08 INFO main] [org.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"]
+[2024-12-21 18:52:08 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 8080 (http) with context path '/'
+[2024-12-21 18:52:08 INFO main] [p1.teamtodo.TeamtodoApplication] Started TeamtodoApplication in 3.392 seconds (process running for 4.409)
+[2024-12-21 18:52:11 INFO http-nio-8080-exec-2] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2024-12-21 18:52:11 INFO http-nio-8080-exec-2] [org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+[2024-12-21 18:52:11 INFO http-nio-8080-exec-2] [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 1 ms
+[2024-12-21 18:52:11 INFO http-nio-8080-exec-2] [p1.teamtodo.mail.MailController] Send mail to wjddnr1gh@naver.com
+[2024-12-21 18:52:30 INFO http-nio-8080-exec-3] [p1.teamtodo.mail.MailController] Send mail to wjddnr1gh@naver.com
+[2024-12-21 18:52:41 INFO Thread-1] [p1.teamtodo.mail.code.AuthCode] codes = {wjddnr1gh@naver.com=6298}
+[2024-12-21 18:53:00 INFO Thread-2] [p1.teamtodo.mail.code.AuthCode] codes = {}
+[2024-12-21 18:54:43 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-21 18:54:43 INFO main] [p1.teamtodo.TeamtodoApplication] Starting TeamtodoApplication using Java 17.0.13 with PID 27464 (C:\Users\rmwl2\spring\teamtodo\build\classes\java\main started by rmwl2 in C:\Users\rmwl2\spring\teamtodo)
+[2024-12-21 18:54:43 INFO main] [p1.teamtodo.TeamtodoApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-21 18:54:45 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-21 18:54:45 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 1547 ms
+[2024-12-21 18:54:46 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 8080 (http) with context path '/'
+[2024-12-21 18:54:46 INFO main] [p1.teamtodo.TeamtodoApplication] Started TeamtodoApplication in 3.463 seconds (process running for 4.286)
+[2024-12-21 18:55:24 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-21 18:55:24 INFO Test worker] [p1.teamtodo.mail.MailServiceTest] Starting MailServiceTest using Java 17.0.13 with PID 17512 (started by rmwl2 in C:\Users\rmwl2\spring\teamtodo)
+[2024-12-21 18:55:24 INFO Test worker] [p1.teamtodo.mail.MailServiceTest] No active profile set, falling back to 1 default profile: "default"
+[2024-12-21 18:55:27 INFO Test worker] [p1.teamtodo.mail.MailServiceTest] Started MailServiceTest in 4.088 seconds (process running for 6.055)
+[2024-12-21 18:55:29 INFO Thread-4] [p1.teamtodo.mail.code.AuthCode] codes = {testmail=104102}
+[2024-12-21 18:56:54 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-21 18:56:54 INFO Test worker] [p1.teamtodo.mail.MailServiceTest] Starting MailServiceTest using Java 17.0.13 with PID 25952 (started by rmwl2 in C:\Users\rmwl2\spring\teamtodo)
+[2024-12-21 18:56:54 INFO Test worker] [p1.teamtodo.mail.MailServiceTest] No active profile set, falling back to 1 default profile: "default"
+[2024-12-21 18:56:57 INFO Test worker] [p1.teamtodo.mail.MailServiceTest] Started MailServiceTest in 4.002 seconds (process running for 5.956)
+[2024-12-21 18:56:59 INFO Thread-4] [p1.teamtodo.mail.code.AuthCode] codes = {testmail=0386}
+[2024-12-21 18:57:49 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-21 18:57:49 INFO Test worker] [p1.teamtodo.mail.MailServiceTest] Starting MailServiceTest using Java 17.0.13 with PID 25348 (started by rmwl2 in C:\Users\rmwl2\spring\teamtodo)
+[2024-12-21 18:57:49 INFO Test worker] [p1.teamtodo.mail.MailServiceTest] No active profile set, falling back to 1 default profile: "default"
+[2024-12-21 18:57:53 INFO Test worker] [p1.teamtodo.mail.MailServiceTest] Started MailServiceTest in 4.096 seconds (process running for 6.107)
+[2024-12-21 18:57:54 INFO Thread-4] [p1.teamtodo.mail.code.AuthCode] codes = {testmail=5850}
+[2024-12-21 18:57:56 INFO Thread-5] [p1.teamtodo.mail.code.AuthCode] codes = {testmail=4534}
+[2024-12-21 18:58:16 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-21 18:58:16 INFO Test worker] [p1.teamtodo.mail.MailServiceTest] Starting MailServiceTest using Java 17.0.13 with PID 10028 (started by rmwl2 in C:\Users\rmwl2\spring\teamtodo)
+[2024-12-21 18:58:16 INFO Test worker] [p1.teamtodo.mail.MailServiceTest] No active profile set, falling back to 1 default profile: "default"
+[2024-12-21 18:58:19 INFO Test worker] [p1.teamtodo.mail.MailServiceTest] Started MailServiceTest in 3.859 seconds (process running for 5.797)
+[2024-12-21 18:58:20 INFO Thread-4] [p1.teamtodo.mail.code.AuthCode] codes = {testmail=3821}
+[2024-12-21 18:58:22 INFO Thread-5] [p1.teamtodo.mail.code.AuthCode] codes = {testmail=9915}
+[2024-12-21 18:58:24 INFO Thread-6] [p1.teamtodo.mail.code.AuthCode] codes = {testmail=6688}
+[2024-12-21 18:58:26 INFO Thread-7] [p1.teamtodo.mail.code.AuthCode] codes = {testmail=9841}
