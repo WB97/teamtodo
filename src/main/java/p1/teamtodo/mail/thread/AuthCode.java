@@ -1,4 +1,4 @@
-package p1.teamtodo.mail.code;
+package p1.teamtodo.mail.thread;
 
 import lombok.extern.slf4j.Slf4j;
 import p1.teamtodo.mail.MailService;
@@ -19,13 +19,10 @@ public class AuthCode implements Runnable {
                 code.append((int)(Math.random() * 10));
             }
             MailService.codes.put(email, String.valueOf(code));
-            log.info("codes = {}", MailService.codes);
-            Thread.sleep(2000);
+            Thread.sleep(180_000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-
         MailService.codes.remove(email);
-        log.info("delete Codes = {}", MailService.codes);
     }
 }

@@ -12,8 +12,8 @@ public enum ResponseCode {
 
     // 회원가입
     OK("OK"),
-    DUPLICATE_EMAIL("DE"),
-    DUPLICATE_NICKNAME("DN"),
+    DUPLICATE_EMAIL("DPE"),
+    DUPLICATE_NICKNAME("DPN"),
     PASSWORD_FORMAT_ERROR("PFE"),
     PASSWORD_CHECK_ERROR("PCE"),
 

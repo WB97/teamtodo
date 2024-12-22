@@ -6,11 +6,11 @@ import p1.teamtodo.user.model.dto.UserDto;
 @Mapper
 public interface UserMapper {
 
-    void insertUser(UserDto userDto);
+    void insUser(UserDto userDto);
 
     UserDto selUser(String nickname);
 
-    boolean checkDuplicateEmail();
+    boolean checkDuplicateEmail(String email);
 
-    boolean checkDuplicateNick();
+    boolean checkDuplicateNick(String nickname);
 }

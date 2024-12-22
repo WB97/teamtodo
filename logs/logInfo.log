@@ -1039,37 +1039,37 @@ java.sql.SQLSyntaxErrorException: (conn=19) You have an error in your SQL syntax
 [2024-12-21 18:07:07 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 0 ms
 [2024-12-21 18:07:07 INFO http-nio-8080-exec-1] [p1.teamtodo.mail.MailController] Send mail to wjddnr1gh@naver.com
 [2024-12-21 18:07:07 INFO http-nio-8080-exec-1] [p1.teamtodo.mail.MailService] send mail to wjddnr1gh@naver.com
-[2024-12-21 18:07:07 INFO Thread-1] [p1.teamtodo.mail.code.AuthCode] waiting... 1
-[2024-12-21 18:07:07 INFO Thread-1] [p1.teamtodo.mail.code.AuthCode] codes: {user=1}
-[2024-12-21 18:07:08 INFO Thread-1] [p1.teamtodo.mail.code.AuthCode] waiting... 2
-[2024-12-21 18:07:08 INFO Thread-1] [p1.teamtodo.mail.code.AuthCode] codes: {user=1}
-[2024-12-21 18:07:09 INFO Thread-1] [p1.teamtodo.mail.code.AuthCode] waiting... 3
-[2024-12-21 18:07:09 INFO Thread-1] [p1.teamtodo.mail.code.AuthCode] codes: {user=1}
-[2024-12-21 18:07:10 INFO Thread-1] [p1.teamtodo.mail.code.AuthCode] waiting... 4
-[2024-12-21 18:07:10 INFO Thread-1] [p1.teamtodo.mail.code.AuthCode] codes: {user=1}
-[2024-12-21 18:07:11 INFO Thread-1] [p1.teamtodo.mail.code.AuthCode] waiting... 5
-[2024-12-21 18:07:11 INFO Thread-1] [p1.teamtodo.mail.code.AuthCode] codes: {user=1}
-[2024-12-21 18:07:12 INFO Thread-1] [p1.teamtodo.mail.code.AuthCode] codes: {}
+[2024-12-21 18:07:07 INFO Thread-1] [p1.teamtodo.mail.thread.AuthCode] waiting... 1
+[2024-12-21 18:07:07 INFO Thread-1] [p1.teamtodo.mail.thread.AuthCode] codes: {user=1}
+[2024-12-21 18:07:08 INFO Thread-1] [p1.teamtodo.mail.thread.AuthCode] waiting... 2
+[2024-12-21 18:07:08 INFO Thread-1] [p1.teamtodo.mail.thread.AuthCode] codes: {user=1}
+[2024-12-21 18:07:09 INFO Thread-1] [p1.teamtodo.mail.thread.AuthCode] waiting... 3
+[2024-12-21 18:07:09 INFO Thread-1] [p1.teamtodo.mail.thread.AuthCode] codes: {user=1}
+[2024-12-21 18:07:10 INFO Thread-1] [p1.teamtodo.mail.thread.AuthCode] waiting... 4
+[2024-12-21 18:07:10 INFO Thread-1] [p1.teamtodo.mail.thread.AuthCode] codes: {user=1}
+[2024-12-21 18:07:11 INFO Thread-1] [p1.teamtodo.mail.thread.AuthCode] waiting... 5
+[2024-12-21 18:07:11 INFO Thread-1] [p1.teamtodo.mail.thread.AuthCode] codes: {user=1}
+[2024-12-21 18:07:12 INFO Thread-1] [p1.teamtodo.mail.thread.AuthCode] codes: {}
 [2024-12-21 18:32:53 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
 [2024-12-21 18:32:53 INFO Test worker] [p1.teamtodo.mail.MailServiceTest] Starting MailServiceTest using Java 17.0.13 with PID 26720 (started by rmwl2 in C:\Users\rmwl2\spring\teamtodo)
 [2024-12-21 18:32:53 INFO Test worker] [p1.teamtodo.mail.MailServiceTest] No active profile set, falling back to 1 default profile: "default"
 [2024-12-21 18:32:57 INFO Test worker] [p1.teamtodo.mail.MailServiceTest] Started MailServiceTest in 4.263 seconds (process running for 6.287)
-[2024-12-21 18:32:58 INFO Thread-4] [p1.teamtodo.mail.code.AuthCode] email = testmail
+[2024-12-21 18:32:58 INFO Thread-4] [p1.teamtodo.mail.thread.AuthCode] email = testmail
 [2024-12-21 18:34:09 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
 [2024-12-21 18:34:09 INFO Test worker] [p1.teamtodo.mail.MailServiceTest] Starting MailServiceTest using Java 17.0.13 with PID 24548 (started by rmwl2 in C:\Users\rmwl2\spring\teamtodo)
 [2024-12-21 18:34:09 INFO Test worker] [p1.teamtodo.mail.MailServiceTest] No active profile set, falling back to 1 default profile: "default"
 [2024-12-21 18:34:12 INFO Test worker] [p1.teamtodo.mail.MailServiceTest] Started MailServiceTest in 3.978 seconds (process running for 6.064)
-[2024-12-21 18:34:14 INFO Thread-4] [p1.teamtodo.mail.code.AuthCode] num = 2
+[2024-12-21 18:34:14 INFO Thread-4] [p1.teamtodo.mail.thread.AuthCode] num = 2
 [2024-12-21 18:35:18 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
 [2024-12-21 18:35:18 INFO Test worker] [p1.teamtodo.mail.MailServiceTest] Starting MailServiceTest using Java 17.0.13 with PID 25312 (started by rmwl2 in C:\Users\rmwl2\spring\teamtodo)
 [2024-12-21 18:35:18 INFO Test worker] [p1.teamtodo.mail.MailServiceTest] No active profile set, falling back to 1 default profile: "default"
 [2024-12-21 18:35:21 INFO Test worker] [p1.teamtodo.mail.MailServiceTest] Started MailServiceTest in 4.015 seconds (process running for 6.046)
-[2024-12-21 18:35:23 INFO Thread-4] [p1.teamtodo.mail.code.AuthCode] num = 6
-[2024-12-21 18:35:24 INFO Thread-4] [p1.teamtodo.mail.code.AuthCode] num = 4
-[2024-12-21 18:35:25 INFO Thread-4] [p1.teamtodo.mail.code.AuthCode] num = 2
-[2024-12-21 18:35:26 INFO Thread-4] [p1.teamtodo.mail.code.AuthCode] num = 4
-[2024-12-21 18:35:27 INFO Thread-4] [p1.teamtodo.mail.code.AuthCode] codes = {testmail=6424}
-[2024-12-21 18:35:28 INFO Thread-4] [p1.teamtodo.mail.code.AuthCode] codes: {testmail=6424}
+[2024-12-21 18:35:23 INFO Thread-4] [p1.teamtodo.mail.thread.AuthCode] num = 6
+[2024-12-21 18:35:24 INFO Thread-4] [p1.teamtodo.mail.thread.AuthCode] num = 4
+[2024-12-21 18:35:25 INFO Thread-4] [p1.teamtodo.mail.thread.AuthCode] num = 2
+[2024-12-21 18:35:26 INFO Thread-4] [p1.teamtodo.mail.thread.AuthCode] num = 4
+[2024-12-21 18:35:27 INFO Thread-4] [p1.teamtodo.mail.thread.AuthCode] codes = {testmail=6424}
+[2024-12-21 18:35:28 INFO Thread-4] [p1.teamtodo.mail.thread.AuthCode] codes: {testmail=6424}
 [2024-12-21 18:48:20 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
 [2024-12-21 18:48:20 INFO main] [p1.teamtodo.TeamtodoApplication] Starting TeamtodoApplication using Java 17.0.13 with PID 27516 (C:\Users\rmwl2\spring\teamtodo\build\classes\java\main started by rmwl2 in C:\Users\rmwl2\spring\teamtodo)
 [2024-12-21 18:48:20 INFO main] [p1.teamtodo.TeamtodoApplication] No active profile set, falling back to 1 default profile: "default"
@@ -1088,7 +1088,7 @@ java.sql.SQLSyntaxErrorException: (conn=19) You have an error in your SQL syntax
 [2024-12-21 18:48:25 INFO http-nio-8080-exec-1] [p1.teamtodo.mail.MailController] Send mail to {
     "email" : "wjddnr1gh@naver.com"
 }
-[2024-12-21 18:48:55 INFO Thread-1] [p1.teamtodo.mail.code.AuthCode] codes = {{
+[2024-12-21 18:48:55 INFO Thread-1] [p1.teamtodo.mail.thread.AuthCode] codes = {{
     "email" : "wjddnr1gh@naver.com"
 }=3884}
 [2024-12-21 18:52:05 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
@@ -1108,8 +1108,8 @@ java.sql.SQLSyntaxErrorException: (conn=19) You have an error in your SQL syntax
 [2024-12-21 18:52:11 INFO http-nio-8080-exec-2] [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 1 ms
 [2024-12-21 18:52:11 INFO http-nio-8080-exec-2] [p1.teamtodo.mail.MailController] Send mail to wjddnr1gh@naver.com
 [2024-12-21 18:52:30 INFO http-nio-8080-exec-3] [p1.teamtodo.mail.MailController] Send mail to wjddnr1gh@naver.com
-[2024-12-21 18:52:41 INFO Thread-1] [p1.teamtodo.mail.code.AuthCode] codes = {wjddnr1gh@naver.com=6298}
-[2024-12-21 18:53:00 INFO Thread-2] [p1.teamtodo.mail.code.AuthCode] codes = {}
+[2024-12-21 18:52:41 INFO Thread-1] [p1.teamtodo.mail.thread.AuthCode] codes = {wjddnr1gh@naver.com=6298}
+[2024-12-21 18:53:00 INFO Thread-2] [p1.teamtodo.mail.thread.AuthCode] codes = {}
 [2024-12-21 18:54:43 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
 [2024-12-21 18:54:43 INFO main] [p1.teamtodo.TeamtodoApplication] Starting TeamtodoApplication using Java 17.0.13 with PID 27464 (C:\Users\rmwl2\spring\teamtodo\build\classes\java\main started by rmwl2 in C:\Users\rmwl2\spring\teamtodo)
 [2024-12-21 18:54:43 INFO main] [p1.teamtodo.TeamtodoApplication] No active profile set, falling back to 1 default profile: "default"
@@ -1121,23 +1121,730 @@ java.sql.SQLSyntaxErrorException: (conn=19) You have an error in your SQL syntax
 [2024-12-21 18:55:24 INFO Test worker] [p1.teamtodo.mail.MailServiceTest] Starting MailServiceTest using Java 17.0.13 with PID 17512 (started by rmwl2 in C:\Users\rmwl2\spring\teamtodo)
 [2024-12-21 18:55:24 INFO Test worker] [p1.teamtodo.mail.MailServiceTest] No active profile set, falling back to 1 default profile: "default"
 [2024-12-21 18:55:27 INFO Test worker] [p1.teamtodo.mail.MailServiceTest] Started MailServiceTest in 4.088 seconds (process running for 6.055)
-[2024-12-21 18:55:29 INFO Thread-4] [p1.teamtodo.mail.code.AuthCode] codes = {testmail=104102}
+[2024-12-21 18:55:29 INFO Thread-4] [p1.teamtodo.mail.thread.AuthCode] codes = {testmail=104102}
 [2024-12-21 18:56:54 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
 [2024-12-21 18:56:54 INFO Test worker] [p1.teamtodo.mail.MailServiceTest] Starting MailServiceTest using Java 17.0.13 with PID 25952 (started by rmwl2 in C:\Users\rmwl2\spring\teamtodo)
 [2024-12-21 18:56:54 INFO Test worker] [p1.teamtodo.mail.MailServiceTest] No active profile set, falling back to 1 default profile: "default"
 [2024-12-21 18:56:57 INFO Test worker] [p1.teamtodo.mail.MailServiceTest] Started MailServiceTest in 4.002 seconds (process running for 5.956)
-[2024-12-21 18:56:59 INFO Thread-4] [p1.teamtodo.mail.code.AuthCode] codes = {testmail=0386}
+[2024-12-21 18:56:59 INFO Thread-4] [p1.teamtodo.mail.thread.AuthCode] codes = {testmail=0386}
 [2024-12-21 18:57:49 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
 [2024-12-21 18:57:49 INFO Test worker] [p1.teamtodo.mail.MailServiceTest] Starting MailServiceTest using Java 17.0.13 with PID 25348 (started by rmwl2 in C:\Users\rmwl2\spring\teamtodo)
 [2024-12-21 18:57:49 INFO Test worker] [p1.teamtodo.mail.MailServiceTest] No active profile set, falling back to 1 default profile: "default"
 [2024-12-21 18:57:53 INFO Test worker] [p1.teamtodo.mail.MailServiceTest] Started MailServiceTest in 4.096 seconds (process running for 6.107)
-[2024-12-21 18:57:54 INFO Thread-4] [p1.teamtodo.mail.code.AuthCode] codes = {testmail=5850}
-[2024-12-21 18:57:56 INFO Thread-5] [p1.teamtodo.mail.code.AuthCode] codes = {testmail=4534}
+[2024-12-21 18:57:54 INFO Thread-4] [p1.teamtodo.mail.thread.AuthCode] codes = {testmail=5850}
+[2024-12-21 18:57:56 INFO Thread-5] [p1.teamtodo.mail.thread.AuthCode] codes = {testmail=4534}
 [2024-12-21 18:58:16 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
 [2024-12-21 18:58:16 INFO Test worker] [p1.teamtodo.mail.MailServiceTest] Starting MailServiceTest using Java 17.0.13 with PID 10028 (started by rmwl2 in C:\Users\rmwl2\spring\teamtodo)
 [2024-12-21 18:58:16 INFO Test worker] [p1.teamtodo.mail.MailServiceTest] No active profile set, falling back to 1 default profile: "default"
 [2024-12-21 18:58:19 INFO Test worker] [p1.teamtodo.mail.MailServiceTest] Started MailServiceTest in 3.859 seconds (process running for 5.797)
-[2024-12-21 18:58:20 INFO Thread-4] [p1.teamtodo.mail.code.AuthCode] codes = {testmail=3821}
-[2024-12-21 18:58:22 INFO Thread-5] [p1.teamtodo.mail.code.AuthCode] codes = {testmail=9915}
-[2024-12-21 18:58:24 INFO Thread-6] [p1.teamtodo.mail.code.AuthCode] codes = {testmail=6688}
-[2024-12-21 18:58:26 INFO Thread-7] [p1.teamtodo.mail.code.AuthCode] codes = {testmail=9841}
+[2024-12-21 18:58:20 INFO Thread-4] [p1.teamtodo.mail.thread.AuthCode] codes = {testmail=3821}
+[2024-12-21 18:58:22 INFO Thread-5] [p1.teamtodo.mail.thread.AuthCode] codes = {testmail=9915}
+[2024-12-21 18:58:24 INFO Thread-6] [p1.teamtodo.mail.thread.AuthCode] codes = {testmail=6688}
+[2024-12-21 18:58:26 INFO Thread-7] [p1.teamtodo.mail.thread.AuthCode] codes = {testmail=9841}
+[2024-12-22 18:27:38 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-22 18:27:38 INFO Test worker] [p1.teamtodo.user.UserServiceTest] Starting UserServiceTest using Java 17.0.13 with PID 21568 (started by rmwl2 in C:\Users\rmwl2\spring\teamtodo)
+[2024-12-22 18:27:38 INFO Test worker] [p1.teamtodo.user.UserServiceTest] No active profile set, falling back to 1 default profile: "default"
+[2024-12-22 18:27:40 INFO Test worker] [p1.teamtodo.common.MyFileUtils] MyFileUtils - 생성자: C:/Users/rmwl2/spring/teamtodo/file
+[2024-12-22 18:27:42 INFO Test worker] [p1.teamtodo.user.UserServiceTest] Started UserServiceTest in 4.379 seconds (process running for 6.546)
+[2024-12-22 18:27:43 INFO Test worker] [p1.teamtodo.user.UserServiceTest] res=ResponseResult(code=CE)
+[2024-12-22 18:45:41 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-22 18:45:42 INFO Test worker] [p1.teamtodo.user.UserServiceTest] Starting UserServiceTest using Java 17.0.13 with PID 26328 (started by rmwl2 in C:\Users\rmwl2\spring\teamtodo)
+[2024-12-22 18:45:42 INFO Test worker] [p1.teamtodo.user.UserServiceTest] No active profile set, falling back to 1 default profile: "default"
+[2024-12-22 18:45:43 INFO Test worker] [p1.teamtodo.common.MyFileUtils] MyFileUtils - 생성자: C:/Users/rmwl2/spring/teamtodo/file
+[2024-12-22 18:45:45 INFO Test worker] [p1.teamtodo.user.UserServiceTest] Started UserServiceTest in 4.063 seconds (process running for 6.071)
+[2024-12-22 18:53:11 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-22 18:53:11 INFO Test worker] [p1.teamtodo.user.UserServiceTest] Starting UserServiceTest using Java 17.0.13 with PID 23092 (started by rmwl2 in C:\Users\rmwl2\spring\teamtodo)
+[2024-12-22 18:53:11 INFO Test worker] [p1.teamtodo.user.UserServiceTest] No active profile set, falling back to 1 default profile: "default"
+[2024-12-22 18:53:13 INFO Test worker] [p1.teamtodo.common.MyFileUtils] MyFileUtils - 생성자: C:/Users/rmwl2/spring/teamtodo/file
+[2024-12-22 18:53:15 INFO Test worker] [p1.teamtodo.user.UserServiceTest] Started UserServiceTest in 4.134 seconds (process running for 6.216)
+[2024-12-22 18:53:18 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-22 18:53:19 INFO Test worker] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@3e89f5bc
+[2024-12-22 18:53:19 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-22 18:53:19 ERRORTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyConnection.prepareStatement(ProxyConnection.java:328)
+1. SELECT EXISTS (
+            SELECT email FROM `user`
+            WHERE email={email}
+        )
+ {FAILED after -1 msec}
+java.sql.SQLException: unknown escape sequence {email}
+	at org.mariadb.jdbc.util.NativeSql.resolveEscapes(NativeSql.java:194)
+	at org.mariadb.jdbc.util.NativeSql.parse(NativeSql.java:122)
+	at org.mariadb.jdbc.Connection.prepareInternal(Connection.java:170)
+	at org.mariadb.jdbc.Connection.prepareStatement(Connection.java:125)
+	at net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy.prepareStatement(ConnectionSpy.java:475)
+	at com.zaxxer.hikari.pool.ProxyConnection.prepareStatement(ProxyConnection.java:328)
+	at com.zaxxer.hikari.pool.HikariProxyConnection.prepareStatement(HikariProxyConnection.java)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.instantiateStatement(PreparedStatementHandler.java:88)
+	at org.apache.ibatis.executor.statement.BaseStatementHandler.prepare(BaseStatementHandler.java:90)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.prepare(RoutingStatementHandler.java:60)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:90)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:64)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:336)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:158)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:110)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:90)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:154)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:142)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:75)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:333)
+	at jdk.proxy3/jdk.proxy3.$Proxy86.selectOne(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:154)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:87)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:141)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy3/jdk.proxy3.$Proxy87.checkDuplicateEmail(Unknown Source)
+	at p1.teamtodo.user.UserService.signUp(UserService.java:33)
+	at p1.teamtodo.user.UserServiceTest.signUp(UserServiceTest.java:37)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:156)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:124)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:99)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:94)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:63)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92)
+	at jdk.proxy1/jdk.proxy1.$Proxy4.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:200)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:132)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:121)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+[2024-12-22 18:53:19 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-22 18:53:19 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-22 18:53:56 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-22 18:53:56 INFO Test worker] [p1.teamtodo.user.UserServiceTest] Starting UserServiceTest using Java 17.0.13 with PID 24896 (started by rmwl2 in C:\Users\rmwl2\spring\teamtodo)
+[2024-12-22 18:53:56 INFO Test worker] [p1.teamtodo.user.UserServiceTest] No active profile set, falling back to 1 default profile: "default"
+[2024-12-22 18:53:58 INFO Test worker] [p1.teamtodo.common.MyFileUtils] MyFileUtils - 생성자: C:/Users/rmwl2/spring/teamtodo/file
+[2024-12-22 18:53:59 INFO Test worker] [p1.teamtodo.user.UserServiceTest] Started UserServiceTest in 4.401 seconds (process running for 6.443)
+[2024-12-22 18:54:03 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-22 18:54:03 INFO Test worker] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@2560a7be
+[2024-12-22 18:54:03 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-22 18:54:03 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT EXISTS (
+            SELECT email FROM `user`
+            WHERE email='test@email.com'
+        )
+ {executed in 1 msec}
+[2024-12-22 18:54:03 INFO Test worker] [jdbc.resultsettable] 
+|-------------------------------------------------------------------------------------------------|
+|exists (
+            select email from `user`
+            where email='test@email.com'
+        ) |
+|-------------------------------------------------------------------------------------------------|
+|false                                                                                            |
+|-------------------------------------------------------------------------------------------------|
+
+[2024-12-22 18:54:03 INFO Test worker] [p1.teamtodo.user.UserServiceTest] ResponseResult(code=DE)
+[2024-12-22 18:54:03 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-22 18:54:03 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-22 18:56:27 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-22 18:56:27 INFO Test worker] [p1.teamtodo.user.UserServiceTest] Starting UserServiceTest using Java 17.0.13 with PID 22784 (started by rmwl2 in C:\Users\rmwl2\spring\teamtodo)
+[2024-12-22 18:56:27 INFO Test worker] [p1.teamtodo.user.UserServiceTest] No active profile set, falling back to 1 default profile: "default"
+[2024-12-22 18:56:29 INFO Test worker] [p1.teamtodo.common.MyFileUtils] MyFileUtils - 생성자: C:/Users/rmwl2/spring/teamtodo/file
+[2024-12-22 18:56:30 INFO Test worker] [p1.teamtodo.user.UserServiceTest] Started UserServiceTest in 4.12 seconds (process running for 6.195)
+[2024-12-22 18:56:34 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-22 18:56:34 INFO Test worker] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@576b385d
+[2024-12-22 18:56:34 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-22 18:56:34 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT EXISTS (
+            SELECT email FROM `user`
+            WHERE email='test@email.com'
+        )
+ {executed in 1 msec}
+[2024-12-22 18:56:34 INFO Test worker] [jdbc.resultsettable] 
+|-------------------------------------------------------------------------------------------------|
+|exists (
+            select email from `user`
+            where email='test@email.com'
+        ) |
+|-------------------------------------------------------------------------------------------------|
+|false                                                                                            |
+|-------------------------------------------------------------------------------------------------|
+
+[2024-12-22 18:56:34 INFO Test worker] [p1.teamtodo.user.UserServiceTest] ResponseResult(code=DE)
+[2024-12-22 18:56:34 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-22 18:56:34 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-22 18:56:55 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-22 18:56:55 INFO Test worker] [p1.teamtodo.user.UserServiceTest] Starting UserServiceTest using Java 17.0.13 with PID 26612 (started by rmwl2 in C:\Users\rmwl2\spring\teamtodo)
+[2024-12-22 18:56:55 INFO Test worker] [p1.teamtodo.user.UserServiceTest] No active profile set, falling back to 1 default profile: "default"
+[2024-12-22 18:56:57 INFO Test worker] [p1.teamtodo.common.MyFileUtils] MyFileUtils - 생성자: C:/Users/rmwl2/spring/teamtodo/file
+[2024-12-22 18:56:59 INFO Test worker] [p1.teamtodo.user.UserServiceTest] Started UserServiceTest in 4.585 seconds (process running for 7.181)
+[2024-12-22 18:57:33 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-22 18:57:33 INFO Test worker] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@594c66c3
+[2024-12-22 18:57:33 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-22 18:57:33 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT EXISTS (
+            SELECT email FROM `user`
+            WHERE email='test@email.com'
+        )
+ {executed in 2 msec}
+[2024-12-22 18:57:33 INFO Test worker] [jdbc.resultsettable] 
+|-------------------------------------------------------------------------------------------------|
+|exists (
+            select email from `user`
+            where email='test@email.com'
+        ) |
+|-------------------------------------------------------------------------------------------------|
+|false                                                                                            |
+|-------------------------------------------------------------------------------------------------|
+
+[2024-12-22 18:58:12 INFO Test worker] [p1.teamtodo.user.UserServiceTest] ResponseResult(code=DE)
+[2024-12-22 19:00:24 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-22 19:00:24 INFO Test worker] [p1.teamtodo.user.UserServiceTest] Starting UserServiceTest using Java 17.0.13 with PID 19876 (started by rmwl2 in C:\Users\rmwl2\spring\teamtodo)
+[2024-12-22 19:00:24 INFO Test worker] [p1.teamtodo.user.UserServiceTest] No active profile set, falling back to 1 default profile: "default"
+[2024-12-22 19:00:25 INFO Test worker] [p1.teamtodo.common.MyFileUtils] MyFileUtils - 생성자: C:/Users/rmwl2/spring/teamtodo/file
+[2024-12-22 19:00:27 INFO Test worker] [p1.teamtodo.user.UserServiceTest] Started UserServiceTest in 3.931 seconds (process running for 5.946)
+[2024-12-22 19:00:30 INFO Test worker] [p1.teamtodo.user.UserServiceTest] ResponseResult(code=CE)
+[2024-12-22 19:00:52 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-22 19:00:52 INFO Test worker] [p1.teamtodo.user.UserServiceTest] Starting UserServiceTest using Java 17.0.13 with PID 26452 (started by rmwl2 in C:\Users\rmwl2\spring\teamtodo)
+[2024-12-22 19:00:52 INFO Test worker] [p1.teamtodo.user.UserServiceTest] No active profile set, falling back to 1 default profile: "default"
+[2024-12-22 19:00:54 INFO Test worker] [p1.teamtodo.common.MyFileUtils] MyFileUtils - 생성자: C:/Users/rmwl2/spring/teamtodo/file
+[2024-12-22 19:00:55 INFO Test worker] [p1.teamtodo.user.UserServiceTest] Started UserServiceTest in 3.894 seconds (process running for 5.969)
+[2024-12-22 19:00:59 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-22 19:00:59 INFO Test worker] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@576b385d
+[2024-12-22 19:00:59 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-22 19:00:59 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT EXISTS (
+            SELECT email FROM `user`
+            WHERE email='test1@email.com'
+        )
+ {executed in 1 msec}
+[2024-12-22 19:00:59 INFO Test worker] [jdbc.resultsettable] 
+|--------------------------------------------------------------------------------------------------|
+|exists (
+            select email from `user`
+            where email='test1@email.com'
+        ) |
+|--------------------------------------------------------------------------------------------------|
+|true                                                                                              |
+|--------------------------------------------------------------------------------------------------|
+
+[2024-12-22 19:00:59 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT EXISTS (
+            SELECT nickname FROM `user`
+            WHERE nickname='test'
+        )
+ {executed in 0 msec}
+[2024-12-22 19:00:59 INFO Test worker] [jdbc.resultsettable] 
+|---------------------------------------------------------------------------------------------|
+|exists (
+            select nickname from `user`
+            where nickname='test'
+        ) |
+|---------------------------------------------------------------------------------------------|
+|false                                                                                        |
+|---------------------------------------------------------------------------------------------|
+
+[2024-12-22 19:00:59 INFO Test worker] [p1.teamtodo.user.UserServiceTest] ResponseResult(code=DPN)
+[2024-12-22 19:00:59 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-22 19:00:59 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-22 19:02:08 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-22 19:02:08 INFO Test worker] [p1.teamtodo.user.UserServiceTest] Starting UserServiceTest using Java 17.0.13 with PID 20884 (started by rmwl2 in C:\Users\rmwl2\spring\teamtodo)
+[2024-12-22 19:02:08 INFO Test worker] [p1.teamtodo.user.UserServiceTest] No active profile set, falling back to 1 default profile: "default"
+[2024-12-22 19:02:09 INFO Test worker] [p1.teamtodo.common.MyFileUtils] MyFileUtils - 생성자: C:/Users/rmwl2/spring/teamtodo/file
+[2024-12-22 19:02:11 INFO Test worker] [p1.teamtodo.user.UserServiceTest] Started UserServiceTest in 4.071 seconds (process running for 6.123)
+[2024-12-22 19:02:15 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-22 19:02:15 INFO Test worker] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@576b385d
+[2024-12-22 19:02:15 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-22 19:02:15 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT EXISTS (
+            SELECT email FROM `user`
+            WHERE email='test@email.com'
+        )
+ {executed in 1 msec}
+[2024-12-22 19:02:15 INFO Test worker] [jdbc.resultsettable] 
+|-------------------------------------------------------------------------------------------------|
+|exists (
+            select email from `user`
+            where email='test@email.com'
+        ) |
+|-------------------------------------------------------------------------------------------------|
+|false                                                                                            |
+|-------------------------------------------------------------------------------------------------|
+
+[2024-12-22 19:02:15 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT EXISTS (
+            SELECT nickname FROM `user`
+            WHERE nickname='test'
+        )
+ {executed in 0 msec}
+[2024-12-22 19:02:15 INFO Test worker] [jdbc.resultsettable] 
+|---------------------------------------------------------------------------------------------|
+|exists (
+            select nickname from `user`
+            where nickname='test'
+        ) |
+|---------------------------------------------------------------------------------------------|
+|false                                                                                        |
+|---------------------------------------------------------------------------------------------|
+
+[2024-12-22 19:02:15 INFO Test worker] [p1.teamtodo.user.UserServiceTest] ResponseResult(code=PFE)
+[2024-12-22 19:02:15 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-22 19:02:15 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-22 19:02:40 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-22 19:02:40 INFO Test worker] [p1.teamtodo.user.UserServiceTest] Starting UserServiceTest using Java 17.0.13 with PID 23076 (started by rmwl2 in C:\Users\rmwl2\spring\teamtodo)
+[2024-12-22 19:02:40 INFO Test worker] [p1.teamtodo.user.UserServiceTest] No active profile set, falling back to 1 default profile: "default"
+[2024-12-22 19:02:42 INFO Test worker] [p1.teamtodo.common.MyFileUtils] MyFileUtils - 생성자: C:/Users/rmwl2/spring/teamtodo/file
+[2024-12-22 19:02:44 INFO Test worker] [p1.teamtodo.user.UserServiceTest] Started UserServiceTest in 4.05 seconds (process running for 6.099)
+[2024-12-22 19:02:47 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-22 19:02:47 INFO Test worker] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@2560a7be
+[2024-12-22 19:02:47 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-22 19:02:47 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT EXISTS (
+            SELECT email FROM `user`
+            WHERE email='test@email.com'
+        )
+ {executed in 1 msec}
+[2024-12-22 19:02:47 INFO Test worker] [jdbc.resultsettable] 
+|-------------------------------------------------------------------------------------------------|
+|exists (
+            select email from `user`
+            where email='test@email.com'
+        ) |
+|-------------------------------------------------------------------------------------------------|
+|false                                                                                            |
+|-------------------------------------------------------------------------------------------------|
+
+[2024-12-22 19:02:47 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT EXISTS (
+            SELECT nickname FROM `user`
+            WHERE nickname='test'
+        )
+ {executed in 0 msec}
+[2024-12-22 19:02:47 INFO Test worker] [jdbc.resultsettable] 
+|---------------------------------------------------------------------------------------------|
+|exists (
+            select nickname from `user`
+            where nickname='test'
+        ) |
+|---------------------------------------------------------------------------------------------|
+|false                                                                                        |
+|---------------------------------------------------------------------------------------------|
+
+[2024-12-22 19:02:47 INFO Test worker] [p1.teamtodo.user.UserServiceTest] ResponseResult(code=OK)
+[2024-12-22 19:02:47 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-22 19:02:47 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-22 19:03:01 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-22 19:03:01 INFO Test worker] [p1.teamtodo.user.UserServiceTest] Starting UserServiceTest using Java 17.0.13 with PID 26492 (started by rmwl2 in C:\Users\rmwl2\spring\teamtodo)
+[2024-12-22 19:03:01 INFO Test worker] [p1.teamtodo.user.UserServiceTest] No active profile set, falling back to 1 default profile: "default"
+[2024-12-22 19:03:03 INFO Test worker] [p1.teamtodo.common.MyFileUtils] MyFileUtils - 생성자: C:/Users/rmwl2/spring/teamtodo/file
+[2024-12-22 19:03:05 INFO Test worker] [p1.teamtodo.user.UserServiceTest] Started UserServiceTest in 4.196 seconds (process running for 6.274)
+[2024-12-22 19:03:08 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-22 19:03:08 INFO Test worker] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@576b385d
+[2024-12-22 19:03:08 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-22 19:03:08 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT EXISTS (
+            SELECT email FROM `user`
+            WHERE email='test@email.com'
+        )
+ {executed in 1 msec}
+[2024-12-22 19:03:08 INFO Test worker] [jdbc.resultsettable] 
+|-------------------------------------------------------------------------------------------------|
+|exists (
+            select email from `user`
+            where email='test@email.com'
+        ) |
+|-------------------------------------------------------------------------------------------------|
+|false                                                                                            |
+|-------------------------------------------------------------------------------------------------|
+
+[2024-12-22 19:03:08 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT EXISTS (
+            SELECT nickname FROM `user`
+            WHERE nickname='test'
+        )
+ {executed in 1 msec}
+[2024-12-22 19:03:08 INFO Test worker] [jdbc.resultsettable] 
+|---------------------------------------------------------------------------------------------|
+|exists (
+            select nickname from `user`
+            where nickname='test'
+        ) |
+|---------------------------------------------------------------------------------------------|
+|false                                                                                        |
+|---------------------------------------------------------------------------------------------|
+
+[2024-12-22 19:03:08 INFO Test worker] [p1.teamtodo.user.UserServiceTest] ResponseResult(code=PCE)
+[2024-12-22 19:03:08 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-22 19:03:09 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-22 19:03:33 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-22 19:03:33 INFO Test worker] [p1.teamtodo.user.UserServiceTest] Starting UserServiceTest using Java 17.0.13 with PID 22192 (started by rmwl2 in C:\Users\rmwl2\spring\teamtodo)
+[2024-12-22 19:03:33 INFO Test worker] [p1.teamtodo.user.UserServiceTest] No active profile set, falling back to 1 default profile: "default"
+[2024-12-22 19:03:34 INFO Test worker] [p1.teamtodo.common.MyFileUtils] MyFileUtils - 생성자: C:/Users/rmwl2/spring/teamtodo/file
+[2024-12-22 19:03:36 INFO Test worker] [p1.teamtodo.user.UserServiceTest] Started UserServiceTest in 4.036 seconds (process running for 6.252)
+[2024-12-22 19:03:40 INFO Test worker] [p1.teamtodo.user.UserServiceTest] ResponseResult(code=CE)
+[2024-12-22 19:05:15 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-22 19:05:15 INFO Test worker] [p1.teamtodo.user.UserServiceTest] Starting UserServiceTest using Java 17.0.13 with PID 23716 (started by rmwl2 in C:\Users\rmwl2\spring\teamtodo)
+[2024-12-22 19:05:15 INFO Test worker] [p1.teamtodo.user.UserServiceTest] No active profile set, falling back to 1 default profile: "default"
+[2024-12-22 19:05:17 INFO Test worker] [p1.teamtodo.common.MyFileUtils] MyFileUtils - 생성자: C:/Users/rmwl2/spring/teamtodo/file
+[2024-12-22 19:05:19 INFO Test worker] [p1.teamtodo.user.UserServiceTest] Started UserServiceTest in 4.366 seconds (process running for 6.517)
+[2024-12-22 19:05:23 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-22 19:05:23 INFO Test worker] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@576b385d
+[2024-12-22 19:05:23 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-22 19:05:23 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT EXISTS (
+            SELECT email FROM `user`
+            WHERE email='test@email.com'
+        )
+ {executed in 1 msec}
+[2024-12-22 19:05:23 INFO Test worker] [jdbc.resultsettable] 
+|-------------------------------------------------------------------------------------------------|
+|exists (
+            select email from `user`
+            where email='test@email.com'
+        ) |
+|-------------------------------------------------------------------------------------------------|
+|false                                                                                            |
+|-------------------------------------------------------------------------------------------------|
+
+[2024-12-22 19:05:23 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT EXISTS (
+            SELECT nickname FROM `user`
+            WHERE nickname='test'
+        )
+ {executed in 1 msec}
+[2024-12-22 19:05:23 INFO Test worker] [jdbc.resultsettable] 
+|---------------------------------------------------------------------------------------------|
+|exists (
+            select nickname from `user`
+            where nickname='test'
+        ) |
+|---------------------------------------------------------------------------------------------|
+|false                                                                                        |
+|---------------------------------------------------------------------------------------------|
+
+[2024-12-22 19:05:23 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO `user`
+        SET nickname = 'test'
+            , password = '123456789'
+            , email = 'test@email.com'
+            , profile_pic = NULL
+            , first_login = TRUE
+ {executed in 13 msec}
+[2024-12-22 19:05:23 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:229)
+1. getGeneratedKeys on query: INSERT INTO `user`
+        SET nickname = 'test'
+            , password = '123456789'
+            , email = 'test@email.com'
+            , profile_pic = NULL
+            , first_login = TRUE
+ {executed in 1 msec}
+[2024-12-22 19:05:23 INFO Test worker] [jdbc.resultsettable] 
+|----------|
+|insert_id |
+|----------|
+|2         |
+|----------|
+
+[2024-12-22 19:05:23 INFO Test worker] [p1.teamtodo.user.UserServiceTest] ResponseResult(code=OK)
+[2024-12-22 19:05:23 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-22 19:05:23 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-22 19:05:59 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-22 19:05:59 INFO Test worker] [p1.teamtodo.user.UserServiceTest] Starting UserServiceTest using Java 17.0.13 with PID 21536 (started by rmwl2 in C:\Users\rmwl2\spring\teamtodo)
+[2024-12-22 19:05:59 INFO Test worker] [p1.teamtodo.user.UserServiceTest] No active profile set, falling back to 1 default profile: "default"
+[2024-12-22 19:06:01 INFO Test worker] [p1.teamtodo.common.MyFileUtils] MyFileUtils - 생성자: C:/Users/rmwl2/spring/teamtodo/file
+[2024-12-22 19:06:02 INFO Test worker] [p1.teamtodo.user.UserServiceTest] Started UserServiceTest in 4.362 seconds (process running for 6.399)
+[2024-12-22 19:06:06 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-22 19:06:06 INFO Test worker] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@51da7b08
+[2024-12-22 19:06:06 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-22 19:06:06 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT EXISTS (
+            SELECT email FROM `user`
+            WHERE email='test@email.com'
+        )
+ {executed in 1 msec}
+[2024-12-22 19:06:06 INFO Test worker] [jdbc.resultsettable] 
+|-------------------------------------------------------------------------------------------------|
+|exists (
+            select email from `user`
+            where email='test@email.com'
+        ) |
+|-------------------------------------------------------------------------------------------------|
+|true                                                                                             |
+|-------------------------------------------------------------------------------------------------|
+
+[2024-12-22 19:06:06 INFO Test worker] [p1.teamtodo.user.UserServiceTest] ResponseResult(code=DPE)
+[2024-12-22 19:06:06 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-22 19:06:06 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-22 19:06:26 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-22 19:06:26 INFO Test worker] [p1.teamtodo.user.UserServiceTest] Starting UserServiceTest using Java 17.0.13 with PID 26132 (started by rmwl2 in C:\Users\rmwl2\spring\teamtodo)
+[2024-12-22 19:06:26 INFO Test worker] [p1.teamtodo.user.UserServiceTest] No active profile set, falling back to 1 default profile: "default"
+[2024-12-22 19:06:28 INFO Test worker] [p1.teamtodo.common.MyFileUtils] MyFileUtils - 생성자: C:/Users/rmwl2/spring/teamtodo/file
+[2024-12-22 19:06:29 INFO Test worker] [p1.teamtodo.user.UserServiceTest] Started UserServiceTest in 3.874 seconds (process running for 5.939)
+[2024-12-22 19:06:33 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-22 19:06:33 INFO Test worker] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@2560a7be
+[2024-12-22 19:06:33 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-22 19:06:33 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT EXISTS (
+            SELECT email FROM `user`
+            WHERE email='test2@email.com'
+        )
+ {executed in 1 msec}
+[2024-12-22 19:06:33 INFO Test worker] [jdbc.resultsettable] 
+|--------------------------------------------------------------------------------------------------|
+|exists (
+            select email from `user`
+            where email='test2@email.com'
+        ) |
+|--------------------------------------------------------------------------------------------------|
+|false                                                                                             |
+|--------------------------------------------------------------------------------------------------|
+
+[2024-12-22 19:06:33 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT EXISTS (
+            SELECT nickname FROM `user`
+            WHERE nickname='test1'
+        )
+ {executed in 1 msec}
+[2024-12-22 19:06:33 INFO Test worker] [jdbc.resultsettable] 
+|----------------------------------------------------------------------------------------------|
+|exists (
+            select nickname from `user`
+            where nickname='test1'
+        ) |
+|----------------------------------------------------------------------------------------------|
+|true                                                                                          |
+|----------------------------------------------------------------------------------------------|
+
+[2024-12-22 19:06:33 INFO Test worker] [p1.teamtodo.user.UserServiceTest] ResponseResult(code=DPN)
+[2024-12-22 19:06:33 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-22 19:06:33 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-22 19:07:59 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-22 19:07:59 INFO Test worker] [p1.teamtodo.user.UserServiceTest] Starting UserServiceTest using Java 17.0.13 with PID 14560 (started by rmwl2 in C:\Users\rmwl2\spring\teamtodo)
+[2024-12-22 19:07:59 INFO Test worker] [p1.teamtodo.user.UserServiceTest] No active profile set, falling back to 1 default profile: "default"
+[2024-12-22 19:08:01 INFO Test worker] [p1.teamtodo.common.MyFileUtils] MyFileUtils - 생성자: C:/Users/rmwl2/spring/teamtodo/file
+[2024-12-22 19:08:03 INFO Test worker] [p1.teamtodo.user.UserServiceTest] Started UserServiceTest in 4.247 seconds (process running for 6.565)
+[2024-12-22 19:08:06 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-22 19:08:07 INFO Test worker] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@576b385d
+[2024-12-22 19:08:07 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-22 19:08:07 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT EXISTS (
+            SELECT email FROM `user`
+            WHERE email='test2@test.com'
+        )
+ {executed in 1 msec}
+[2024-12-22 19:08:07 INFO Test worker] [jdbc.resultsettable] 
+|-------------------------------------------------------------------------------------------------|
+|exists (
+            select email from `user`
+            where email='test2@test.com'
+        ) |
+|-------------------------------------------------------------------------------------------------|
+|false                                                                                            |
+|-------------------------------------------------------------------------------------------------|
+
+[2024-12-22 19:08:07 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT EXISTS (
+            SELECT nickname FROM `user`
+            WHERE nickname='test2'
+        )
+ {executed in 1 msec}
+[2024-12-22 19:08:07 INFO Test worker] [jdbc.resultsettable] 
+|----------------------------------------------------------------------------------------------|
+|exists (
+            select nickname from `user`
+            where nickname='test2'
+        ) |
+|----------------------------------------------------------------------------------------------|
+|false                                                                                         |
+|----------------------------------------------------------------------------------------------|
+
+[2024-12-22 19:08:07 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO `user`
+        SET nickname = 'test2'
+            , password = '123456789'
+            , email = 'test2@test.com'
+            , profile_pic = NULL
+            , first_login = TRUE
+ {executed in 6 msec}
+[2024-12-22 19:08:07 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:229)
+1. getGeneratedKeys on query: INSERT INTO `user`
+        SET nickname = 'test2'
+            , password = '123456789'
+            , email = 'test2@test.com'
+            , profile_pic = NULL
+            , first_login = TRUE
+ {executed in 2 msec}
+[2024-12-22 19:08:07 INFO Test worker] [jdbc.resultsettable] 
+|----------|
+|insert_id |
+|----------|
+|3         |
+|----------|
+
+[2024-12-22 19:08:07 INFO Test worker] [p1.teamtodo.user.UserServiceTest] ResponseResult(code=OK)
+[2024-12-22 19:08:07 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-22 19:08:07 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-22 19:22:40 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-22 19:22:40 INFO main] [p1.teamtodo.TeamtodoApplication] Starting TeamtodoApplication using Java 17.0.13 with PID 15024 (C:\Users\rmwl2\spring\teamtodo\build\classes\java\main started by rmwl2 in C:\Users\rmwl2\spring\teamtodo)
+[2024-12-22 19:22:40 INFO main] [p1.teamtodo.TeamtodoApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-22 19:22:41 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-22 19:22:41 INFO main] [org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"]
+[2024-12-22 19:22:41 INFO main] [org.apache.catalina.core.StandardService] Starting service [Tomcat]
+[2024-12-22 19:22:41 INFO main] [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/10.1.33]
+[2024-12-22 19:22:41 INFO main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
+[2024-12-22 19:22:41 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 1643 ms
+[2024-12-22 19:22:41 INFO main] [p1.teamtodo.common.MyFileUtils] MyFileUtils - 생성자: C:/Users/rmwl2/spring/teamtodo/file
+[2024-12-22 19:22:42 INFO main] [org.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"]
+[2024-12-22 19:22:42 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 8080 (http) with context path '/'
+[2024-12-22 19:22:42 INFO main] [p1.teamtodo.TeamtodoApplication] Started TeamtodoApplication in 3.57 seconds (process running for 4.354)
+[2024-12-22 19:22:51 INFO http-nio-8080-exec-2] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2024-12-22 19:22:51 INFO http-nio-8080-exec-2] [org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+[2024-12-22 19:22:51 INFO http-nio-8080-exec-2] [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 1 ms
+[2024-12-22 19:22:51 INFO http-nio-8080-exec-2] [p1.teamtodo.mail.MailController] Send mail to wjddnr1gh@naver.com
+[2024-12-22 19:24:24 INFO http-nio-8080-exec-4] [p1.teamtodo.user.UserController] req = SignUpReq(email=wjddnr1gh@naver.com, nickname=test3, password=123456789, passwordConfirm=123456789)
+[2024-12-22 19:24:24 INFO http-nio-8080-exec-4] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-22 19:24:25 INFO http-nio-8080-exec-4] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@75bf0e83
+[2024-12-22 19:24:25 INFO http-nio-8080-exec-4] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-22 19:24:25 DEBUGhttp-nio-8080-exec-4] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT EXISTS (
+            SELECT email FROM `user`
+            WHERE email='wjddnr1gh@naver.com'
+        )
+ {executed in 1 msec}
+[2024-12-22 19:24:25 INFO http-nio-8080-exec-4] [jdbc.resultsettable] 
+|------------------------------------------------------------------------------------------------------|
+|exists (
+            select email from `user`
+            where email='wjddnr1gh@naver.com'
+        ) |
+|------------------------------------------------------------------------------------------------------|
+|false                                                                                                 |
+|------------------------------------------------------------------------------------------------------|
+
+[2024-12-22 19:24:25 DEBUGhttp-nio-8080-exec-4] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT EXISTS (
+            SELECT nickname FROM `user`
+            WHERE nickname='test3'
+        )
+ {executed in 1 msec}
+[2024-12-22 19:24:25 INFO http-nio-8080-exec-4] [jdbc.resultsettable] 
+|----------------------------------------------------------------------------------------------|
+|exists (
+            select nickname from `user`
+            where nickname='test3'
+        ) |
+|----------------------------------------------------------------------------------------------|
+|false                                                                                         |
+|----------------------------------------------------------------------------------------------|
+
+[2024-12-22 19:24:25 DEBUGhttp-nio-8080-exec-4] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO `user`
+        SET nickname = 'test3'
+            , password = '123456789'
+            , email = 'wjddnr1gh@naver.com'
+            , profile_pic = '3f3b73d5-02b7-436a-8a97-e8b5e6c82b6d.png'
+            , first_login = TRUE
+ {executed in 7 msec}
+[2024-12-22 19:24:25 DEBUGhttp-nio-8080-exec-4] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:229)
+1. getGeneratedKeys on query: INSERT INTO `user`
+        SET nickname = 'test3'
+            , password = '123456789'
+            , email = 'wjddnr1gh@naver.com'
+            , profile_pic = '3f3b73d5-02b7-436a-8a97-e8b5e6c82b6d.png'
+            , first_login = TRUE
+ {executed in 1 msec}
+[2024-12-22 19:24:25 INFO http-nio-8080-exec-4] [jdbc.resultsettable] 
+|----------|
+|insert_id |
+|----------|
+|4         |
+|----------|
+
+[2024-12-22 19:24:43 INFO http-nio-8080-exec-5] [p1.teamtodo.user.UserController] req = SignUpReq(email=wjddnr1gh@naver.com, nickname=test3, password=123456789, passwordConfirm=123456789)
+[2024-12-22 19:24:43 DEBUGhttp-nio-8080-exec-5] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT EXISTS (
+            SELECT email FROM `user`
+            WHERE email='wjddnr1gh@naver.com'
+        )
+ {executed in 0 msec}
+[2024-12-22 19:24:43 INFO http-nio-8080-exec-5] [jdbc.resultsettable] 
+|------------------------------------------------------------------------------------------------------|
+|exists (
+            select email from `user`
+            where email='wjddnr1gh@naver.com'
+        ) |
+|------------------------------------------------------------------------------------------------------|
+|true                                                                                                  |
+|------------------------------------------------------------------------------------------------------|
+
+[2024-12-22 19:24:49 INFO http-nio-8080-exec-6] [p1.teamtodo.user.UserController] req = SignUpReq(email=wjddnr2gh@naver.com, nickname=test3, password=123456789, passwordConfirm=123456789)
+[2024-12-22 19:24:59 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-22 19:24:59 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.

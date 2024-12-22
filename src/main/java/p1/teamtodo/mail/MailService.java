@@ -5,7 +5,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
 import p1.teamtodo.common.ResponseResult;
-import p1.teamtodo.mail.code.AuthCode;
+import p1.teamtodo.mail.thread.AuthCode;
+import p1.teamtodo.mail.thread.MailCheck;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -17,10 +18,11 @@ public class MailService {
 
     private final JavaMailSender mailSender;
     public static Map<String, String> codes = new HashMap<>();
+    public static Map<String, Boolean> mailChecked = new HashMap<>();
 
     public ResponseResult send(String email) {
 
-        new Thread(new AuthCode(email)).start();
+        new Thread(new AuthCode(email)).start(); // 인증 코드 생성, 3분간 저장
 
         MailHandler mailHandler;
         try {
@@ -34,6 +36,17 @@ public class MailService {
             e.printStackTrace();
             return ResponseResult.databaseError();
         }
+        return ResponseResult.success();
+    }
+
+    public ResponseResult check(String email, String code) {
+        String savedCode = codes.getOrDefault(email, "");
+        if (!savedCode.equals(code)) {
+            return new ResponseResult("FAIL");
+        }
+        codes.remove(code);
+        mailChecked.put(email, true);
+        new Thread(new MailCheck(email)).start(); // 3분간 인증 성공, 이후 만료
         return ResponseResult.success();
     }
 }

@@ -23,8 +23,8 @@ public class MailController {
         return mailService.send(email);
     }
 
-//    @PostMapping("/check")
-//    public ResponseResult checkMail(@RequestBody String email) {
-//
-//    }
+    @PostMapping("/check")
+    public ResponseResult checkMail(String email, String code) {
+        return mailService.check(email, code);
+    }
 }
