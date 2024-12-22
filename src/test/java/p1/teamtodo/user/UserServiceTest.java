@@ -21,7 +21,7 @@ class UserServiceTest {
 
     @Test
     void signUp() {
-        String email = "test2@test.com";
+        String email = "test12312e12e";
         String pass = "123456789";
         String nickname = "test2";
         new Thread(new AuthCode(email)).start();

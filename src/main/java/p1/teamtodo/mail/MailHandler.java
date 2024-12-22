@@ -6,6 +6,7 @@ import org.springframework.core.io.FileSystemResource;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.util.ResourceUtils;
+import p1.teamtodo.common.ResponseResult;
 
 import java.io.File;
 import java.io.IOException;
@@ -52,11 +53,11 @@ public class MailHandler {
     }
 
     // 이메일 발송
-    public void send() {
+    public void send() throws Exception {
         try {
             sender.send(message);
         }catch(Exception e) {
-            e.printStackTrace();
+            throw new Exception(e);
         }
     }
 }

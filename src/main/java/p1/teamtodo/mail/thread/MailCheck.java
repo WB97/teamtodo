@@ -1,5 +1,7 @@
 package p1.teamtodo.mail.thread;
 
+import p1.teamtodo.common.ResponseCode;
+import p1.teamtodo.common.ResponseResult;
 import p1.teamtodo.mail.MailService;
 
 public class MailCheck implements Runnable {

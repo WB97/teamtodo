@@ -1,5 +1,7 @@
 package p1.teamtodo.mail;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
@@ -17,10 +19,9 @@ public class MailController {
     private final MailService mailService;
 
     @PostMapping("/send")
-    public ResponseResult sendMail(@RequestBody GetMailReq req) {
-        String email = req.getEmail();
+    public ResponseResult sendMail(@Valid @RequestBody GetEmailReq email) {
         log.info("Send mail to " + email);
-        return mailService.send(email);
+        return mailService.send(email.getEmail());
     }
 
     @PostMapping("/check")

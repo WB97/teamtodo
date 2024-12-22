@@ -1,7 +1,7 @@
 package p1.teamtodo.user;
 
 import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
@@ -19,7 +19,7 @@ public class UserController {
 
     @PostMapping("/sign-up")
     @Operation(summary = "회원 가입")
-    public ResponseResult signUp(@RequestPart SignUpReq req,
+    public ResponseResult signUp(@Valid @RequestPart SignUpReq req,
                                  @RequestPart MultipartFile pic) {
         log.info("req = {}", req);
         return userService.signUp(req, pic);

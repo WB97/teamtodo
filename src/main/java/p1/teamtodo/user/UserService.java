@@ -6,11 +6,14 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 import p1.teamtodo.common.MyFileUtils;
+import p1.teamtodo.common.ResponseCode;
 import p1.teamtodo.common.ResponseResult;
 import p1.teamtodo.mail.MailService;
 import p1.teamtodo.user.model.dto.UserDto;
 import p1.teamtodo.user.model.req.SignUpReq;
 import p1.teamtodo.user.model.res.SignUpRes;
+
+import java.io.IOException;
 
 @Slf4j
 @Service
@@ -32,7 +35,7 @@ public class UserService {
         // 이메일 중복 검증
         boolean isDuplicateEmail = userMapper.checkDuplicateEmail(email);
         if(isDuplicateEmail) {
-            return ResponseResult.duplicateEmail();
+            return ResponseResult.badRequest(ResponseCode.DUPLICATE_EMAIL);
         }
 
         String nickname = req.getNickname();
@@ -40,7 +43,7 @@ public class UserService {
         // 닉네임 중복 검증
         boolean isDuplicateNick = userMapper.checkDuplicateNick(nickname);
         if(isDuplicateNick) {
-            return ResponseResult.duplicateNickname();
+            return ResponseResult.badRequest(ResponseCode.DUPLICATE_NICKNAME);
         }
 
         String password = req.getPassword();
@@ -49,12 +52,12 @@ public class UserService {
         // 비밀번호 형식 검증
         int passwordLen = password.length();
         if(!(passwordLen >= 8 && passwordLen < 16)) {
-            return ResponseResult.passwordFormatError();
+            return ResponseResult.badRequest(ResponseCode.PASSWORD_FORMAT_ERROR);
         }
 
         // passwordConfirm 일치 여부
         if(!(password.equals(passwordConfirm))) {
-            return ResponseResult.passwordCheckError();
+            return ResponseResult.badRequest(ResponseCode.PASSWORD_CHECK_ERROR);
         }
 
         String randName = pic == null ? null : fileUtils.makeRandomFileName(pic);
@@ -66,16 +69,15 @@ public class UserService {
             return ResponseResult.success();
         }
 
-        fileUtils.makeFolders("user/" + userDto.getUserNo());
+        // 프로필 사진 저장
+        String filePath = "user/" + userDto.getUserNo();
+        fileUtils.makeFolders(filePath);
+        try {
+            fileUtils.transferTo(pic, filePath + "/" + randName);
+        } catch (IOException e) {
+            return ResponseResult.serverError();
+        }
 
         return ResponseResult.success();
     }
-
-//    public ResponseResult test(SignUpReq req, MultipartFile pic) {
-//        // 이메일 중복 검증
-//        SignUpRes res = new SignUpRes();
-//        res.setEmail(req.getEmail());
-//        // 프로필 사진 저장
-//        return res;
-//    }
 }

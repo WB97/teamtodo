@@ -5,6 +5,7 @@ build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 src/main/resources/application.yaml
+logs/logInfo.log
 
 ### STS ###
 .apt_generated

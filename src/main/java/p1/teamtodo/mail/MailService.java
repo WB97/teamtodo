@@ -34,7 +34,7 @@ public class MailService {
             mailHandler.send();
         } catch (Exception e) {
             e.printStackTrace();
-            return ResponseResult.databaseError();
+            return ResponseResult.serverError();
         }
         return ResponseResult.success();
     }

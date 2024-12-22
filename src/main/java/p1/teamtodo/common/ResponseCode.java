@@ -6,12 +6,17 @@ import lombok.RequiredArgsConstructor;
 @Getter
 @RequiredArgsConstructor
 public enum ResponseCode {
+
+    // 성공
+    OK("OK"),
+
     // 공통 에러
     DATABASE_ERROR("DE"),
     NO_FORBIDDEN("NF"),
+    SERVER_ERROR("SE"),
+    FAIL("FAIL"),
 
     // 회원가입
-    OK("OK"),
     DUPLICATE_EMAIL("DPE"),
     DUPLICATE_NICKNAME("DPN"),
     PASSWORD_FORMAT_ERROR("PFE"),
@@ -21,10 +26,10 @@ public enum ResponseCode {
     INCORRECT_EMAIL("IE"),
     INCORRECT_PASSWORD("IP"),
 
-    // 유저 찾기
+    // 조건에 맞는 유저 없음
     NO_EXIST_USER("NEU"),
 
-    //필수 사항
+    //필수 사항 미기재
     NOT_NULL("NN");
 
     private final String code;
