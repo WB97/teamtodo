@@ -3,6 +3,7 @@ package p1.teamtodo.common;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.*;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatusCode;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 @Getter
@@ -41,5 +42,11 @@ public class ResponseResult {
     @ResponseStatus(HttpStatus.FORBIDDEN)
     public static ResponseResult noPermission() {
         return new ResponseResult(ResponseCode.NO_FORBIDDEN.getCode());
+    }
+
+    // 응답 코드 "UA"
+    @ResponseStatus(HttpStatus.UNAUTHORIZED)
+    public static ResponseResult unauthorized() {
+        return new ResponseResult(ResponseCode.UNAUTHORIZED.getCode());
     }
 }

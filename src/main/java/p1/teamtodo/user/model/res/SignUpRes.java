@@ -16,8 +16,8 @@ public class SignUpRes extends ResponseResult {
 
     private String email;
 
-    public SignUpRes(String code, String email) {
-        super(code);
+    public SignUpRes(ResponseCode code, String email) {
+        super(code.getCode());
         this.email = email;
     }
 }

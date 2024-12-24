@@ -1,0 +1,17 @@
+{
+  "code" : "OK",
+  "project" : {
+    "title" : String,
+    "description" : String,
+    "startAt" : String,
+    "deadLine" : String,
+    "memberList" : [
+      {
+        "userNo" : long,
+        "userNickname" : String,
+        "userPic" : String,
+        "isExistSchedule" : boolean
+      }
+    ]
+  }
+}

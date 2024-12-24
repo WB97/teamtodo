@@ -10,6 +10,9 @@ public enum ResponseCode {
     // 성공
     OK("OK"),
 
+    // 이메일 인증 실패
+    UNAUTHORIZED("UA"),
+
     // 공통 에러
     DATABASE_ERROR("DE"),
     NO_FORBIDDEN("NF"),

@@ -13,4 +13,6 @@ public interface UserMapper {
     boolean checkDuplicateEmail(String email);
 
     boolean checkDuplicateNick(String nickname);
+
+    void changeUserPw(long userNo, String password);
 }

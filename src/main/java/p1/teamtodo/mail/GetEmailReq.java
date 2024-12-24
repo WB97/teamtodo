@@ -4,9 +4,13 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
+
+import java.beans.ConstructorProperties;
 
 @Getter
 @Setter
+@ToString
 public class GetEmailReq {
 
     @NotNull

@@ -18,14 +18,14 @@ public class MailController {
 
     private final MailService mailService;
 
-    @PostMapping("/send")
-    public ResponseResult sendMail(@Valid @RequestBody GetEmailReq email) {
-        log.info("Send mail to " + email);
-        return mailService.send(email.getEmail());
+    @GetMapping
+    public ResponseResult sendMail(@Valid @RequestBody GetEmailReq req) {
+        log.info("Send mail to " + req);
+        return mailService.send(req.getEmail());
     }
 
-    @PostMapping("/check")
-    public ResponseResult checkMail(String email, String code) {
-        return mailService.check(email, code);
+    @PostMapping
+    public ResponseResult checkMail(@Valid @RequestBody GetEmailAndCodeReq req) {
+        return mailService.check(req);
     }
 }

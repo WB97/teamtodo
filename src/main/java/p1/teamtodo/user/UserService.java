@@ -2,6 +2,7 @@ package p1.teamtodo.user;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -10,6 +11,7 @@ import p1.teamtodo.common.ResponseCode;
 import p1.teamtodo.common.ResponseResult;
 import p1.teamtodo.mail.MailService;
 import p1.teamtodo.user.model.dto.UserDto;
+import p1.teamtodo.user.model.req.FindPwReq;
 import p1.teamtodo.user.model.req.SignUpReq;
 import p1.teamtodo.user.model.res.SignUpRes;
 
@@ -27,9 +29,8 @@ public class UserService {
 
         String email = req.getEmail();
 
-        // 인증된 이메일이 아닐때, 인증 만료되었을때
-        if(!MailService.mailChecked.getOrDefault(email, false)) {
-            return new ResponseResult("CE");
+        if(!checkEmail(email)) {
+           return ResponseResult.unauthorized();
         }
 
         // 이메일 중복 검증
@@ -79,5 +80,36 @@ public class UserService {
         }
 
         return ResponseResult.success();
+    }
+
+    public ResponseResult findPw(FindPwReq req) {
+
+        String email = req.getEmail();
+
+        if(!checkEmail(email)) {
+            return ResponseResult.unauthorized();
+        }
+
+        if(!req.getPassword().equals(req.getPasswordConfirm())) {
+            return ResponseResult.badRequest(ResponseCode.PASSWORD_CHECK_ERROR);
+        }
+
+        String hashPw = BCrypt.hashpw(req.getPassword(), BCrypt.gensalt());
+
+        try {
+            userMapper.changeUserPw(req.getUserNo(), hashPw);
+        } catch (Exception e) {
+            return ResponseResult.databaseError();
+        }
+        return ResponseResult.success();
+    }
+
+    private boolean checkEmail(String email) {
+
+        // 인증된 이메일이 아닐때, 인증 만료되었을때
+        if(!MailService.mailChecked.getOrDefault(email, false)) {
+            return false;
+        }
+        return true;
     }
 }

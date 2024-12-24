@@ -1,10 +1,7 @@
 package p1.teamtodo.user.model.req;
 
 import io.swagger.v3.oas.annotations.media.Schema;
-import jakarta.validation.constraints.Max;
-import jakarta.validation.constraints.Min;
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.*;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -21,17 +18,17 @@ public class SignUpReq {
     private String email;
 
     @NotNull
-    @Max(30) @Min(5)
+    @Size(min = 5, max = 30)
     @Schema(name = "nickname", description = "유저 닉네임", type= "string", example = "nick", requiredMode = Schema.RequiredMode.REQUIRED)
     private String nickname;
 
     @NotNull
-    @Max(16) @Min(8)
+    @Size(min=8, max=16)
     @Schema(name = "password", description = "유저 패스워드", type= "string", example = "1234", requiredMode = Schema.RequiredMode.REQUIRED)
     private String password;
 
     @NotNull
-    @Max(16) @Min(8)
+    @Size(min=8, max=16)
     @Schema(name = "password_confirm", description = "유저 패스워드 확인", type= "string", example = "1234", requiredMode = Schema.RequiredMode.REQUIRED)
     private String passwordConfirm;
 }

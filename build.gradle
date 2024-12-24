@@ -31,6 +31,7 @@ dependencies {
 	// email
 	implementation 'org.springframework:spring-context-support:6.2.1'
 	implementation 'com.sun.mail:jakarta.mail:2.0.1'
+	implementation 'org.springframework.boot:spring-boot-starter-mail'
 
 	// lombok
 	compileOnly 'org.projectlombok:lombok'
@@ -55,6 +56,7 @@ dependencies {
 
 	// swagger
 	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.6.0'
+
 }
 
 tasks.named('test') {

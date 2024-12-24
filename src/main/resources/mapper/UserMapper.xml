@@ -36,4 +36,10 @@
             WHERE nickname=#{nickname}
         )
     </select>
+
+    <update id="changeUserPw">
+        UPDATE `user`
+        SET password = #{password}
+        WHERE user_no = #{userNo};
+    </update>
 </mapper>

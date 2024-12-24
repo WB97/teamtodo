@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import p1.teamtodo.common.ResponseResult;
+import p1.teamtodo.user.model.req.FindPwReq;
 import p1.teamtodo.user.model.req.SignUpReq;
 
 @Slf4j
@@ -23,5 +24,11 @@ public class UserController {
                                  @RequestPart MultipartFile pic) {
         log.info("req = {}", req);
         return userService.signUp(req, pic);
+    }
+
+    @PostMapping("/find-pw")
+    public ResponseResult findPw(@Valid @RequestBody FindPwReq req) {
+        userService.findPw(req);
+        return ResponseResult.success();
     }
 }
