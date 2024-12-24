@@ -41,9 +41,9 @@ public class MailService {
 
     public ResponseResult check(GetEmailAndCodeReq req) {
         String email = req.getEmail();
-        int code = req.getCode();
+        String code = req.getCode();
         String savedCode = codes.getOrDefault(email, "");
-        if (!savedCode.equals(String.valueOf(code))) {
+        if (!savedCode.equals(code)) {
             return new ResponseResult("FAIL");
         }
         codes.remove(code);

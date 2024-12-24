@@ -19,9 +19,9 @@ public class MailController {
     private final MailService mailService;
 
     @GetMapping
-    public ResponseResult sendMail(@Valid @RequestBody GetEmailReq req) {
-        log.info("Send mail to " + req);
-        return mailService.send(req.getEmail());
+    public ResponseResult sendMail(@Valid String email) {
+        log.info("Send mail to " + email);
+        return mailService.send(email);
     }
 
     @PostMapping

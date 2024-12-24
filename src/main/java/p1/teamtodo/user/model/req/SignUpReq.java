@@ -29,6 +29,6 @@ public class SignUpReq {
 
     @NotNull
     @Size(min=8, max=16)
-    @Schema(name = "password_confirm", description = "유저 패스워드 확인", type= "string", example = "1234", requiredMode = Schema.RequiredMode.REQUIRED)
+    @Schema(name = "passwordConfirm", description = "유저 패스워드 확인", type= "string", example = "1234", requiredMode = Schema.RequiredMode.REQUIRED)
     private String passwordConfirm;
 }

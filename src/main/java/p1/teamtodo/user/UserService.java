@@ -5,15 +5,22 @@ import lombok.extern.slf4j.Slf4j;
 import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 import p1.teamtodo.common.MyFileUtils;
 import p1.teamtodo.common.ResponseCode;
 import p1.teamtodo.common.ResponseResult;
 import p1.teamtodo.mail.MailService;
 import p1.teamtodo.user.model.dto.UserDto;
+import p1.teamtodo.user.model.dto.UserInfo;
+import p1.teamtodo.user.model.dto.UserLoginInfo;
 import p1.teamtodo.user.model.req.FindPwReq;
 import p1.teamtodo.user.model.req.SignUpReq;
+import p1.teamtodo.user.model.req.UserInfoGetReq;
+import p1.teamtodo.user.model.req.UserSignInReq;
 import p1.teamtodo.user.model.res.SignUpRes;
+import p1.teamtodo.user.model.res.UserInfoGetRes;
+import p1.teamtodo.user.model.res.UserSignInRes;
 
 import java.io.IOException;
 
@@ -62,8 +69,8 @@ public class UserService {
         }
 
         String randName = pic == null ? null : fileUtils.makeRandomFileName(pic);
-
-        UserDto userDto = new UserDto(email, nickname, password, randName);
+        String hashPw = BCrypt.hashpw(req.getPassword(), BCrypt.gensalt());
+        UserDto userDto = new UserDto(email, nickname, hashPw, randName);
         userMapper.insUser(userDto);
 
         if(randName == null) {
@@ -111,5 +118,64 @@ public class UserService {
             return false;
         }
         return true;
+    }
+
+    public ResponseResult userSignIn(UserSignInReq p) {
+
+        String email = p.getEmail();
+
+        // 요청 데이터 검증
+        if (p == null || email == null || email.isEmpty()) {
+            return ResponseResult.badRequest(ResponseCode.NOT_NULL); // 이메일이 없거나 비어 있을 경우
+        }
+
+        if (p.getPassword() == null || p.getPassword().isEmpty()) {
+            return ResponseResult.badRequest(ResponseCode.NOT_NULL); // 비밀번호가 없거나 비어 있을 경우
+        }
+
+        // 매퍼 메서드를 호출하여 사용자 조회
+        UserLoginInfo info = userMapper.userSignIn(email);
+        if (info == null) {
+            return ResponseResult.badRequest(ResponseCode.NO_EXIST_USER); // 사용자 정보가 없을 경우
+        }
+
+        // 비밀번호 검증
+        if (!BCrypt.checkpw(p.getPassword(), info.getPassword())) {
+            return ResponseResult.badRequest(ResponseCode.INCORRECT_PASSWORD); // 비밀번호 불일치
+        }
+
+        // 첫 로그인 여부 확인
+        boolean firstLogin = info.isFirstLogin(); // DB에서 firstLogin 여부 가져옴
+
+        // 성공 응답
+        return new UserSignInRes(ResponseCode.OK.getCode(), firstLogin);
+    }
+
+
+    @Transactional
+    public ResponseResult selUserInfo(UserInfoGetReq p) {
+
+        long signedUserNo = p.getSignedUserNo();
+
+        // 3. 사용자 정보 조회
+        UserInfo userInfo = userMapper.selUserInfo(p.getTargetUserNo());
+        if (userInfo == null) {
+            return ResponseResult.badRequest(ResponseCode.NO_EXIST_USER); // 유저 정보 없음
+        }
+
+        // 4. 본인 여부 확인
+        boolean isMyInfo = (signedUserNo == userInfo.getUserNo());
+
+        // 5. UserInfoGetRes 반환
+        UserInfoGetRes response = new UserInfoGetRes();
+        response.setEmail(userInfo.getEmail());
+        response.setNickname(userInfo.getNickname());
+        response.setUserStatusMessage(userInfo.getUserStatusMessage());
+        response.setProfilePic(userInfo.getProfilePic());
+
+        // 본인 여부를 결과에 포함
+        response.setMyInfo(isMyInfo);
+
+        return response;
     }
 }
