@@ -8,6 +8,7 @@ import p1.teamtodo.common.ResponseResult;
 
 @Getter
 @Setter
+@Schema(name = "유저 정보 응답", description = "유저 상세 정보 RESPONSE")
 public class UserInfoGetRes extends ResponseResult {
 
     @Schema(title = "이메일")
@@ -17,10 +18,10 @@ public class UserInfoGetRes extends ResponseResult {
     private String nickname;
 
     @Schema(title = "상태 메시지")
-    private String userStatusMessage;
+    private String statusMessage;
 
-    @Schema(title = "프로필 사진 URL")
-    private String profilePic;
+    @Schema(title = "프로필 사진")
+    private String pic;
 
     @Schema(title = "본인 여부", description = "요청한 사용자가 자신의 정보를 요청했는지 여부")
     private boolean isMyInfo; // 본인 여부 필드 추가
@@ -31,11 +32,11 @@ public class UserInfoGetRes extends ResponseResult {
     }
 
     // 필요한 경우 매개변수 생성자도 추가
-    public UserInfoGetRes(String code, String email, String nickname, String userStatusMessage, String profilePic) {
+    public UserInfoGetRes(String code, String email, String nickname, String statusMessage, String pic) {
         super(code); // ResponseResult 생성자 호출
         this.email = email;
         this.nickname = nickname;
-        this.userStatusMessage = userStatusMessage;
-        this.profilePic = profilePic;
+        this.statusMessage = statusMessage;
+        this.pic = pic;
     }
 }

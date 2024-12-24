@@ -3,7 +3,6 @@ package p1.teamtodo.user;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.mindrot.jbcrypt.BCrypt;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
@@ -14,11 +13,7 @@ import p1.teamtodo.mail.MailService;
 import p1.teamtodo.user.model.dto.UserDto;
 import p1.teamtodo.user.model.dto.UserInfo;
 import p1.teamtodo.user.model.dto.UserLoginInfo;
-import p1.teamtodo.user.model.req.FindPwReq;
-import p1.teamtodo.user.model.req.SignUpReq;
-import p1.teamtodo.user.model.req.UserInfoGetReq;
-import p1.teamtodo.user.model.req.UserSignInReq;
-import p1.teamtodo.user.model.res.SignUpRes;
+import p1.teamtodo.user.model.req.*;
 import p1.teamtodo.user.model.res.UserInfoGetRes;
 import p1.teamtodo.user.model.res.UserSignInRes;
 
@@ -55,7 +50,6 @@ public class UserService {
         }
 
         String password = req.getPassword();
-        String passwordConfirm = req.getPasswordConfirm();
 
         // 비밀번호 형식 검증
         int passwordLen = password.length();
@@ -64,13 +58,13 @@ public class UserService {
         }
 
         // passwordConfirm 일치 여부
-        if(!(password.equals(passwordConfirm))) {
+        if(!checkPassword(password, req.getPasswordConfirm())) {
             return ResponseResult.badRequest(ResponseCode.PASSWORD_CHECK_ERROR);
         }
 
         String randName = pic == null ? null : fileUtils.makeRandomFileName(pic);
-        String hashPw = BCrypt.hashpw(req.getPassword(), BCrypt.gensalt());
-        UserDto userDto = new UserDto(email, nickname, hashPw, randName);
+        String hashPw = generateHashPw(password);
+        UserDto userDto = new UserDto(email, nickname, null, hashPw, randName);
         userMapper.insUser(userDto);
 
         if(randName == null) {
@@ -78,7 +72,7 @@ public class UserService {
         }
 
         // 프로필 사진 저장
-        String filePath = "user/" + userDto.getUserNo();
+        String filePath = "user/" + userDto.getTargetUserNo();
         fileUtils.makeFolders(filePath);
         try {
             fileUtils.transferTo(pic, filePath + "/" + randName);
@@ -89,14 +83,16 @@ public class UserService {
         return ResponseResult.success();
     }
 
-    public ResponseResult findPw(FindPwReq req) {
+    public ResponseResult ChangePw(ChangePwReq req) {
 
         String email = req.getEmail();
 
+        // 이메일 인증 여부
         if(!checkEmail(email)) {
             return ResponseResult.unauthorized();
         }
 
+        // 비밀번호 확인 체크
         if(!req.getPassword().equals(req.getPasswordConfirm())) {
             return ResponseResult.badRequest(ResponseCode.PASSWORD_CHECK_ERROR);
         }
@@ -111,27 +107,9 @@ public class UserService {
         return ResponseResult.success();
     }
 
-    private boolean checkEmail(String email) {
-
-        // 인증된 이메일이 아닐때, 인증 만료되었을때
-        if(!MailService.mailChecked.getOrDefault(email, false)) {
-            return false;
-        }
-        return true;
-    }
-
     public ResponseResult userSignIn(UserSignInReq p) {
 
         String email = p.getEmail();
-
-        // 요청 데이터 검증
-        if (p == null || email == null || email.isEmpty()) {
-            return ResponseResult.badRequest(ResponseCode.NOT_NULL); // 이메일이 없거나 비어 있을 경우
-        }
-
-        if (p.getPassword() == null || p.getPassword().isEmpty()) {
-            return ResponseResult.badRequest(ResponseCode.NOT_NULL); // 비밀번호가 없거나 비어 있을 경우
-        }
 
         // 매퍼 메서드를 호출하여 사용자 조회
         UserLoginInfo info = userMapper.userSignIn(email);
@@ -141,7 +119,7 @@ public class UserService {
 
         // 비밀번호 검증
         if (!BCrypt.checkpw(p.getPassword(), info.getPassword())) {
-            return ResponseResult.badRequest(ResponseCode.INCORRECT_PASSWORD); // 비밀번호 불일치
+            return ResponseResult.badRequest(ResponseCode.INCORRECT_EMAIL_PASSWORD); // 비밀번호 불일치
         }
 
         // 첫 로그인 여부 확인
@@ -170,12 +148,64 @@ public class UserService {
         UserInfoGetRes response = new UserInfoGetRes();
         response.setEmail(userInfo.getEmail());
         response.setNickname(userInfo.getNickname());
-        response.setUserStatusMessage(userInfo.getUserStatusMessage());
-        response.setProfilePic(userInfo.getProfilePic());
+        response.setStatusMessage(userInfo.getStatusMessage());
+        response.setPic(userInfo.getPic());
 
         // 본인 여부를 결과에 포함
         response.setMyInfo(isMyInfo);
 
         return response;
+    }
+
+    @Transactional
+    public ResponseResult editUser(EditUserPutReq req, MultipartFile pic) {
+        String reqPw = req.getPassword();
+
+        // 닉네임 중복 체크
+        if(userMapper.checkDuplicateNick(req.getNickname())) {
+            return ResponseResult.badRequest(ResponseCode.DUPLICATE_NICKNAME);
+        }
+
+        // 비밀번호 확인 체크
+        if(!checkPassword(reqPw, req.getPassword())) {
+            return ResponseResult.badRequest(ResponseCode.PASSWORD_CHECK_ERROR);
+        }
+
+        String hashPw = generateHashPw(reqPw);
+        String savePicName = pic == null ? null : fileUtils.makeRandomFileName(pic);
+
+        UserDto userDto = new UserDto();
+        userDto.setTargetUserNo(req.getTargetUserNo());
+        userDto.setNickname(req.getNickname());
+        userDto.setPassword(hashPw);
+        userDto.setPic(savePicName);
+        userDto.setStatusMessage(req.getStatusMessage());
+        userMapper.editUser(userDto);
+
+        if(pic == null) {
+            return ResponseResult.success();
+        }
+        String folderPath = "user/" + req.getTargetUserNo();
+        fileUtils.makeFolders(folderPath);
+        try {
+            fileUtils.transferTo(pic,folderPath + "/" + savePicName);
+        } catch (IOException e) {
+            return ResponseResult.serverError();
+        }
+
+        return ResponseResult.success();
+    }
+
+    private boolean checkEmail(String email) {
+        // 인증된 이메일이 아닐때, 인증 만료되었을때
+        return MailService.mailChecked.getOrDefault(email, false);
+    }
+
+    private boolean checkPassword(String password, String passwordConfirm) {
+        return password.equals(passwordConfirm);
+    }
+
+    private String generateHashPw(String password) {
+        return BCrypt.hashpw(password, BCrypt.gensalt());
     }
 }

@@ -17,10 +17,10 @@ public class UserInfo {
     private String nickname;
 
     @Schema(title = "상태 메시지", description = "사용자의 상태 메시지", example = "Hello World!")
-    private String userStatusMessage;
+    private String statusMessage;
 
     @Schema(title = "프로필 사진", description = "사용자 프로필 사진 URL", example = "profile.jpg")
-    private String profilePic;
+    private String pic;
 
     @JsonIgnore
     private long userNo;

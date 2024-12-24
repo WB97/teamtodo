@@ -46,13 +46,13 @@
     <!-- 1. 사용자 로그인 -->
     <select id="userSignIn">
         SELECT
-        user_no AS userNo,
-        password,
-        nickname,
-        email,
-        profile_pic AS profilePic,
-        first_login AS firstLogin,
-        status_message AS userStatusMessage
+            user_no AS userNo,
+            password,
+            nickname,
+            email,
+            profile_pic AS profilePic,
+            first_login AS firstLogin,
+            status_message AS userStatusMessage
         FROM user
         WHERE email = #{email}
     </select>
@@ -61,12 +61,21 @@
     <!-- 2. 사용자 정보 조회 -->
     <select id="selUserInfo">
         SELECT
-        user_no AS userNo,
-        email,
-        nickname,
-        status_message AS userStatusMessage,
-        profile_pic AS profilePic
+            user_no AS userNo,
+            email,
+            nickname,
+            status_message AS userStatusMessage,
+            profile_pic AS profilePic
         FROM user
         WHERE user_no = #{targetUserNo}
     </select>
+
+    <update id="editUser">
+        UPDATE `user`
+        SET nickname = #{nickname}
+            , password = #{password}
+            , profile_pic = #{pic}
+            , status_message = #{statusMessage}
+        WHERE user_no = #{targetUserNo}
+    </update>
 </mapper>

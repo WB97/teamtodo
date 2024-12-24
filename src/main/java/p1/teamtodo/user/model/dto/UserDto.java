@@ -14,15 +14,17 @@ public class UserDto {
 
     private String email;
     private String nickname;
+    private String statusMessage;
     private String password;
     private String pic;
 
     @JsonIgnore
-    private int userNo;
+    private long targetUserNo;
 
-    public UserDto(String email, String nickname, String password, String pic) {
+    public UserDto(String email, String nickname, String statusMessage, String password, String pic) {
         this.email = email;
         this.nickname = nickname;
+        this.statusMessage = statusMessage;
         this.password = password;
         this.pic = pic;
     }

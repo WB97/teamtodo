@@ -21,4 +21,6 @@ public interface UserMapper {
     UserLoginInfo userSignIn(String email);
 
     UserInfo selUserInfo(long targetUserNo);
+
+    void editUser(UserDto userDto);
 }

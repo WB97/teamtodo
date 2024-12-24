@@ -26,8 +26,7 @@ public enum ResponseCode {
     PASSWORD_CHECK_ERROR("PCE"),
 
     // 로그인
-    INCORRECT_EMAIL("IE"),
-    INCORRECT_PASSWORD("IP"),
+    INCORRECT_EMAIL_PASSWORD("IEP"),
 
     // 조건에 맞는 유저 없음
     NO_EXIST_USER("NEU"),
