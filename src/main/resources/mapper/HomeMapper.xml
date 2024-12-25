@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="p1.teamtodo.home.HomeMapper">
+
+    <select id="selProjectList">
+        SELECT
+            P.project_no AS projectNo
+            , P.title AS title
+            , P.start_at AS startAt
+            , P.deadline AS deadline
+        FROM `project` P
+        JOIN `user_project` UP
+        ON P.project_no = UP.project_no
+        WHERE UP.user_no = #{userNo}
+        AND (
+            date_format(P.start_at, '%Y-%m') &lt;= #{date}
+            AND
+            date_format(P.deadline , '%Y-%m') &gt;= #{date}
+        )
+    </select>
+
+    <select id="selProjectMembersPic">
+        SELECT
+            DISTINCT(U.profile_pic)
+        FROM user U
+        JOIN user_project UP
+            ON U.user_no = UP.user_no
+        WHERE UP.project_no = #{projectNo}
+    </select>
+</mapper>

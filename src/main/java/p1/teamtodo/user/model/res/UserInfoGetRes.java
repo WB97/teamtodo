@@ -8,7 +8,7 @@ import p1.teamtodo.common.ResponseResult;
 
 @Getter
 @Setter
-@Schema(name = "유저 정보 응답", description = "유저 상세 정보 RESPONSE")
+@Schema(name = "유저 상세 정보 GET 응답")
 public class UserInfoGetRes extends ResponseResult {
 
     @Schema(title = "이메일")

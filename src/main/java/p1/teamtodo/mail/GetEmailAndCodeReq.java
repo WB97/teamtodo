@@ -7,6 +7,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
+@Schema(name = "인증코드 확인")
 public class GetEmailAndCodeReq {
 
     @NotNull

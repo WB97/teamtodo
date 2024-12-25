@@ -18,6 +18,7 @@ public enum ResponseCode {
     NO_FORBIDDEN("NF"),
     SERVER_ERROR("SE"),
     FAIL("FAIL"),
+    VALUE_ERROR("VE"),
 
     // 회원가입
     DUPLICATE_EMAIL("DPE"),

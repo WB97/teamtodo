@@ -1,27 +1,29 @@
 package p1.teamtodo.user.model.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
+import p1.teamtodo.schedule.model.dto.ScheduleDto;
+
+import java.util.List;
 
 @Getter
 @Setter
-@Schema(title = "사용자 정보")
+@ToString
 public class UserInfo {
 
-    @Schema(title = "이메일", description = "사용자 이메일", example = "example@example.com")
-    private String email;
-
-    @Schema(title = "닉네임", description = "사용자 닉네임", example = "userNickname")
-    private String nickname;
-
-    @Schema(title = "상태 메시지", description = "사용자의 상태 메시지", example = "Hello World!")
-    private String statusMessage;
-
-    @Schema(title = "프로필 사진", description = "사용자 프로필 사진 URL", example = "profile.jpg")
-    private String pic;
+    private long userNo;
 
     @JsonIgnore
-    private long userNo;
+    private String email;
+
+    private String nickname;
+
+    private String statusMessage;
+
+    private String pic;
+
+    private List<ScheduleDto> scheduleList;
+
 }

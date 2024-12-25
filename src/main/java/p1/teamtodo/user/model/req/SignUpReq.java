@@ -9,7 +9,7 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-@Schema(title = "회원 가입", description = "회원가입 POST Request")
+@Schema(title = "회원 가입 POST 요청")
 public class SignUpReq {
 
     @NotBlank

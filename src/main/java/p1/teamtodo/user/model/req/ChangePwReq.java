@@ -9,10 +9,10 @@ import lombok.Setter;
 
 @Getter
 @Setter
-@Schema(title = "비밀번호 재설정", description = "비밀번호 재설정 POST Request")
+@Schema(title = "비밀번호 재설정 POST 요청")
 public class ChangePwReq {
 
-    @NotBlank
+    @NotNull
     @Schema(name = "userNo", description = "유저 번호", type= "long", example = "1", requiredMode = Schema.RequiredMode.REQUIRED)
     private long userNo;
 

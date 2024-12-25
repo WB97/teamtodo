@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="p1.teamtodo.project.ProjectMapper">
+
+    <insert id="insProject" useGeneratedKeys="true" keyProperty="projectNo">
+        INSERT INTO project (leader_no, title, description,	start_at, deadline)
+        VALUES (#{signedUserNo}, #{title}, #{description}, #{startAt}, #{deadLine})
+    </insert>
+
+    <insert id="insUserProject">
+        INSERT INTO user_project
+        (user_no, project_no)
+        VALUES
+        <foreach collection="memberNoList" item="userNo" separator=",">
+            ( #{userNo}, #{projectNo} )
+        </foreach>
+    </insert>
+
+    <select id="selProjectDetail">
+        SELECT
+            project_no AS projectNo,
+            leader_no AS leaderNo,
+            title AS title,
+            description AS description,
+            start_at AS startAt,
+            deadline AS deadLine,
+            created_at AS createdAt
+        FROM project
+        WHERE project_no = #{projectNo}
+    </select>
+
+<!--    수정 데이터 요청 -->
+    <select id="selEditProjectDetail">
+        SELECT
+            title AS title
+            , leader_no AS leaderNo
+            , description AS description
+            , start_at AS startAt
+            , deadline AS deadLine
+        FROM project
+        WHERE project_no = #{projectNo}
+    </select>
+
+    <select id="participatingUser">
+        SELECT EXISTS (
+            SELECT user_no FROM user_project
+            WHERE user_no = #{userNo}
+                AND project_no = #{projectNo}
+        )AS RESULT
+    </select>
+
+    <select id="selProjectUsers">
+        SELECT
+            U.user_no AS userNo,
+            U.nickname AS nickname,
+            U.status_message AS statusMessage,
+            U.profile_pic AS pic
+        FROM `user` U
+        JOIN user_project UP
+            ON U.user_no = UP.user_no
+        AND UP.project_no = #{projectNo}
+    </select>
+
+    <select id="selUserSchedules">
+        SELECT
+            UP.user_no AS userNo,
+            S.schedule_no AS scheduleNo,
+            S.content AS content,
+            S.cheked AS checked,
+            S.created_at AS createdAt
+        FROM schedule S
+        JOIN user_project UP
+            ON UP.user_project_no = S.user_project_no
+        AND UP.project_no = #{projectNo}
+    </select>
+
+    <select id="selUserProjectList">
+        SELECT
+            P.project_no AS projectNo
+            , P.title AS title
+            , P.start_at AS startAt
+            , P.deadline AS deadline
+            , P.description AS description
+        FROM project P
+        JOIN user_project UP
+            ON P.project_no = UP.project_no
+            AND UP.user_no = #{userNo}
+        ORDER BY projectNo ASC
+        LIMIT #{startIdx}, #{size}
+    </select>
+</mapper>

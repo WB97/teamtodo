@@ -11,7 +11,7 @@ import java.beans.ConstructorProperties;
 
 @Getter
 @Setter
-@Schema(title = "유저 정보 요청", description = "유저 상세 정보 가져오기 GET Request. 유저 상세 페이지와 수정 페이지에서도 사용가능.")
+@Schema(title = "유저 정보 요청 GET 요청", description = "유저 상세 페이지와 수정 페이지에서도 사용가능.")
 @ToString
 public class UserInfoGetReq {
 

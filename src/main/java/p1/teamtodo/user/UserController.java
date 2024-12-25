@@ -21,7 +21,7 @@ public class UserController {
     private final UserService userService;
 
     @PostMapping(value = "/sign-up", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-    @Operation(summary = "회원가입", description = "이메일로 인증코드 전송, 이후 인증코드 입력 시 3분간 회원가입 가능")
+    @Operation(summary = "회원가입", description = "이메일로 인증코드 전송, 이후 인증코드 확인 후 3분간 회원가입 가능")
     public ResponseResult signUp(@Valid @RequestPart SignUpReq req,
                                  @RequestPart(required = false) MultipartFile pic) {
         log.info("req = {}", req);
@@ -29,7 +29,7 @@ public class UserController {
     }
 
     @PostMapping("/find-pw")
-    @Operation(summary = "비밀번호 재설정", description = "이메일로 인증코드 전송, 이후 인증코드 입력 시 3분간 비밀번호 재설정 가능")
+    @Operation(summary = "비밀번호 재설정", description = "이메일로 인증코드 전송, 이후 인증코드 확인 후 3분간 비밀번호 재설정 가능")
     public ResponseResult changePw(@Valid @RequestBody ChangePwReq req) {
         return userService.ChangePw(req);
     }
@@ -48,7 +48,7 @@ public class UserController {
         return userService.selUserInfo(req);
     }
 
-    @PutMapping
+    @PutMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     @Operation(summary = "사용자 정보 수정")
     public ResponseResult editUser(@RequestPart EditUserPutReq req,
                                    @RequestPart(required = false) MultipartFile pic

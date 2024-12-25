@@ -30,10 +30,10 @@ public class UserService {
     public ResponseResult signUp(SignUpReq req, MultipartFile pic) {
 
         String email = req.getEmail();
-
-        if(!checkEmail(email)) {
-           return ResponseResult.unauthorized();
-        }
+//
+//        if(!checkEmail(email)) {
+//           return ResponseResult.unauthorized();
+//        }
 
         // 이메일 중복 검증
         boolean isDuplicateEmail = userMapper.checkDuplicateEmail(email);
@@ -64,7 +64,11 @@ public class UserService {
 
         String randName = pic == null ? null : fileUtils.makeRandomFileName(pic);
         String hashPw = generateHashPw(password);
-        UserDto userDto = new UserDto(email, nickname, null, hashPw, randName);
+        UserDto userDto = new UserDto();
+        userDto.setEmail(email);
+        userDto.setNickname(nickname);
+        userDto.setPassword(hashPw);
+        userDto.setPic(randName);
         userMapper.insUser(userDto);
 
         if(randName == null) {
@@ -72,7 +76,7 @@ public class UserService {
         }
 
         // 프로필 사진 저장
-        String filePath = "user/" + userDto.getTargetUserNo();
+        String filePath = "user/" + userDto.getUserNo();
         fileUtils.makeFolders(filePath);
         try {
             fileUtils.transferTo(pic, filePath + "/" + randName);
@@ -175,7 +179,7 @@ public class UserService {
         String savePicName = pic == null ? null : fileUtils.makeRandomFileName(pic);
 
         UserDto userDto = new UserDto();
-        userDto.setTargetUserNo(req.getTargetUserNo());
+        userDto.setUserNo(req.getTargetUserNo());
         userDto.setNickname(req.getNickname());
         userDto.setPassword(hashPw);
         userDto.setPic(savePicName);
@@ -185,7 +189,7 @@ public class UserService {
         if(pic == null) {
             return ResponseResult.success();
         }
-        String folderPath = "user/" + req.getTargetUserNo();
+        String folderPath = "user/" + userDto.getUserNo();
         fileUtils.makeFolders(folderPath);
         try {
             fileUtils.transferTo(pic,folderPath + "/" + savePicName);

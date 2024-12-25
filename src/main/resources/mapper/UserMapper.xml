@@ -17,8 +17,7 @@
         SELECT
             email
             , nickname
-            , password
-            , profile_pic
+            , profile_pic AS pic
         FROM `user`
         WHERE nickname = #{nickname}
     </select>
@@ -65,7 +64,7 @@
             email,
             nickname,
             status_message AS userStatusMessage,
-            profile_pic AS profilePic
+            profile_pic AS pic
         FROM user
         WHERE user_no = #{targetUserNo}
     </select>
@@ -78,4 +77,19 @@
             , status_message = #{statusMessage}
         WHERE user_no = #{targetUserNo}
     </update>
+
+    <select id="selProjectEditUser">
+        SELECT
+            u.user_no AS userNo
+            , u.nickname AS userNickname
+            , u.profile_pic AS userPic
+            , IF(s.schedule_no IS NULL, 0, 1) AS isExistSchedule
+        FROM `user` u
+        JOIN user_project up
+            ON up.user_no = u.user_no
+            AND up.project_no = #{projectNo}
+        LEFT JOIN schedule s
+            ON s.user_project_no = up.user_project_no
+        GROUP BY u.user_no
+    </select>
 </mapper>

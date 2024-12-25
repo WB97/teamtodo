@@ -1,16 +1,299 @@
 {
-  "code" : "OK",
-  "project" : {
-    "title" : String,
-    "description" : String,
-    "startAt" : String,
-    "deadLine" : String,
-    "memberList" : [
+  "code": "OK",
+  "project": {
+    "projectNo": 1,
+    "leaderNo": 6,
+    "title": "1",
+    "description": "설명",
+    "startAt": "2024-12-25",
+    "deadLine": "2025-01-08",
+    "createdAt": "2024-12-25 15:13:02",
+    "memberList": [
       {
-        "userNo" : long,
-        "userNickname" : String,
-        "userPic" : String,
-        "isExistSchedule" : boolean
+        "userNo": 6,
+        "nickname": "wook1",
+        "statusMessage": null,
+        "pic": "6",
+        "scheduleList": [
+          {
+            "scheduleNo": 12,
+            "content": "Felis libyca",
+            "checked": false,
+            "createdAt": "2024-12-25 19:24:46"
+          },
+          {
+            "scheduleNo": 24,
+            "content": "Lasiodora parahybana",
+            "checked": false,
+            "createdAt": "2024-12-25 19:24:46"
+          },
+          {
+            "scheduleNo": 36,
+            "content": "Varanus salvator",
+            "checked": false,
+            "createdAt": "2024-12-25 19:24:46"
+          },
+          {
+            "scheduleNo": 48,
+            "content": "Marmota monax",
+            "checked": false,
+            "createdAt": "2024-12-25 19:24:46"
+          },
+          {
+            "scheduleNo": 60,
+            "content": "Falco peregrinus",
+            "checked": false,
+            "createdAt": "2024-12-25 19:24:46"
+          },
+          {
+            "scheduleNo": 72,
+            "content": "Felis chaus",
+            "checked": false,
+            "createdAt": "2024-12-25 19:24:46"
+          },
+          {
+            "scheduleNo": 84,
+            "content": "Alopex lagopus",
+            "checked": false,
+            "createdAt": "2024-12-25 19:24:49"
+          },
+          {
+            "scheduleNo": 96,
+            "content": "Merops nubicus",
+            "checked": false,
+            "createdAt": "2024-12-25 19:24:49"
+          }
+        ]
+      },
+      {
+        "userNo": 2,
+        "nickname": "test",
+        "statusMessage": null,
+        "pic": "2",
+        "scheduleList": [
+          {
+            "scheduleNo": 4,
+            "content": "Sarcorhamphus papa",
+            "checked": false,
+            "createdAt": "2024-12-25 19:24:46"
+          },
+          {
+            "scheduleNo": 16,
+            "content": "Ara ararauna",
+            "checked": false,
+            "createdAt": "2024-12-25 19:24:46"
+          },
+          {
+            "scheduleNo": 28,
+            "content": "Felis concolor",
+            "checked": false,
+            "createdAt": "2024-12-25 19:24:46"
+          },
+          {
+            "scheduleNo": 40,
+            "content": "Milvus migrans",
+            "checked": false,
+            "createdAt": "2024-12-25 19:24:46"
+          },
+          {
+            "scheduleNo": 52,
+            "content": "Theropithecus gelada",
+            "checked": false,
+            "createdAt": "2024-12-25 19:24:46"
+          },
+          {
+            "scheduleNo": 64,
+            "content": "Rhea americana",
+            "checked": false,
+            "createdAt": "2024-12-25 19:24:46"
+          },
+          {
+            "scheduleNo": 76,
+            "content": "Erinaceus frontalis",
+            "checked": false,
+            "createdAt": "2024-12-25 19:24:46"
+          },
+          {
+            "scheduleNo": 88,
+            "content": "Isoodon obesulus",
+            "checked": false,
+            "createdAt": "2024-12-25 19:24:49"
+          },
+          {
+            "scheduleNo": 100,
+            "content": "Phalacrocorax carbo",
+            "checked": false,
+            "createdAt": "2024-12-25 19:24:49"
+          }
+        ]
+      },
+      {
+        "userNo": 3,
+        "nickname": "test2",
+        "statusMessage": null,
+        "pic": "3",
+        "scheduleList": [
+          {
+            "scheduleNo": 5,
+            "content": "Cervus duvauceli",
+            "checked": false,
+            "createdAt": "2024-12-25 19:24:46"
+          },
+          {
+            "scheduleNo": 17,
+            "content": "Dasyprocta leporina",
+            "checked": false,
+            "createdAt": "2024-12-25 19:24:46"
+          },
+          {
+            "scheduleNo": 29,
+            "content": "Physignathus cocincinus",
+            "checked": false,
+            "createdAt": "2024-12-25 19:24:46"
+          },
+          {
+            "scheduleNo": 41,
+            "content": "Hippopotamus amphibius",
+            "checked": false,
+            "createdAt": "2024-12-25 19:24:46"
+          },
+          {
+            "scheduleNo": 53,
+            "content": "Speothos vanaticus",
+            "checked": false,
+            "createdAt": "2024-12-25 19:24:46"
+          },
+          {
+            "scheduleNo": 65,
+            "content": "Dusicyon thous",
+            "checked": false,
+            "createdAt": "2024-12-25 19:24:46"
+          },
+          {
+            "scheduleNo": 77,
+            "content": "Platalea leucordia",
+            "checked": false,
+            "createdAt": "2024-12-25 19:24:46"
+          },
+          {
+            "scheduleNo": 89,
+            "content": "Anastomus oscitans",
+            "checked": false,
+            "createdAt": "2024-12-25 19:24:49"
+          }
+        ]
+      },
+      {
+        "userNo": 4,
+        "nickname": "3",
+        "statusMessage": null,
+        "pic": "4",
+        "scheduleList": [
+          {
+            "scheduleNo": 9,
+            "content": "Phalaropus lobatus",
+            "checked": false,
+            "createdAt": "2024-12-25 19:24:46"
+          },
+          {
+            "scheduleNo": 21,
+            "content": "Alopochen aegyptiacus",
+            "checked": false,
+            "createdAt": "2024-12-25 19:24:46"
+          },
+          {
+            "scheduleNo": 33,
+            "content": "Francolinus coqui",
+            "checked": false,
+            "createdAt": "2024-12-25 19:24:46"
+          },
+          {
+            "scheduleNo": 45,
+            "content": "Chionis alba",
+            "checked": false,
+            "createdAt": "2024-12-25 19:24:46"
+          },
+          {
+            "scheduleNo": 57,
+            "content": "Procyon cancrivorus",
+            "checked": false,
+            "createdAt": "2024-12-25 19:24:46"
+          },
+          {
+            "scheduleNo": 69,
+            "content": "Petaurus breviceps",
+            "checked": false,
+            "createdAt": "2024-12-25 19:24:46"
+          },
+          {
+            "scheduleNo": 81,
+            "content": "Colaptes campestroides",
+            "checked": false,
+            "createdAt": "2024-12-25 19:24:49"
+          },
+          {
+            "scheduleNo": 93,
+            "content": "Alligator mississippiensis",
+            "checked": false,
+            "createdAt": "2024-12-25 19:24:49"
+          }
+        ]
+      },
+      {
+        "userNo": 1,
+        "nickname": "닉네임입니다1",
+        "statusMessage": "상태메세지 입니다",
+        "pic": "631b5e2d-2f06-41a1-a750-6d504bba7771.png",
+        "scheduleList": [
+          {
+            "scheduleNo": 11,
+            "content": "unavailable",
+            "checked": false,
+            "createdAt": "2024-12-25 19:24:46"
+          },
+          {
+            "scheduleNo": 23,
+            "content": "unavailable",
+            "checked": false,
+            "createdAt": "2024-12-25 19:24:46"
+          },
+          {
+            "scheduleNo": 35,
+            "content": "Crotalus adamanteus",
+            "checked": false,
+            "createdAt": "2024-12-25 19:24:46"
+          },
+          {
+            "scheduleNo": 47,
+            "content": "Chelodina longicollis",
+            "checked": false,
+            "createdAt": "2024-12-25 19:24:46"
+          },
+          {
+            "scheduleNo": 59,
+            "content": "Bubo virginianus",
+            "checked": false,
+            "createdAt": "2024-12-25 19:24:46"
+          },
+          {
+            "scheduleNo": 71,
+            "content": "Eudyptula minor",
+            "checked": false,
+            "createdAt": "2024-12-25 19:24:46"
+          },
+          {
+            "scheduleNo": 83,
+            "content": "Tadorna tadorna",
+            "checked": false,
+            "createdAt": "2024-12-25 19:24:49"
+          },
+          {
+            "scheduleNo": 95,
+            "content": "Crotalus cerastes",
+            "checked": false,
+            "createdAt": "2024-12-25 19:24:49"
+          }
+        ]
       }
     ]
   }

@@ -11,7 +11,7 @@ import p1.teamtodo.common.ResponseCode;
 @Getter
 @Setter
 @ToString
-@Schema(name = "로그인 요청", description = "로그인 POST Request")
+@Schema(name = "로그인 POST 요청")
 public class UserSignInReq {
 
     @NotBlank

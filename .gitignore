@@ -6,7 +6,8 @@ build/
 !**/src/test/**/build/
 src/main/resources/application.yaml
 src/main/resources/application-prod.yaml
-!**/logs/
+files/
+logs/
 
 ### STS ###
 .apt_generated

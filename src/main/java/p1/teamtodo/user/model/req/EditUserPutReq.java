@@ -11,11 +11,11 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-@Schema(name = "유저 정보 수정", description = "수정 버튼 클릭시 PUT Reqeust")
+@Schema(name = "유저 정보 수정 PUT 요청", description = "수정 버튼 클릭시 PUT 요청")
 public class EditUserPutReq {
 
-    @NotBlank
-    @Schema(name = "targetUserNo", description = "수정하려는 대상 번호")
+    @NotNull
+    @Schema(name = "targetUserNo", description = "수정하려는 대상 번호", type = "long", example = "1", requiredMode = Schema.RequiredMode.REQUIRED)
     private long targetUserNo;
 
     @NotBlank

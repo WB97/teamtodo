@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
+
 public class ResponseResult {
-    @Schema(title = "응답 코드")
     private String code;
 
     // 응답 코드 "OK"
