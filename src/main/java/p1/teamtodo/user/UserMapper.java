@@ -2,6 +2,7 @@ package p1.teamtodo.user;
 
 import org.apache.ibatis.annotations.Mapper;
 import p1.teamtodo.project.model.dto.ProjectEditUserDto;
+import p1.teamtodo.project.model.dto.ProjectSearchUserDto;
 import p1.teamtodo.user.model.dto.UserDto;
 import p1.teamtodo.user.model.dto.UserInfo;
 import p1.teamtodo.user.model.dto.UserLoginInfo;
@@ -22,6 +23,8 @@ public interface UserMapper {
     UserLoginInfo userSignIn(String email);
 
     UserInfo selUserInfo(long targetUserNo);
+
+    ProjectSearchUserDto selUserByNickname(String nickname);
 
     List<ProjectEditUserDto> selProjectEditUser(long userNo);
 

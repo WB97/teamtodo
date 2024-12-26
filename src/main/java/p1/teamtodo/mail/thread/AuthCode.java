@@ -19,7 +19,7 @@ public class AuthCode implements Runnable {
                 code.append((int)(Math.random() * 10));
             }
             MailService.codes.put(email, String.valueOf(code));
-            Thread.sleep(180_000);
+            Thread.sleep(1_800_000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }

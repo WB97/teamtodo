@@ -27,13 +27,14 @@ public class UserService {
     private final UserMapper userMapper;
     private final MyFileUtils fileUtils;
 
+    @Transactional
     public ResponseResult signUp(SignUpReq req, MultipartFile pic) {
 
         String email = req.getEmail();
-//
-//        if(!checkEmail(email)) {
-//           return ResponseResult.unauthorized();
-//        }
+
+        if(!checkEmail(email)) {
+           return ResponseResult.unauthorized();
+        }
 
         // 이메일 중복 검증
         boolean isDuplicateEmail = userMapper.checkDuplicateEmail(email);
@@ -87,6 +88,7 @@ public class UserService {
         return ResponseResult.success();
     }
 
+    @Transactional
     public ResponseResult ChangePw(ChangePwReq req) {
 
         String email = req.getEmail();
@@ -132,7 +134,6 @@ public class UserService {
         // 성공 응답
         return new UserSignInRes(ResponseCode.OK.getCode(), firstLogin);
     }
-
 
     @Transactional
     public ResponseResult selUserInfo(UserInfoGetReq p) {

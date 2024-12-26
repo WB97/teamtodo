@@ -6,11 +6,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import p1.teamtodo.common.ResponseCode;
 import p1.teamtodo.common.ResponseResult;
-import p1.teamtodo.project.model.dto.ProjectDetailDto;
-import p1.teamtodo.project.model.dto.ProjectEditDto;
-import p1.teamtodo.project.model.dto.ProjectEditUserDto;
-import p1.teamtodo.project.model.dto.ProjectListDto;
+import p1.teamtodo.project.model.dto.*;
 import p1.teamtodo.project.model.res.ProjectEditGetRes;
+import p1.teamtodo.project.model.res.ProjectSearchUserGetRes;
 import p1.teamtodo.schedule.model.dto.ScheduleDto;
 import p1.teamtodo.project.model.req.ProjectCreatePostReq;
 import p1.teamtodo.project.model.req.ProjectListPaging;
@@ -111,6 +109,7 @@ public class ProjectService {
         return ResponseResult.success();
     }
 
+    @Transactional
     public ResponseResult editProject(long projectNo, long signedUserNo) {
         ProjectEditDto projectDto = projectMapper.selEditProjectDetail(projectNo);
         if(projectDto.getLeaderNo() != signedUserNo) {
@@ -122,6 +121,13 @@ public class ProjectService {
 
         ProjectEditGetRes res = new ProjectEditGetRes();
         res.setProject(projectDto);
+        return res;
+    }
+
+    public ResponseResult searchUserByNickname(String nickname) {
+        ProjectSearchUserDto userDto = userMapper.selUserByNickname(nickname);
+        ProjectSearchUserGetRes res = new ProjectSearchUserGetRes();
+        res.setUser(userDto);
         return res;
     }
 }

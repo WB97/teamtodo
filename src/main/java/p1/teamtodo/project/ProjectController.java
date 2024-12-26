@@ -45,4 +45,10 @@ public class ProjectController {
     ) {
         return projectService.editProject(projectNo, signedUserNo);
     }
+
+    @GetMapping("search-user/{nickname}")
+    @Operation(summary = "프로젝트 수정에서 구성원 닉네임으로 검색하기")
+    public ResponseResult searchUser(@PathVariable String nickname) {
+        return projectService.searchUserByNickname(nickname);
+    }
 }
