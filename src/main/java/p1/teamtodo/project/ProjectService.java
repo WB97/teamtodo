@@ -7,13 +7,10 @@ import org.springframework.transaction.annotation.Transactional;
 import p1.teamtodo.common.ResponseCode;
 import p1.teamtodo.common.ResponseResult;
 import p1.teamtodo.project.model.dto.*;
-import p1.teamtodo.project.model.req.ProjectUserEdit;
-import p1.teamtodo.project.model.req.ProjectUserLockReq;
+import p1.teamtodo.project.model.req.*;
 import p1.teamtodo.project.model.res.ProjectEditGetRes;
 import p1.teamtodo.project.model.res.ProjectSearchUserGetRes;
 import p1.teamtodo.schedule.model.dto.ScheduleDto;
-import p1.teamtodo.project.model.req.ProjectCreatePostReq;
-import p1.teamtodo.project.model.req.ProjectListPaging;
 import p1.teamtodo.project.model.res.ProjectDetailGetRes;
 import p1.teamtodo.project.model.res.ProjectListGetRes;
 import p1.teamtodo.schedule.ScheduleMapper;
@@ -112,7 +109,7 @@ public class ProjectService {
     }
 
     @Transactional
-    public ResponseResult editProject(long projectNo, long signedUserNo) {
+    public ResponseResult getEditProject(long projectNo, long signedUserNo) {
         ProjectEditDto projectDto = projectMapper.selEditProjectDetail(projectNo);
         if(projectDto.getLeaderNo() != signedUserNo) {
             return ResponseResult.badRequest(ResponseCode.NO_FORBIDDEN);
@@ -159,5 +156,26 @@ public class ProjectService {
         return ResponseResult.success();
     }
 
+    ResponseResult putEditProject(ProjectEditPutReq req) {
+        long projectNo = req.getProjectNo();
+        long signedUserNo = req.getSignedUserNo();
+        if(!projectMapper.selProjectLeaderNo(projectNo, signedUserNo)) {
+            return ResponseResult.badRequest(ResponseCode.NO_FORBIDDEN);
+        }
 
+        String temp = req.getStartAt();
+        String startAt = temp.substring(0,4) + "-" + temp.substring(4,6) + "-" + temp.substring(6);
+        temp = req.getDeadLine();
+        String deadLine = temp.substring(0,4) + "-" + temp.substring(4,6) + "-" + temp.substring(6);
+
+        try {
+            int result = projectMapper.updProject(projectNo, req.getTitle(), req.getDescription(), startAt, deadLine);
+            if(result == 0) {
+                return ResponseResult.databaseError();
+            }
+        } catch (Exception e) {
+            return ResponseResult.databaseError();
+        }
+        return ResponseResult.success();
+    }
 }

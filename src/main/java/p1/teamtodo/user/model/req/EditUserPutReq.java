@@ -15,22 +15,22 @@ import lombok.ToString;
 public class EditUserPutReq {
 
     @NotNull
-    @Schema(name = "targetUserNo", description = "수정하려는 대상 번호", type = "long", example = "1", requiredMode = Schema.RequiredMode.REQUIRED)
+    @Schema(title = "수정하려는 대상 번호", type = "long", example = "1", requiredMode = Schema.RequiredMode.REQUIRED)
     private long targetUserNo;
 
     @NotBlank
-    @Schema(name = "nickname", description = "유저 닉네임", type= "string", example = "닉네임입니다", requiredMode = Schema.RequiredMode.REQUIRED)
+    @Schema(title = "유저 닉네임", type= "string", example = "닉네임입니다", requiredMode = Schema.RequiredMode.REQUIRED)
     private String nickname;
 
     @NotBlank
-    @Schema(name = "statusMessage", description = "유저 상태메세지", type= "string", example = "상태메세지 입니다")
+    @Schema(title = "유저 상태메세지", type= "string", example = "상태메세지 입니다")
     private String statusMessage;
 
     @NotBlank
-    @Schema(name = "password", description = "유저 패스워드", type= "string", example = "123456789", requiredMode = Schema.RequiredMode.REQUIRED)
+    @Schema(title = "유저 패스워드", type= "string", example = "123456789", requiredMode = Schema.RequiredMode.REQUIRED)
     private String password;
 
     @NotBlank
-    @Schema(name = "passwordConfirm", description = "유저 패스워드 확인", type= "string", example = "123456789", requiredMode = Schema.RequiredMode.REQUIRED)
+    @Schema(title = "유저 패스워드 확인", type= "string", example = "123456789", requiredMode = Schema.RequiredMode.REQUIRED)
     private String passwordConfirm;
 }

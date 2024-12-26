@@ -24,18 +24,19 @@ public class ScheduleService {
         if(scheduleNo <= 0&&signedUserNo <= 0){
             return ResponseResult.serverError();
         }
-        ScheduleDetail<Integer> detail = mapper.scheduleDetail(scheduleNo,signedUserNo);
+        ScheduleDetail detail = mapper.scheduleDetail(scheduleNo,signedUserNo);
         if(detail == null) {
             return ResponseResult.badRequest(ResponseCode.VALUE_ERROR);
         }
-        return new ScheduleDetail<>("OK",
+        return new ScheduleDetail(
+                "OK",
                 detail.getContent(),
                 detail.getDetail(),
                 detail.isChecked(),
                 detail.getCreatedAt(),
                 detail.getUserNickname(),
                 detail.getUserProfilePic(),
-                detail.getMySchedule() == 1 ? true : false
+                detail.isMySchedule()
         );
     }
 

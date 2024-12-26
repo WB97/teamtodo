@@ -30,6 +30,10 @@ public interface ProjectMapper {
 
     List<ProjectListDto> selUserProjectList(ProjectListPaging req);
 
+    int updProject(long projectNo, String title, String description, String startAt, String deadLine);
+
+    boolean selProjectLeaderNo(long projectNo, long signedUserNo);
+
     // 수지
     int userLock(ProjectUserLockReq p);
     int delUserProjectList(long projectNo, List<Long> deleteUserNoList);

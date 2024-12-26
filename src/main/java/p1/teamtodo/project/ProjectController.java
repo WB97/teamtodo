@@ -7,7 +7,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import p1.teamtodo.common.ResponseResult;
 import p1.teamtodo.project.model.req.ProjectCreatePostReq;
-import p1.teamtodo.project.model.req.ProjectListPaging;
+import p1.teamtodo.project.model.req.ProjectEditPutReq;
 import p1.teamtodo.project.model.req.ProjectUserEdit;
 import p1.teamtodo.project.model.req.ProjectUserLockReq;
 
@@ -43,14 +43,14 @@ public class ProjectController {
 
     @GetMapping("/edit")
     @Operation(summary = "프로젝트 수정 데이터 요청")
-    public ResponseResult editProject(@RequestParam long projectNo,
-                                      @RequestParam long signedUserNo
+    public ResponseResult getEditProject(@RequestParam long projectNo,
+                                         @RequestParam long signedUserNo
     ) {
-        return projectService.editProject(projectNo, signedUserNo);
+        return projectService.getEditProject(projectNo, signedUserNo);
     }
 
     @GetMapping("search-user/{nickname}")
-    @Operation(summary = "프로젝트 수정에서 구성원 닉네임으로 검색하기")
+    @Operation(summary = "프로젝트 수정에서 추가할 인원 닉네임으로 검색하기")
     public ResponseResult searchUser(@PathVariable String nickname) {
         return projectService.searchUserByNickname(nickname);
     }
@@ -66,4 +66,11 @@ public class ProjectController {
     public ResponseResult editUserList(@Valid @RequestBody ProjectUserEdit p){
         return projectService.editUserList(p);
     }
+
+    @PutMapping
+    @Operation(summary = "프로젝트 수정", description = "수정 PUT 요청")
+    public ResponseResult putEditProject(@Valid @RequestBody ProjectEditPutReq req){
+        return projectService.putEditProject(req);
+    }
+
 }

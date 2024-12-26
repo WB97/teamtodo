@@ -12,12 +12,12 @@ import org.springframework.validation.annotation.Validated;
 @Validated
 public class ProjectUserLockReq {
     @Positive
-    @Schema(description = "로그인한 유저", type="long", example="4",requiredMode=Schema.RequiredMode.REQUIRED)
+    @Schema(title = "로그인한 유저", type="long", example="4",requiredMode=Schema.RequiredMode.REQUIRED)
     private long signedUserNo;
     @Positive
-    @Schema(description = "잠글 유저", type="long", example="4",requiredMode=Schema.RequiredMode.REQUIRED)
+    @Schema(title = "잠글 유저", type="long", example="4",requiredMode=Schema.RequiredMode.REQUIRED)
     private long targetUserNo;
     @Positive
-    @Schema(description = "프로젝트 번호", type="long", example="4",requiredMode=Schema.RequiredMode.REQUIRED)
+    @Schema(title = "프로젝트 번호", type="long", example="4",requiredMode=Schema.RequiredMode.REQUIRED)
     private long projectNo;
 }

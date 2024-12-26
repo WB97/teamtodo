@@ -8,18 +8,18 @@ import p1.teamtodo.common.ResponseResult;
 @Getter
 @Setter
 @NoArgsConstructor
-public class ScheduleDetail<T> extends ResponseResult {
+public class ScheduleDetail extends ResponseResult {
     private String content;
     private String detail;
     private boolean checked;
     private String createdAt;
     private String userNickname;
     private String userProfilePic;
-    private T mySchedule;
+    private boolean mySchedule;
 
 
     public ScheduleDetail(String code, String content, String detail, boolean checked, String createdAt,
-                          String userNickname, String userProfilePic, T mySchedule) {
+                          String userNickname, String userProfilePic, boolean mySchedule) {
         super(code);
         this.content = content;
         this.detail = detail;

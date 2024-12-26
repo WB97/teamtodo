@@ -97,6 +97,24 @@
         LIMIT #{startIdx}, #{size}
     </select>
 
+    <select id="selProjectLeaderNo">
+        SELECT EXISTS (
+        SELECT 1
+        FROM project
+        WHERE project_no = #{projectNo}
+            AND leader_no = #{signedUserNo}
+        )AS RESULT
+    </select>
+
+    <update id="updProject">
+        UPDATE project
+        SET title = #{title}
+            , description = #{description}
+            , start_at = #{startAt}
+            , deadline = #{deadLine}
+        WHERE project_no = #{projectNo}
+    </update>
+
 <!--    수지 -->
 
     <update id="userLock">

@@ -13,9 +13,9 @@ import org.springframework.validation.annotation.Validated;
 @Schema(title="일정 삭제")
 public class DeleteSchedule {
     @Positive
-    @Schema(description = "일정 번호", type="long", example="4",requiredMode=Schema.RequiredMode.REQUIRED)
+    @Schema(title = "일정 번호", type="long", example="4",requiredMode=Schema.RequiredMode.REQUIRED)
     private long scheduleNo;
     @Positive
-    @Schema(description = "로그인한 팀원 번호", type="long", example="2",requiredMode=Schema.RequiredMode.REQUIRED)
+    @Schema(title = "로그인한 팀원 번호", type="long", example="2",requiredMode=Schema.RequiredMode.REQUIRED)
     private long signedUserNo;
 }

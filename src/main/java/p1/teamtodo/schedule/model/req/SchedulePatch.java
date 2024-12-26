@@ -12,19 +12,19 @@ import org.springframework.validation.annotation.Validated;
 @Validated
 public class SchedulePatch {
     @Positive
-    @Schema(description = "일정 번호", type="long", example="1",requiredMode=Schema.RequiredMode.REQUIRED)
+    @Schema(title = "일정 번호", type="long", example="1",requiredMode=Schema.RequiredMode.REQUIRED)
     private long scheduleNo;
     @Positive
-    @Schema(description = "로그인한 팀원 번호", type="long", example="1",requiredMode=Schema.RequiredMode.REQUIRED)
+    @Schema(title = "로그인한 팀원 번호", type="long", example="1",requiredMode=Schema.RequiredMode.REQUIRED)
     private long signedUserNo;
     @Positive
-    @Schema(description = "일정 실행하는 팀원 번호", type="long", example="2",requiredMode=Schema.RequiredMode.REQUIRED)
+    @Schema(title = "일정 실행하는 팀원 번호", type="long", example="2",requiredMode=Schema.RequiredMode.REQUIRED)
     private long scheduleUserNo;
     @Positive
-    @Schema(description = "일정 진행하는 프로젝트 번호", type="long", example="1",requiredMode=Schema.RequiredMode.REQUIRED)
+    @Schema(title = "일정 진행하는 프로젝트 번호", type="long", example="1",requiredMode=Schema.RequiredMode.REQUIRED)
     private long projectNo;
-    @Schema(description = "일정제목", type="정수", example="주간회의록 작성하기")
+    @Schema(title = "일정제목", type="정수", example="주간회의록 작성하기")
     private String content;
-    @Schema(description = "일정상세", type="정수", example="김모씨白 왱알왱알, 그렇게하기로 협의")
+    @Schema(title = "일정상세", type="정수", example="김모씨白 왱알왱알, 그렇게하기로 협의")
     private String detail;
 }

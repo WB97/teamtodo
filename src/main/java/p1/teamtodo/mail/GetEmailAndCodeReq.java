@@ -11,10 +11,10 @@ import lombok.Setter;
 public class GetEmailAndCodeReq {
 
     @NotNull
-    @Schema(name = "email", description = "유저 이메일", type= "string", example = "test@email.com", requiredMode = Schema.RequiredMode.REQUIRED)
+    @Schema(title = "수신 이메일", type= "string", example = "test@email.com", requiredMode = Schema.RequiredMode.REQUIRED)
     private String email;
 
     @NotNull
-    @Schema(name = "code", description = "이메일 인증코드", type= "string", example = "1234", requiredMode = Schema.RequiredMode.REQUIRED)
+    @Schema(title = "인증 코드", type= "string", example = "1234", requiredMode = Schema.RequiredMode.REQUIRED)
     private String code;
 }

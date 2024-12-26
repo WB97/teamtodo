@@ -13,37 +13,29 @@ import java.util.List;
 @Getter
 @Setter
 @ToString
-public class ProjectCreatePostReq {
+public class ProjectEditPutReq {
 
     @NotNull
-    @Schema(title = "로그인 유저 번호, 팀장이 될 유저")
+    @Schema(title = "로그인 유저 번호")
     private long signedUserNo;
+
+    @NotNull
+    @Schema(title = "프로젝트 번호")
+    private long projectNo;
 
     @NotBlank
     @Schema(title = "프로젝트 타이틀")
     private String title;
+
     @NotBlank
     @Schema(title = "프로젝트 설명")
     private String description;
+
     @NotBlank
     @Schema(title = "프로젝트 시작일")
     private String startAt;
+
     @NotBlank
-    @Schema(title = "프로젝트 마감일")
+    @Schema(title = "프로젝트 만료일")
     private String deadLine;
-
-    @Schema(title = "추가될 프로젝트 구성원")
-    private List<Long> memberNoList;
-
-    @JsonIgnore
-    private long projectNo;
 }
-
-/*
-* 	"signedUserNo" : long,
-  "title" : String,
-  "description" : String,
-  "startAt" : String,
-  "deadLine" : String,
-  "memberNoList" : [long, ...]
-* */

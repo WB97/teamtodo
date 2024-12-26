@@ -16,11 +16,11 @@ import java.beans.ConstructorProperties;
 public class UserInfoGetReq {
 
     @NotBlank
-    @Schema(name = "targetUserNo", description = "화면에 띄울 프로필 유저 번호", example = "1", requiredMode = Schema.RequiredMode.REQUIRED)
+    @Schema(title = "화면에 띄울 프로필 유저 번호", example = "1", requiredMode = Schema.RequiredMode.REQUIRED)
     private long targetUserNo;
 
     @NotBlank
-    @Schema(name = "signedUserNo", description = "로그인한 유저 번호", example = "2", requiredMode = Schema.RequiredMode.REQUIRED)
+    @Schema(title = "로그인한 유저 번호", example = "2", requiredMode = Schema.RequiredMode.REQUIRED)
     private long signedUserNo;
 
     @ConstructorProperties({"targetUserNo","signedUserNo"})
