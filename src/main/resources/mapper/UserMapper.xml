@@ -107,4 +107,18 @@
             ON s.user_project_no = up.user_project_no
         GROUP BY u.user_no
     </select>
+
+<!--    수지 -->
+    <select id="leaderNo">
+        SELECT leader_no
+        FROM project
+        WHERE project_no=#{projectNo}
+    </select>
+    <select id="scheduleUserNoFromSchedule">
+        SELECT user_no
+        FROM schedule A
+        INNER JOIN user_project B
+        ON B.user_project_no=A.user_project_no
+        WHERE schedule_no=#{scheduleNo}
+    </select>
 </mapper>

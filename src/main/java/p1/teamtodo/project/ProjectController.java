@@ -2,11 +2,14 @@ package p1.teamtodo.project;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import p1.teamtodo.common.ResponseResult;
 import p1.teamtodo.project.model.req.ProjectCreatePostReq;
 import p1.teamtodo.project.model.req.ProjectListPaging;
+import p1.teamtodo.project.model.req.ProjectUserEdit;
+import p1.teamtodo.project.model.req.ProjectUserLockReq;
 
 @RestController
 @RequestMapping("/project")
@@ -17,7 +20,7 @@ public class ProjectController {
     private final ProjectService projectService;
 
     @GetMapping("/{projectNo}")
-    @Operation(summary = "특정 프로젝트 상세 정보")
+    @Operation(summary = "특정 프로젝트 상세 정보", description = "signedUserNo 가 참여중인 projectNo의 프로젝트만 정보보기 가능")
     public ResponseResult getProjectDetail(@PathVariable long projectNo, @RequestParam long signedUserNo) {
         return projectService.getProjectDetail(projectNo, signedUserNo);
     }
@@ -50,5 +53,17 @@ public class ProjectController {
     @Operation(summary = "프로젝트 수정에서 구성원 닉네임으로 검색하기")
     public ResponseResult searchUser(@PathVariable String nickname) {
         return projectService.searchUserByNickname(nickname);
+    }
+
+    @PatchMapping
+    @Operation(summary = "유저 잠금", description = "유저 잠금설정")
+    public ResponseResult userLock(@Valid @RequestBody ProjectUserLockReq p){
+        return projectService.userLock(p);
+    }
+
+    @PostMapping("search-user")
+    @Operation(summary = "프로젝트 일원 수정", description = "프로젝트 인원 추가 및 삭제")
+    public ResponseResult editUserList(@Valid @RequestBody ProjectUserEdit p){
+        return projectService.editUserList(p);
     }
 }

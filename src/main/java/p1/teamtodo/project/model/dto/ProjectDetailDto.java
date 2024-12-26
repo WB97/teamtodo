@@ -20,6 +20,7 @@ public class ProjectDetailDto {
     private String deadLine;
     private String createdAt;
     private List<UserInfo> memberList;
+    private int signedUserLock;
 }
 
 /*

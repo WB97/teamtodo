@@ -4,6 +4,7 @@ import org.apache.ibatis.annotations.Mapper;
 import p1.teamtodo.project.model.dto.ProjectDetailDto;
 import p1.teamtodo.project.model.dto.ProjectEditDto;
 import p1.teamtodo.project.model.dto.ProjectListDto;
+import p1.teamtodo.project.model.req.ProjectUserLockReq;
 import p1.teamtodo.schedule.model.dto.ScheduleDto;
 import p1.teamtodo.project.model.req.ProjectCreatePostReq;
 import p1.teamtodo.project.model.req.ProjectListPaging;
@@ -28,4 +29,9 @@ public interface ProjectMapper {
     List<ScheduleDto> selUserSchedules(long projectNo);
 
     List<ProjectListDto> selUserProjectList(ProjectListPaging req);
+
+    // 수지
+    int userLock(ProjectUserLockReq p);
+    int delUserProjectList(long projectNo, List<Long> deleteUserNoList);
+    int insUserProjectList(long projectNo, List<Long> insertUserNoList);
 }

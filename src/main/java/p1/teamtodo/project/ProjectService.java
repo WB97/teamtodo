@@ -7,6 +7,8 @@ import org.springframework.transaction.annotation.Transactional;
 import p1.teamtodo.common.ResponseCode;
 import p1.teamtodo.common.ResponseResult;
 import p1.teamtodo.project.model.dto.*;
+import p1.teamtodo.project.model.req.ProjectUserEdit;
+import p1.teamtodo.project.model.req.ProjectUserLockReq;
 import p1.teamtodo.project.model.res.ProjectEditGetRes;
 import p1.teamtodo.project.model.res.ProjectSearchUserGetRes;
 import p1.teamtodo.schedule.model.dto.ScheduleDto;
@@ -130,4 +132,32 @@ public class ProjectService {
         res.setUser(userDto);
         return res;
     }
+
+    ResponseResult userLock(ProjectUserLockReq p){
+        if(userMapper.leaderNo(p.getProjectNo())!=p.getSignedUserNo()){
+            ResponseResult.noPermission();
+        }
+        projectMapper.userLock(p);
+        return ResponseResult.success();
+    }
+
+    ResponseResult editUserList(ProjectUserEdit p){
+        long projectNo = p.getProjectNo();
+        if(p.getSignedUserNo()!=userMapper.leaderNo(projectNo)){
+            ResponseResult.noPermission();
+        }
+        List<Long> insUserList = p.getInsertUserNoList()!=null?p.getInsertUserNoList():new ArrayList<>();
+        List<Long> delUserList = p.getDeleteUserNoList()!=null?p.getDeleteUserNoList():new ArrayList<>();
+        if(insUserList.size()!=0){
+            int ins= projectMapper.insUserProjectList(projectNo,insUserList);
+            if(ins==0){ResponseResult.badRequest(ResponseCode.DATABASE_ERROR);}
+        }
+        if(delUserList.size()!=0){
+            int del= projectMapper.delUserProjectList(projectNo,delUserList);
+            if(del==0){ResponseResult.badRequest(ResponseCode.DATABASE_ERROR);}
+        }
+        return ResponseResult.success();
+    }
+
+
 }

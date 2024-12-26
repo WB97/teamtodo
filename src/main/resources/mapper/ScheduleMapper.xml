@@ -2,6 +2,77 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="p1.teamtodo">
+<mapper namespace="p1.teamtodo.schedule.ScheduleMapper">
+<!-- 수지 -->
+    <select id="scheduleDetail">
+        SELECT A.content
+            , A.detail
+            , A.checked
+            , A.created_at AS createdAt
+            , C.nickname AS userNickname
+            , C.profile_pic AS userProfilePic
+            , if(B.user_no=#{signedUserNo} OR D.leader_no=#{signedUserNo},1,0) AS mySchedule
+        FROM schedule A
+        INNER JOIN user_project B
+        ON B.user_project_no=A.user_project_no
+        INNER JOIN user C
+        ON B.user_no=C.user_no
+        INNER JOIN project D
+        ON B.project_no=D.project_no
+        WHERE A.schedule_no=#{scheduleNo}
+    </select>
 
+    <insert id="scheduleAdd" useGeneratedKeys="true" keyProperty="scheduleNo">
+        INSERT INTO schedule
+        SET content=#{content}
+            , user_project_no = (
+                SELECT A.user_project_no FROM user_project A
+                WHERE user_no=#{scheduleUserNo}
+                AND project_no=#{projectNo}
+        )
+        <if test="detail != null and detail != ''">
+            , detail=#{detail}
+        </if>
+    </insert>
+
+    <select id="getChecked">
+        SELECT A.checked
+        FROM schedule A
+        WHERE schedule_no=#{scheduleNo}
+    </select>
+
+    <update id="scheduleComplete">
+        UPDATE schedule
+        <set>
+            <if test="checked==0">
+                checked=1
+            </if>
+            <if test="checked==1">
+                checked=0
+            </if>
+        </set>
+        WHERE schedule_no=#{scheduleNo}
+    </update>
+
+
+    <update id="scheduleUpdate">
+        UPDATE schedule
+        SET
+        user_project_no = (
+        SELECT A.user_project_no FROM user_project A
+        WHERE user_no=#{scheduleUserNo}
+        AND project_no=#{projectNo})
+        <if test="content != null and content != ''">
+            , content = #{content}
+        </if>
+        <if test="detail != null and content != ''">
+            , detail = #{detail}
+        </if>
+        WHERE schedule_no=#{scheduleNo}
+    </update>
+
+    <delete id="scheduleDelete">
+        DELETE FROM schedule
+        WHERE schedule_no=#{scheduleNo}
+    </delete>
 </mapper>

@@ -20,15 +20,21 @@
 
     <select id="selProjectDetail">
         SELECT
-            project_no AS projectNo,
-            leader_no AS leaderNo,
-            title AS title,
-            description AS description,
-            start_at AS startAt,
-            deadline AS deadLine,
-            created_at AS createdAt
-        FROM project
-        WHERE project_no = #{projectNo}
+            p.project_no AS projectNo
+            , p.leader_no AS leaderNo
+            , p.title AS title
+            , p.description AS description
+            , p.start_at AS startAt
+            , p.deadline AS deadLine
+            , p.created_at AS createdAt
+            , up.`lock` AS signedUserLock
+        FROM project p
+        JOIN user_project up
+        ON p.project_no = up.project_no
+        JOIN USER u
+        ON u.user_no = up.user_no
+        WHERE p.project_no = #{projectNo}
+        AND u.user_no = #{userNo}
     </select>
 
 <!--    수정 데이터 요청 -->
@@ -90,4 +96,30 @@
         ORDER BY projectNo ASC
         LIMIT #{startIdx}, #{size}
     </select>
+
+<!--    수지 -->
+
+    <update id="userLock">
+        UPDATE user_project
+        SET `lock`='1'
+        WHERE user_no=#{targetUserNo}
+    </update>
+
+    <insert id="insUserProjectList">
+        INSERT INTO user_project
+        (user_no, project_no)
+        VALUES
+        <foreach collection="insertUserNoList" item="userNo" separator=",">
+            (#{userNo}, #{projectNo})
+        </foreach>
+    </insert>
+
+    <delete id="delUserProjectList">
+        DELETE FROM user_project
+        WHERE project_no = #{projectNo}
+        AND user_no IN
+        <foreach collection="deleteUserNoList" item="userNo" separator="," open="(" close=")">
+            #{userNo}
+        </foreach>
+    </delete>
 </mapper>
