@@ -80,6 +80,7 @@
         JOIN user_project UP
             ON UP.user_project_no = S.user_project_no
         AND UP.project_no = #{projectNo}
+        ORDER BY checked, schedule_no
     </select>
 
     <select id="selUserProjectList">
@@ -139,5 +140,10 @@
         <foreach collection="deleteUserNoList" item="userNo" separator="," open="(" close=")">
             #{userNo}
         </foreach>
+    </delete>
+
+    <delete id="delProject">
+        DELETE FROM project
+        WHERE project_no = #{projectNo}
     </delete>
 </mapper>

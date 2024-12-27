@@ -178,4 +178,22 @@ public class ProjectService {
         }
         return ResponseResult.success();
     }
+
+    ResponseResult deleteProject(ProjectDeleteReq req) {
+        long projectNo = req.getProjectNo();
+        long signedUserNo = req.getSignedUserNo();
+
+        if(!projectMapper.selProjectLeaderNo(projectNo, signedUserNo)) {
+            return ResponseResult.badRequest(ResponseCode.NO_FORBIDDEN);
+        }
+
+        int result = projectMapper.delProject(projectNo);
+        if(result != 1) {
+            return ResponseResult.databaseError();
+        }
+
+        return ResponseResult.success();
+    }
+
+
 }

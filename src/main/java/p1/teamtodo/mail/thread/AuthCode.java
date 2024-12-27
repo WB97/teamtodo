@@ -13,12 +13,8 @@ public class AuthCode implements Runnable {
 
     @Override
     public void run() {
-        StringBuilder code = new StringBuilder();
         try {
-            for (int i = 0; i < 4; i++) {
-                code.append((int)(Math.random() * 10));
-            }
-            MailService.codes.put(email, String.valueOf(code));
+
             Thread.sleep(36_000_000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);

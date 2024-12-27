@@ -34,6 +34,8 @@ public interface ProjectMapper {
 
     boolean selProjectLeaderNo(long projectNo, long signedUserNo);
 
+    int delProject(long projectNo);
+
     // 수지
     int userLock(ProjectUserLockReq p);
     int delUserProjectList(long projectNo, List<Long> deleteUserNoList);

@@ -15,8 +15,8 @@ import p1.teamtodo.common.ResponseCode;
 public class UserSignInReq {
 
     @NotBlank
-    @Schema(title = "유저 아이디용 이메일", example = "miniming0426@naver.com", requiredMode = Schema.RequiredMode.REQUIRED)
-    private String email;
+    @Schema(title = "유저 아이디", example = "testu123", requiredMode = Schema.RequiredMode.REQUIRED)
+    private String userId;
 
     @NotBlank
     @Schema(title = "유저 비밀번호", example = "0426", requiredMode = Schema.RequiredMode.REQUIRED)

@@ -19,8 +19,8 @@ public class SignUpReq {
     private String email;
 
     @NotBlank
-    @Schema(title = "유저 닉네임", type= "string", example = "testuser", requiredMode = Schema.RequiredMode.REQUIRED)
-    private String nickname;
+    @Schema(title = "유저 아이디", type= "string", example = "testu123", requiredMode = Schema.RequiredMode.REQUIRED)
+    private String userId;
 
     @NotBlank
     @Schema(title = "유저 패스워드", type= "string", example = "123456789", requiredMode = Schema.RequiredMode.REQUIRED)

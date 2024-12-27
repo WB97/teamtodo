@@ -10,10 +10,12 @@ import p1.teamtodo.common.MyFileUtils;
 import p1.teamtodo.common.ResponseCode;
 import p1.teamtodo.common.ResponseResult;
 import p1.teamtodo.mail.MailService;
+import p1.teamtodo.user.model.UserNickname;
 import p1.teamtodo.user.model.dto.UserDto;
 import p1.teamtodo.user.model.dto.UserInfo;
 import p1.teamtodo.user.model.dto.UserLoginInfo;
 import p1.teamtodo.user.model.req.*;
+import p1.teamtodo.user.model.res.FindUserIdGetRes;
 import p1.teamtodo.user.model.res.UserInfoGetRes;
 import p1.teamtodo.user.model.res.UserSignInRes;
 
@@ -28,7 +30,7 @@ public class UserService {
     private final MyFileUtils fileUtils;
 
     @Transactional
-    public ResponseResult signUp(SignUpReq req, MultipartFile pic) {
+    public ResponseResult signUp(SignUpReq req) {
 
         String email = req.getEmail();
 
@@ -42,12 +44,12 @@ public class UserService {
             return ResponseResult.badRequest(ResponseCode.DUPLICATE_EMAIL);
         }
 
-        String nickname = req.getNickname();
+        String userId = req.getUserId();
 
-        // 닉네임 중복 검증
-        boolean isDuplicateNick = userMapper.checkDuplicateNick(nickname);
-        if(isDuplicateNick) {
-            return ResponseResult.badRequest(ResponseCode.DUPLICATE_NICKNAME);
+        // 아이디 중복 검증
+        boolean isDuplicateId = userMapper.checkDuplicateUserId(userId);
+        if(isDuplicateId) {
+            return ResponseResult.badRequest(ResponseCode.DUPLICATE_ID);
         }
 
         String password = req.getPassword();
@@ -63,27 +65,20 @@ public class UserService {
             return ResponseResult.badRequest(ResponseCode.PASSWORD_CHECK_ERROR);
         }
 
-        String randName = pic == null ? null : fileUtils.makeRandomFileName(pic);
+        String randomUserNickname = UserNickname.createRandomUserNickname();
+        StringBuilder nickname = new StringBuilder(randomUserNickname);
+        for(int i=0; i<4; i++) {
+            nickname.append((int)(Math.random() * 10));
+        }
+
+
         String hashPw = generateHashPw(password);
         UserDto userDto = new UserDto();
         userDto.setEmail(email);
-        userDto.setNickname(nickname);
+        userDto.setUserId(userId);
         userDto.setPassword(hashPw);
-        userDto.setPic(randName);
+        userDto.setNickname(String.valueOf(nickname));
         userMapper.insUser(userDto);
-
-        if(randName == null) {
-            return ResponseResult.success();
-        }
-
-        // 프로필 사진 저장
-        String filePath = "user/" + userDto.getUserNo();
-        fileUtils.makeFolders(filePath);
-        try {
-            fileUtils.transferTo(pic, filePath + "/" + randName);
-        } catch (IOException e) {
-            return ResponseResult.serverError();
-        }
 
         return ResponseResult.success();
     }
@@ -106,19 +101,38 @@ public class UserService {
         String hashPw = BCrypt.hashpw(req.getPassword(), BCrypt.gensalt());
 
         try {
-            userMapper.changeUserPw(req.getUserNo(), hashPw);
+            userMapper.changeUserPw(email, hashPw);
         } catch (Exception e) {
             return ResponseResult.databaseError();
         }
         return ResponseResult.success();
     }
 
+    public ResponseResult findUserId(String email) {
+
+        // 이메일 인증 여부
+        if(!checkEmail(email)) {
+            return ResponseResult.unauthorized();
+        }
+
+        String userId;
+        try {
+            userId = userMapper.selUserIdByEmail(email);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResponseResult.databaseError();
+        }
+        FindUserIdGetRes findUserIdGetRes = new FindUserIdGetRes(ResponseCode.OK.getCode());
+        findUserIdGetRes.setUserId(userId);
+        return findUserIdGetRes;
+    }
+
     public ResponseResult userSignIn(UserSignInReq p) {
 
-        String email = p.getEmail();
+        String userId = p.getUserId();
 
         // 매퍼 메서드를 호출하여 사용자 조회
-        UserLoginInfo info = userMapper.userSignIn(email);
+        UserLoginInfo info = userMapper.userSignIn(userId);
         if (info == null) {
             return ResponseResult.badRequest(ResponseCode.NO_EXIST_USER); // 사용자 정보가 없을 경우
         }
@@ -128,14 +142,10 @@ public class UserService {
             return ResponseResult.badRequest(ResponseCode.INCORRECT_EMAIL_PASSWORD); // 비밀번호 불일치
         }
 
-        // 첫 로그인 여부 확인
-        boolean firstLogin = info.isFirstLogin(); // DB에서 firstLogin 여부 가져옴
-
         // 성공 응답
-        return new UserSignInRes(ResponseCode.OK.getCode(), firstLogin);
+        return new UserSignInRes(ResponseCode.OK.getCode(), info.isFirstLogin(), info.getUserNo());
     }
 
-    @Transactional
     public ResponseResult selUserInfo(UserInfoGetReq p) {
 
         long signedUserNo = p.getSignedUserNo();
@@ -149,10 +159,15 @@ public class UserService {
         // 4. 본인 여부 확인
         boolean isMyInfo = (signedUserNo == userInfo.getUserNo());
 
+        // # 제외한 닉네임 반환
+        String fullNickname = userInfo.getNickname();
+        String nickname = UserNickname.getUserNicknameWithOutNumber(fullNickname);
+        if(nickname == null) return ResponseResult.databaseError();
+
         // 5. UserInfoGetRes 반환
         UserInfoGetRes response = new UserInfoGetRes();
         response.setEmail(userInfo.getEmail());
-        response.setNickname(userInfo.getNickname());
+        response.setNickname(nickname);
         response.setStatusMessage(userInfo.getStatusMessage());
         response.setPic(userInfo.getPic());
 

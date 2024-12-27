@@ -6,10 +6,7 @@ import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import p1.teamtodo.common.ResponseResult;
-import p1.teamtodo.project.model.req.ProjectCreatePostReq;
-import p1.teamtodo.project.model.req.ProjectEditPutReq;
-import p1.teamtodo.project.model.req.ProjectUserEdit;
-import p1.teamtodo.project.model.req.ProjectUserLockReq;
+import p1.teamtodo.project.model.req.*;
 
 @RestController
 @RequestMapping("/project")
@@ -28,7 +25,8 @@ public class ProjectController {
     @GetMapping
     @Operation(summary = "로그인 유저의 프로젝트 목록", description = "page 가 0 일때 첫페이지")
     public ResponseResult getProjectList(@RequestParam long signedUserNo,
-                                         @RequestParam(required = false) Integer page) {
+                                         @RequestParam(required = false) Integer page
+    ) {
         if(page == null) {
             return projectService.getProjectList(signedUserNo);
         }
@@ -73,4 +71,9 @@ public class ProjectController {
         return projectService.putEditProject(req);
     }
 
+    @DeleteMapping
+    @Operation(summary = "프로젝트 삭제", description = "삭제 DELETE 요청, 연관된 일정도 모두 삭제.")
+    public ResponseResult deleteProject(@RequestBody ProjectDeleteReq req){
+        return projectService.deleteProject(req);
+    }
 }

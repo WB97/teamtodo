@@ -62,10 +62,8 @@
         SELECT A.user_project_no FROM user_project A
         WHERE user_no=#{scheduleUserNo}
         AND project_no=#{projectNo})
-        <if test="content != null and content != ''">
+        <if test="content != null and content != '' and detail != null and detail != ''">
             , content = #{content}
-        </if>
-        <if test="detail != null and content != ''">
             , detail = #{detail}
         </if>
         WHERE schedule_no=#{scheduleNo}

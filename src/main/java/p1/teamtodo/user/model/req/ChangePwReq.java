@@ -12,10 +12,6 @@ import lombok.Setter;
 @Schema(title = "비밀번호 재설정 POST 요청")
 public class ChangePwReq {
 
-    @NotNull
-    @Schema(title = "유저 번호", type= "long", example = "1", requiredMode = Schema.RequiredMode.REQUIRED)
-    private long userNo;
-
     @NotBlank
     @Schema(title = "유저 이메일", type= "string", example = "test@email.com", requiredMode = Schema.RequiredMode.REQUIRED)
     private String email;

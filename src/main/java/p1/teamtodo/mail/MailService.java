@@ -22,7 +22,15 @@ public class MailService {
 
     public ResponseResult send(String email) {
 
-        new Thread(new AuthCode(email)).start(); // 인증 코드 생성, 3분간 저장
+        // 인증코드 생성
+        StringBuilder code = new StringBuilder();
+        for (int i = 0; i < 4; i++) {
+            code.append((int)(Math.random() * 10));
+        }
+        MailService.codes.put(email, String.valueOf(code));
+
+        // 인증코드 유지 시간 설정
+        new Thread(new AuthCode(email)).start();
 
         MailHandler mailHandler;
         try {
@@ -46,7 +54,7 @@ public class MailService {
         if (!savedCode.equals(code)) {
             return new ResponseResult("FAIL");
         }
-        codes.remove(code);
+        codes.remove(email);
         mailChecked.put(email, true);
         new Thread(new MailCheck(email)).start(); // 3분간 인증 성공, 이후 만료
         return ResponseResult.success();

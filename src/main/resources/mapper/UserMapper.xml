@@ -6,10 +6,10 @@
 
     <insert id="insUser" useGeneratedKeys="true" keyProperty="userNo">
         INSERT INTO `user`
-        SET nickname = #{nickname}
+        SET user_id = #{userId}
             , password = #{password}
+            , nickname = #{nickname}
             , email = #{email}
-            , profile_pic = #{pic}
             , first_login = TRUE
     </insert>
 
@@ -20,6 +20,13 @@
             , profile_pic AS pic
         FROM `user`
         WHERE nickname = #{nickname}
+    </select>
+
+    <select id="selUserIdByEmail">
+        SELECT
+            user_id AS userId
+        FROM user
+        WHERE email = #{email}
     </select>
 
     <select id="selUserByNickname">
@@ -39,22 +46,29 @@
 
     <select id="checkDuplicateEmail" resultType="boolean">
         SELECT EXISTS (
-            SELECT email FROM `user`
+            SELECT 1 FROM `user`
             WHERE email=#{email}
         )
     </select>
 
     <select id="checkDuplicateNick" resultType="boolean">
         SELECT EXISTS (
-            SELECT nickname FROM `user`
+            SELECT 1 FROM `user`
             WHERE nickname=#{nickname}
+        )
+    </select>
+
+    <select id="checkDuplicateUserId">
+        SELECT EXISTS (
+            SELECT 1 FROM `user`
+        WHERE user_id=#{userId}
         )
     </select>
 
     <update id="changeUserPw">
         UPDATE `user`
         SET password = #{password}
-        WHERE user_no = #{userNo}
+        WHERE email = #{email}
     </update>
 
     <!-- 1. 사용자 로그인 -->
@@ -62,13 +76,13 @@
         SELECT
             user_no AS userNo,
             password,
-            nickname,
-            email,
-            profile_pic AS profilePic,
-            first_login AS firstLogin,
-            status_message AS userStatusMessage
+            first_login AS firstLogin
         FROM user
-        WHERE email = #{email}
+        WHERE user_id = #{userId}
+    </select>
+
+    <select id="selUserFirstLogin">
+
     </select>
 
 
@@ -78,7 +92,7 @@
             user_no AS userNo,
             email,
             nickname,
-            status_message AS userStatusMessage,
+            status_message AS statusMessage,
             profile_pic AS pic
         FROM user
         WHERE user_no = #{targetUserNo}

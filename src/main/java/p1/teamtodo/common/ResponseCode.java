@@ -23,6 +23,7 @@ public enum ResponseCode {
     // 회원가입
     DUPLICATE_EMAIL("DPE"),
     DUPLICATE_NICKNAME("DPN"),
+    DUPLICATE_ID("DPI"),
     PASSWORD_FORMAT_ERROR("PFE"),
     PASSWORD_CHECK_ERROR("PCE"),
 

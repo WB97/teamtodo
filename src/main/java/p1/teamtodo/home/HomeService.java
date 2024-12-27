@@ -7,6 +7,7 @@ import p1.teamtodo.common.ResponseResult;
 import p1.teamtodo.home.model.res.HomeGetRes;
 import p1.teamtodo.home.model.res.MembersPicGetRes;
 import p1.teamtodo.project.model.dto.ProjectHomeDto;
+import p1.teamtodo.user.UserMapper;
 
 import java.util.List;
 
@@ -16,9 +17,11 @@ import java.util.List;
 public class HomeService {
 
     private final HomeMapper homeMapper;
+    private final UserMapper userMapper;
 
     public ResponseResult getHome(String reqDate, long userNo) {
         String date = reqDate.substring(0,4) + "-" + reqDate.substring(4);
+        boolean firstLogin = userMapper.selUserFirstLogin(userNo);
         List<ProjectHomeDto> projectList = homeMapper.selProjectList(date, userNo);
         HomeGetRes res = new HomeGetRes();
         res.setProjectList(projectList);

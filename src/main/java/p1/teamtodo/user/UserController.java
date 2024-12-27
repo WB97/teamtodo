@@ -22,10 +22,9 @@ public class UserController {
 
     @PostMapping(value = "/sign-up", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     @Operation(summary = "회원가입", description = "이메일로 인증코드 전송, 이후 인증코드 확인 후 3분간 회원가입 가능")
-    public ResponseResult signUp(@Valid @RequestPart SignUpReq req,
-                                 @RequestPart(required = false) MultipartFile pic) {
+    public ResponseResult signUp(@Valid @RequestPart SignUpReq req) {
         log.info("req = {}", req);
-        return userService.signUp(req, pic);
+        return userService.signUp(req);
     }
 
     @PostMapping("/find-pw")
@@ -40,7 +39,6 @@ public class UserController {
         return userService.userSignIn(p);
     }
 
-
     // 2. 사용자 정보 조회 (GET)
     @GetMapping
     @Operation(summary = "사용자 상세 정보, 수정 페이지 불러오기에서도 사용")
@@ -54,5 +52,11 @@ public class UserController {
                                    @RequestPart(required = false) MultipartFile pic
     ) {
         return userService.editUser(req, pic);
+    }
+
+    @GetMapping("/find-id")
+    @Operation(summary = "아이디 찾기 응답")
+    public ResponseResult findUserId(@RequestParam String email) {
+        return userService.findUserId(email);
     }
 }

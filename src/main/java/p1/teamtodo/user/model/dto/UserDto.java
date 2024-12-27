@@ -12,6 +12,7 @@ import lombok.ToString;
 public class UserDto {
 
     private String email;
+    private String userId;
     private String nickname;
     private String statusMessage;
     private String password;
