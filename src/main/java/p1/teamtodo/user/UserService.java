@@ -142,8 +142,13 @@ public class UserService {
             return ResponseResult.badRequest(ResponseCode.INCORRECT_EMAIL_PASSWORD); // 비밀번호 불일치
         }
 
+        boolean firstLogin = info.isFirstLogin();
+        if(firstLogin) {
+            userMapper.updFirstLogin(info.getUserNo());
+        }
+
         // 성공 응답
-        return new UserSignInRes(ResponseCode.OK.getCode(), info.isFirstLogin(), info.getUserNo());
+        return new UserSignInRes(ResponseCode.OK.getCode(), firstLogin, info.getUserNo());
     }
 
     public ResponseResult selUserInfo(UserInfoGetReq p) {

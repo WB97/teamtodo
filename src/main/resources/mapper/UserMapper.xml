@@ -81,8 +81,10 @@
         WHERE user_id = #{userId}
     </select>
 
-    <select id="selUserFirstLogin">
-
+    <select id="updFirstLogin">
+        UPDATE `user`
+            SET first_login = 0
+        WHERE user_no = #{userNo}
     </select>
 
 
