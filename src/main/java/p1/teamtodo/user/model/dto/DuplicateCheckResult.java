@@ -1,6 +1,5 @@
-package com.green.firstproject.user.model.dto;
+package p1.teamtodo.user.model.dto;
 
-import com.green.firstproject.user.model.UserSignUpReq;
 import lombok.Getter;
 import lombok.Setter;
 

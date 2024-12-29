@@ -93,13 +93,11 @@ public class ProjectService {
                 return ResponseResult.databaseError();
             }
 
-            if(!(req.getMemberNoList() == null || req.getMemberNoList().isEmpty())) {
-                List<Long> memberNoList = req.getMemberNoList();
-                memberNoList.add(req.getSignedUserNo());
-                result = projectMapper.insUserProject(memberNoList, req.getProjectNo());
-                if(result == 0) {
-                    return ResponseResult.databaseError();
-                }
+            List<Long> memberNoList = req.getMemberNoList();
+            memberNoList.add(req.getSignedUserNo());
+            result = projectMapper.insUserProject(memberNoList, req.getProjectNo());
+            if(result == 0) {
+                return ResponseResult.databaseError();
             }
         } catch (Exception e) {
             return ResponseResult.databaseError();
@@ -125,6 +123,7 @@ public class ProjectService {
 
     public ResponseResult searchUserByNickname(String nickname) {
         ProjectSearchUserDto userDto = userMapper.selUserByNickname(nickname);
+        if(userDto == null) return ResponseResult.badRequest(ResponseCode.NO_EXIST_USER);
         ProjectSearchUserGetRes res = new ProjectSearchUserGetRes();
         res.setUser(userDto);
         return res;
@@ -159,17 +158,21 @@ public class ProjectService {
     ResponseResult putEditProject(ProjectEditPutReq req) {
         long projectNo = req.getProjectNo();
         long signedUserNo = req.getSignedUserNo();
+
         if(!projectMapper.selProjectLeaderNo(projectNo, signedUserNo)) {
             return ResponseResult.badRequest(ResponseCode.NO_FORBIDDEN);
         }
 
-        String temp = req.getStartAt();
-        String startAt = temp.substring(0,4) + "-" + temp.substring(4,6) + "-" + temp.substring(6);
-        temp = req.getDeadLine();
-        String deadLine = temp.substring(0,4) + "-" + temp.substring(4,6) + "-" + temp.substring(6);
+        String startAt = req.getStartAt();
+        String deadLine = req.getDeadLine();
+        if(Integer.parseInt(startAt) >= Integer.parseInt(deadLine)) {
+            return ResponseResult.badRequest(ResponseCode.VALUE_ERROR);
+        }
+        String saveStartAt = startAt.substring(0,4) + "-" + startAt.substring(4,6) + "-" + startAt.substring(6);
+        String saveDeadLine = deadLine.substring(0,4) + "-" + deadLine.substring(4,6) + "-" + deadLine.substring(6);
 
         try {
-            int result = projectMapper.updProject(projectNo, req.getTitle(), req.getDescription(), startAt, deadLine);
+            int result = projectMapper.updProject(projectNo, req.getTitle(), req.getDescription(), saveStartAt, saveDeadLine);
             if(result == 0) {
                 return ResponseResult.databaseError();
             }

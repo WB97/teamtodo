@@ -25,12 +25,4 @@ public class EditUserPutReq {
     @NotBlank
     @Schema(title = "유저 상태메세지", type= "string", example = "상태메세지 입니다")
     private String statusMessage;
-
-    @NotBlank
-    @Schema(title = "유저 패스워드", type= "string", example = "123456789", requiredMode = Schema.RequiredMode.REQUIRED)
-    private String password;
-
-    @NotBlank
-    @Schema(title = "유저 패스워드 확인", type= "string", example = "123456789", requiredMode = Schema.RequiredMode.REQUIRED)
-    private String passwordConfirm;
 }

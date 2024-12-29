@@ -3,9 +3,11 @@ package p1.teamtodo.user;
 import org.apache.ibatis.annotations.Mapper;
 import p1.teamtodo.project.model.dto.ProjectEditUserDto;
 import p1.teamtodo.project.model.dto.ProjectSearchUserDto;
+import p1.teamtodo.user.model.dto.DuplicateCheckResult;
 import p1.teamtodo.user.model.dto.UserDto;
 import p1.teamtodo.user.model.dto.UserInfo;
 import p1.teamtodo.user.model.dto.UserLoginInfo;
+import p1.teamtodo.user.model.req.SignUpReq;
 
 import java.util.List;
 
@@ -19,6 +21,8 @@ public interface UserMapper {
     boolean checkDuplicateNick(String nickname);
 
     boolean checkDuplicateUserId(String userId);
+
+    DuplicateCheckResult checkDuplicates(SignUpReq p);
 
     void changeUserPw(String email, String password);
 

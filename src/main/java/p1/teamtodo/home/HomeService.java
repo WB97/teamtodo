@@ -21,7 +21,6 @@ public class HomeService {
 
     public ResponseResult getHome(String reqDate, long userNo) {
         String date = reqDate.substring(0,4) + "-" + reqDate.substring(4);
-        boolean firstLogin = userMapper.selUserFirstLogin(userNo);
         List<ProjectHomeDto> projectList = homeMapper.selProjectList(date, userNo);
         HomeGetRes res = new HomeGetRes();
         res.setProjectList(projectList);

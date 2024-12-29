@@ -31,37 +31,24 @@
 
     <select id="selUserByNickname">
         SELECT
-            u.user_no AS userNo
-            , u.nickname AS nickname
-            , u.profile_pic AS pic
-            , s.schedule_no AS existSchedule
+        u.user_no AS userNo
+        , u.nickname AS nickname
+        , u.profile_pic AS pic
         FROM USER u
-        JOIN user_project up
-            ON u.user_no = up.user_no
-            AND nickname = #{nickname}
-        LEFT JOIN schedule s
-            ON up.user_project_no = s.user_project_no
-        GROUP BY userNo
+        WHERE nickname = #{nickname}
     </select>
 
-    <select id="checkDuplicateEmail" resultType="boolean">
-        SELECT EXISTS (
-            SELECT 1 FROM `user`
-            WHERE email=#{email}
-        )
+    <select id="checkDuplicates">
+        SELECT
+            SUM(email = #{email}) AS emailCount
+            , SUM(user_id = #{userId}) AS userIdCount
+        FROM user
     </select>
 
     <select id="checkDuplicateNick" resultType="boolean">
         SELECT EXISTS (
             SELECT 1 FROM `user`
             WHERE nickname=#{nickname}
-        )
-    </select>
-
-    <select id="checkDuplicateUserId">
-        SELECT EXISTS (
-            SELECT 1 FROM `user`
-        WHERE user_id=#{userId}
         )
     </select>
 
@@ -103,10 +90,9 @@
     <update id="editUser">
         UPDATE `user`
         SET nickname = #{nickname}
-            , password = #{password}
             , profile_pic = #{pic}
             , status_message = #{statusMessage}
-        WHERE user_no = #{targetUserNo}
+        WHERE user_no = #{userNo}
     </update>
 
     <select id="selProjectEditUser">

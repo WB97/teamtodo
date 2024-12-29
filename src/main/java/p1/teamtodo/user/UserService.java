@@ -11,6 +11,7 @@ import p1.teamtodo.common.ResponseCode;
 import p1.teamtodo.common.ResponseResult;
 import p1.teamtodo.mail.MailService;
 import p1.teamtodo.user.model.UserNickname;
+import p1.teamtodo.user.model.dto.DuplicateCheckResult;
 import p1.teamtodo.user.model.dto.UserDto;
 import p1.teamtodo.user.model.dto.UserInfo;
 import p1.teamtodo.user.model.dto.UserLoginInfo;
@@ -34,22 +35,18 @@ public class UserService {
 
         String email = req.getEmail();
 
-        if(!checkEmail(email)) {
-           return ResponseResult.unauthorized();
+        // 이메일 인증 여부
+//        if(!checkEmail(email)) {
+//           return ResponseResult.unauthorized();
+//        }
+
+        // 4. 중복 체크
+        DuplicateCheckResult duplicateCheck = userMapper.checkDuplicates(req); // DTO로 반환
+        if (duplicateCheck.getEmailCount() > 0) {
+            return ResponseResult.badRequest(ResponseCode.DUPLICATE_EMAIL); // 이메일 중복
         }
-
-        // 이메일 중복 검증
-        boolean isDuplicateEmail = userMapper.checkDuplicateEmail(email);
-        if(isDuplicateEmail) {
-            return ResponseResult.badRequest(ResponseCode.DUPLICATE_EMAIL);
-        }
-
-        String userId = req.getUserId();
-
-        // 아이디 중복 검증
-        boolean isDuplicateId = userMapper.checkDuplicateUserId(userId);
-        if(isDuplicateId) {
-            return ResponseResult.badRequest(ResponseCode.DUPLICATE_ID);
+        if (duplicateCheck.getUserIdCount() > 0) {
+            return ResponseResult.badRequest(ResponseCode.DUPLICATE_ID); // 유저 ID 중복
         }
 
         String password = req.getPassword();
@@ -65,20 +62,26 @@ public class UserService {
             return ResponseResult.badRequest(ResponseCode.PASSWORD_CHECK_ERROR);
         }
 
-        String randomUserNickname = UserNickname.createRandomUserNickname();
-        StringBuilder nickname = new StringBuilder(randomUserNickname);
-        for(int i=0; i<4; i++) {
-            nickname.append((int)(Math.random() * 10));
+        // 닉네임 자동생성 ex) test#1234
+        String randomUserNickname;
+        while(true) {
+            randomUserNickname = UserNickname.createRandomUserNickname();
+            boolean isDuplicateNick = userMapper.checkDuplicateNick(randomUserNickname);
+            if(!isDuplicateNick) break;
         }
 
 
         String hashPw = generateHashPw(password);
         UserDto userDto = new UserDto();
         userDto.setEmail(email);
-        userDto.setUserId(userId);
+        userDto.setUserId(req.getUserId());
         userDto.setPassword(hashPw);
-        userDto.setNickname(String.valueOf(nickname));
-        userMapper.insUser(userDto);
+        userDto.setNickname(randomUserNickname);
+        try {
+            userMapper.insUser(userDto);
+        } catch (Exception e) {
+            return ResponseResult.databaseError();
+        }
 
         return ResponseResult.success();
     }
@@ -94,11 +97,16 @@ public class UserService {
         }
 
         // 비밀번호 확인 체크
-        if(!req.getPassword().equals(req.getPasswordConfirm())) {
+        String password = req.getPassword();
+        if(!password.equals(req.getPasswordConfirm())) {
             return ResponseResult.badRequest(ResponseCode.PASSWORD_CHECK_ERROR);
         }
 
-        String hashPw = BCrypt.hashpw(req.getPassword(), BCrypt.gensalt());
+        if(password.length() < 8 || password.length() > 16) {
+            return ResponseResult.badRequest(ResponseCode.PASSWORD_FORMAT_ERROR);
+        }
+
+        String hashPw = BCrypt.hashpw(password, BCrypt.gensalt());
 
         try {
             userMapper.changeUserPw(email, hashPw);
@@ -164,15 +172,13 @@ public class UserService {
         // 4. 본인 여부 확인
         boolean isMyInfo = (signedUserNo == userInfo.getUserNo());
 
-        // # 제외한 닉네임 반환
-        String fullNickname = userInfo.getNickname();
-        String nickname = UserNickname.getUserNicknameWithOutNumber(fullNickname);
-        if(nickname == null) return ResponseResult.databaseError();
+//        String nickname = UserNickname.getUserNicknameWithOutNumber(fullNickname);
+//        if(nickname == null) return ResponseResult.databaseError();
 
         // 5. UserInfoGetRes 반환
         UserInfoGetRes response = new UserInfoGetRes();
         response.setEmail(userInfo.getEmail());
-        response.setNickname(nickname);
+        response.setNickname(userInfo.getNickname());
         response.setStatusMessage(userInfo.getStatusMessage());
         response.setPic(userInfo.getPic());
 
@@ -184,25 +190,26 @@ public class UserService {
 
     @Transactional
     public ResponseResult editUser(EditUserPutReq req, MultipartFile pic) {
-        String reqPw = req.getPassword();
 
         // 닉네임 중복 체크
         if(userMapper.checkDuplicateNick(req.getNickname())) {
             return ResponseResult.badRequest(ResponseCode.DUPLICATE_NICKNAME);
         }
 
-        // 비밀번호 확인 체크
-        if(!checkPassword(reqPw, req.getPassword())) {
-            return ResponseResult.badRequest(ResponseCode.PASSWORD_CHECK_ERROR);
-        }
-
-        String hashPw = generateHashPw(reqPw);
+        // 랜덤 사진 이름
         String savePicName = pic == null ? null : fileUtils.makeRandomFileName(pic);
+
+        // 닉네임 #랜덤숫자 붙이기
+        String nickname;
+        while(true) {
+            nickname = UserNickname.createdUserNicknameWithNumber(req.getNickname());
+            boolean isDuplicateNick = userMapper.checkDuplicateNick(nickname);
+            if(!isDuplicateNick) break;
+        }
 
         UserDto userDto = new UserDto();
         userDto.setUserNo(req.getTargetUserNo());
-        userDto.setNickname(req.getNickname());
-        userDto.setPassword(hashPw);
+        userDto.setNickname(nickname);
         userDto.setPic(savePicName);
         userDto.setStatusMessage(req.getStatusMessage());
         userMapper.editUser(userDto);
