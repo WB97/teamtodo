@@ -26,6 +26,7 @@ public enum ResponseCode {
     DUPLICATE_ID("DPI"),
     PASSWORD_FORMAT_ERROR("PFE"),
     PASSWORD_CHECK_ERROR("PCE"),
+    EMAIL_FORMAT_ERROR("EFE"),
 
     // 로그인
     INCORRECT_EMAIL_PASSWORD("IEP"),

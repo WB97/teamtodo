@@ -21,7 +21,8 @@ public interface ProjectMapper {
 
     boolean participatingUser(long userNo, long projectNo);
 
-    ProjectDetailDto selProjectDetail(long projectNo);
+    ProjectDetailDto selProjectDetail(long projectNo, long signedUserNo);
+
     ProjectEditDto selEditProjectDetail(long projectNo);
 
     List<UserInfo> selProjectUsers(long projectNo);
@@ -40,4 +41,5 @@ public interface ProjectMapper {
     int userLock(ProjectUserLockReq p);
     int delUserProjectList(long projectNo, List<Long> deleteUserNoList);
     int insUserProjectList(long projectNo, List<Long> insertUserNoList);
+    int updProjectComplete(long projectNo);
 }

@@ -40,6 +40,12 @@ public class UserService {
 //           return ResponseResult.unauthorized();
 //        }
 
+        // 이메일 형식 체크
+        if (!email.matches("^[a-zA-Z0-9_+&*.-]+@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$")) {
+            log.error("Invalid email format: {}", email);
+            return ResponseResult.badRequest(ResponseCode.EMAIL_FORMAT_ERROR); // 이메일 형식 오류
+        }
+
         // 4. 중복 체크
         DuplicateCheckResult duplicateCheck = userMapper.checkDuplicates(req); // DTO로 반환
         if (duplicateCheck.getEmailCount() > 0) {
@@ -69,7 +75,6 @@ public class UserService {
             boolean isDuplicateNick = userMapper.checkDuplicateNick(randomUserNickname);
             if(!isDuplicateNick) break;
         }
-
 
         String hashPw = generateHashPw(password);
         UserDto userDto = new UserDto();
@@ -222,9 +227,9 @@ public class UserService {
         try {
             fileUtils.transferTo(pic,folderPath + "/" + savePicName);
         } catch (IOException e) {
+            e.printStackTrace();
             return ResponseResult.serverError();
         }
-
         return ResponseResult.success();
     }
 

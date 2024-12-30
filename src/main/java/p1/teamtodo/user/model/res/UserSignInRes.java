@@ -10,11 +10,11 @@ public class UserSignInRes extends ResponseResult {
 
     @Schema(title = "첫 로그인 여부", description = "첫 로그인 여부를 나타내는 값", example = "true")
     private boolean firstLogin;
-    private long userNo;
+    private long signedUserNo;
 
-    public UserSignInRes(String code, boolean firstLogin, long userNo) {
+    public UserSignInRes(String code, boolean firstLogin, long signedUserNo) {
         super(code); // ResponseResult의 생성자 호출
         this.firstLogin = firstLogin;
-        this.userNo = userNo;
+        this.signedUserNo = signedUserNo;
     }
 }

@@ -34,7 +34,7 @@
         JOIN USER u
         ON u.user_no = up.user_no
         WHERE p.project_no = #{projectNo}
-        AND u.user_no = #{userNo}
+        AND u.user_no = #{signedUserNo}
     </select>
 
 <!--    수정 데이터 요청 -->
@@ -74,7 +74,7 @@
             UP.user_no AS userNo,
             S.schedule_no AS scheduleNo,
             S.content AS content,
-            S.cheked AS checked,
+            S.checked AS checked,
             S.created_at AS createdAt
         FROM schedule S
         JOIN user_project UP
@@ -90,6 +90,7 @@
             , P.start_at AS startAt
             , P.deadline AS deadline
             , P.description AS description
+            , P.project_complete AS projectComplete
         FROM project P
         JOIN user_project UP
             ON P.project_no = UP.project_no
@@ -122,6 +123,19 @@
         UPDATE user_project
         SET `lock`='1'
         WHERE user_no=#{targetUserNo}
+    </update>
+
+    <update id="updProjectComplete">
+        UPDATE project
+            SET project_complete=1
+        WHERE project_no=#{projectNo}
+            AND NOT EXISTS (
+                SELECT 1 FROM schedule S
+                INNER JOIN user_project UP
+                    ON UP.user_project_no=S.user_project_no
+                WHERE project_no=#{projectNo}
+                    AND S.checked=0
+        )
     </update>
 
     <insert id="insUserProjectList">

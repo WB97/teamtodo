@@ -7,4 +7,5 @@ import lombok.Setter;
 @Setter
 public class ProjectListDto extends ProjectHomeDto{
     private String description;
+    private boolean projectComplete;
 }

@@ -71,6 +71,12 @@ public class ProjectController {
         return projectService.putEditProject(req);
     }
 
+    @PostMapping("/{projectNo}")
+    @Operation(summary = "프로젝트 완료", description = "완료 POST 요청")
+    public ResponseResult completeProject(@PathVariable long projectNo, @RequestParam long signedUserNo) {
+        return projectService.completeProject(projectNo, signedUserNo);
+    }
+
     @DeleteMapping
     @Operation(summary = "프로젝트 삭제", description = "삭제 DELETE 요청, 연관된 일정도 모두 삭제.")
     public ResponseResult deleteProject(@RequestBody ProjectDeleteReq req){

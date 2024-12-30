@@ -13,7 +13,6 @@ import lombok.ToString;
 public class SignUpReq {
 
     @NotBlank
-    @Pattern(regexp = "^[a-zA-Z0-9_+&*.-]+@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$")
     @Schema(title = "유저 이메일", type= "string", example = "test@email.com", requiredMode = Schema.RequiredMode.REQUIRED,
     minLength = 5, maxLength = 50, pattern = "^[a-zA-Z0-9_+&*.-]+@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$")
     private String email;

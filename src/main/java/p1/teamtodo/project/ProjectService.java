@@ -35,9 +35,12 @@ public class ProjectService {
             return ResponseResult.badRequest(ResponseCode.NO_FORBIDDEN);
         }
 
-        ProjectDetailDto projectDetailDto = projectMapper.selProjectDetail(projectNo);
+        ProjectDetailDto projectDetailDto = projectMapper.selProjectDetail(projectNo, signedUserNo);
         List<UserInfo> projectUserList = projectMapper.selProjectUsers(projectNo);
         List<ScheduleDto> allUserSchedules = projectMapper.selUserSchedules(projectNo);
+        if(projectDetailDto == null) {
+            return ResponseResult.badRequest(ResponseCode.VALUE_ERROR);
+        }
 
         projectDetailDto.setMemberList(projectUserList);
 
@@ -95,6 +98,9 @@ public class ProjectService {
 
             List<Long> memberNoList = req.getMemberNoList();
             memberNoList.add(req.getSignedUserNo());
+            if(memberNoList.size() > 8) {
+                return ResponseResult.badRequest(ResponseCode.VALUE_ERROR);
+            }
             result = projectMapper.insUserProject(memberNoList, req.getProjectNo());
             if(result == 0) {
                 return ResponseResult.databaseError();
@@ -140,17 +146,21 @@ public class ProjectService {
     ResponseResult editUserList(ProjectUserEdit p){
         long projectNo = p.getProjectNo();
         if(p.getSignedUserNo()!=userMapper.leaderNo(projectNo)){
-            ResponseResult.noPermission();
+            return ResponseResult.noPermission();
         }
-        List<Long> insUserList = p.getInsertUserNoList()!=null?p.getInsertUserNoList():new ArrayList<>();
-        List<Long> delUserList = p.getDeleteUserNoList()!=null?p.getDeleteUserNoList():new ArrayList<>();
+        List<Long> insUserList = p.getInsertUserNoList()!=null ? p.getInsertUserNoList() : new ArrayList<>();
+        List<Long> delUserList = p.getDeleteUserNoList()!=null ? p.getDeleteUserNoList() : new ArrayList<>();
         if(insUserList.size()!=0){
             int ins= projectMapper.insUserProjectList(projectNo,insUserList);
-            if(ins==0){ResponseResult.badRequest(ResponseCode.DATABASE_ERROR);}
+            if(ins==0){
+                return ResponseResult.badRequest(ResponseCode.DATABASE_ERROR);
+            }
         }
         if(delUserList.size()!=0){
             int del= projectMapper.delUserProjectList(projectNo,delUserList);
-            if(del==0){ResponseResult.badRequest(ResponseCode.DATABASE_ERROR);}
+            if(del==0){
+                return ResponseResult.badRequest(ResponseCode.DATABASE_ERROR);
+            }
         }
         return ResponseResult.success();
     }
@@ -178,6 +188,17 @@ public class ProjectService {
             }
         } catch (Exception e) {
             return ResponseResult.databaseError();
+        }
+        return ResponseResult.success();
+    }
+
+    ResponseResult completeProject(long projectNo, long signedUserNo){
+        if(signedUserNo != userMapper.leaderNo(projectNo)){
+            return ResponseResult.noPermission();
+        }
+        int res = projectMapper.updProjectComplete(projectNo);
+        if(res==0){
+            return ResponseResult.badRequest(ResponseCode.FAIL);
         }
         return ResponseResult.success();
     }
