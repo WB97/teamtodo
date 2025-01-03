@@ -3,6 +3,7 @@ package p1.teamtodo.user;
 import org.apache.ibatis.annotations.Mapper;
 import p1.teamtodo.project.model.dto.ProjectEditUserDto;
 import p1.teamtodo.project.model.dto.ProjectSearchUserDto;
+import p1.teamtodo.schedule.model.dto.GetLeaderNoAndScheduledNoDto;
 import p1.teamtodo.user.model.dto.DuplicateCheckResult;
 import p1.teamtodo.user.model.dto.UserDto;
 import p1.teamtodo.user.model.dto.UserInfo;
@@ -19,6 +20,7 @@ public interface UserMapper {
     boolean checkDuplicateEmail(String email);
 
     boolean checkDuplicateNick(String nickname);
+//    boolean checkDuplicateNickForEditUser(String nickname, long userNo);
 
     boolean checkDuplicateUserId(String userId);
 
@@ -42,8 +44,11 @@ public interface UserMapper {
 
     void updFirstLogin(long userNo);
 
+    int getChecked(long scheduleNo);
+
     //프로젝트 번호로 리더 번호 가져오기
     long leaderNo(long projectNo);
-    //스케줄 번호로 실행자 번호 가져오기
-    long scheduleUserNoFromSchedule(long scheduleNo);
+
+    //스케줄 번호로 리더번호와 실행자 번호 가져오기
+    GetLeaderNoAndScheduledNoDto scheduledAndLeaderNoFromScheduleNo(long scheduleNo);
 }

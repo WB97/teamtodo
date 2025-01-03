@@ -11,14 +11,12 @@ import java.util.List;
 @Getter
 @Setter
 @ToString
-public class UserInfo {
+public class UserProjectInfo {
 
     private long userNo;
 
     @JsonIgnore
     private String email;
-
-    private String userId;
 
     private String nickname;
 

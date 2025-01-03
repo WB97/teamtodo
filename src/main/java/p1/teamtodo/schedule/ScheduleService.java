@@ -5,12 +5,14 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import p1.teamtodo.common.ResponseCode;
 import p1.teamtodo.common.ResponseResult;
+import p1.teamtodo.schedule.model.dto.GetLeaderNoAndScheduledNoDto;
 import p1.teamtodo.schedule.model.req.DeleteSchedule;
 import p1.teamtodo.schedule.model.req.ScheduleAddReq;
 import p1.teamtodo.schedule.model.req.SchedulePatch;
 import p1.teamtodo.schedule.model.res.ScheduleAddRes;
 import p1.teamtodo.schedule.model.res.ScheduleDetail;
 import p1.teamtodo.user.UserMapper;
+import p1.teamtodo.user.model.UserNickname;
 
 @Slf4j
 @Service
@@ -21,7 +23,7 @@ public class ScheduleService {
     private final UserMapper userMapper;
     //일정 상세
     public ResponseResult scheduleDetail(long scheduleNo, long signedUserNo){
-        if(scheduleNo <= 0&&signedUserNo <= 0){
+        if(scheduleNo <= 0 && signedUserNo <= 0){
             return ResponseResult.serverError();
         }
         ScheduleDetail detail;
@@ -39,14 +41,14 @@ public class ScheduleService {
                 detail.getDetail(),
                 detail.isChecked(),
                 detail.getCreatedAt(),
-                detail.getUserNickname(),
+                UserNickname.getUserNicknameWithOutNumber(detail.getUserNickname()),
                 detail.getUserProfilePic(),
                 detail.isMySchedule()
         );
     }
 
     //일정 생성
-    public ResponseResult scheduleAdd(ScheduleAddReq sch){
+    public ResponseResult scheduleAdd(ScheduleAddReq sch) {
         log.info("service>Schedule:{}", sch);
         long leaderNo;
         try {
@@ -66,30 +68,22 @@ public class ScheduleService {
             return ResponseResult.databaseError();
         }
         if(result==0){ResponseResult.serverError();}
-        return new ScheduleAddRes("OK",sch.getScheduleNo());
+        return new ScheduleAddRes("OK", sch.getScheduleNo());
     }
 
     //일정 완료 체크
-    public ResponseResult scheduleComplete(long signedUserNo, long scheduleNo){
+    public ResponseResult scheduleComplete(long signedUserNo, long scheduleNo) {
         if(scheduleNo <= 0||signedUserNo<=0){
             return ResponseResult.badRequest(ResponseCode.FAIL);
         }
-        long doUserNo;
-        try {
-            doUserNo = userMapper.scheduleUserNoFromSchedule(scheduleNo);
-        } catch (Exception e) {
-            return ResponseResult.databaseError();
-        }
-        if(doUserNo!=signedUserNo){
+        GetLeaderNoAndScheduledNoDto dto=userMapper.scheduledAndLeaderNoFromScheduleNo(scheduleNo);
+        long doUserNo= dto.getScheduledNo();
+        long leaderNo = dto.getLeaderNo();
+        // 스케쥴 유저 넘버가 로그인 유저가 아니면서, 로그인 유저 넘버가 리더넘버가 아닐때
+        if(doUserNo!=signedUserNo && signedUserNo!=leaderNo){
             return ResponseResult.noPermission();
         }
-
-        try {
-            mapper.scheduleComplete(scheduleNo, mapper.getChecked(scheduleNo));
-        } catch (Exception e) {
-            return ResponseResult.databaseError();
-        }
-
+        mapper.scheduleComplete(scheduleNo, mapper.getChecked(scheduleNo));
 
         return ResponseResult.success();
     }
@@ -124,20 +118,24 @@ public class ScheduleService {
     }
 
     //일정 삭제
-    public ResponseResult scheduleDelete(DeleteSchedule del){
+    public ResponseResult scheduleDelete(DeleteSchedule del) {
 
-        long doUserNo;
+        GetLeaderNoAndScheduledNoDto dto;
+
         try {
-            doUserNo=userMapper.scheduleUserNoFromSchedule(del.getScheduleNo());
+            dto=userMapper.scheduledAndLeaderNoFromScheduleNo(del.getScheduleNo());
         } catch (Exception e) {
             return ResponseResult.databaseError();
         }
-        if(doUserNo!=del.getSignedUserNo()){
+
+        long signedUserNo = del.getSignedUserNo();
+        if(signedUserNo != dto.getScheduledNo() && signedUserNo!=dto.getLeaderNo()){
             return ResponseResult.noPermission();
         }
+
         int res;
         try {
-            res=mapper.scheduleDelete(del.getScheduleNo());
+            res = mapper.scheduleDelete(del.getScheduleNo());
         } catch (Exception e) {
             return ResponseResult.databaseError();
         }

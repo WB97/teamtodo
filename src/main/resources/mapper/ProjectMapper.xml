@@ -27,7 +27,7 @@
             , p.start_at AS startAt
             , p.deadline AS deadLine
             , p.created_at AS createdAt
-            , up.`lock` AS signedUserLock
+            , up.`lock` AS `lock`
         FROM project p
         JOIN user_project up
         ON p.project_no = up.project_no
@@ -62,7 +62,8 @@
             U.user_no AS userNo,
             U.nickname AS nickname,
             U.status_message AS statusMessage,
-            U.profile_pic AS pic
+            U.profile_pic AS pic,
+            UP.`lock` AS `lock`
         FROM `user` U
         JOIN user_project UP
             ON U.user_no = UP.user_no
@@ -137,6 +138,13 @@
                     AND S.checked=0
         )
     </update>
+
+    <select id="checkDeadline">
+        UPDATE project
+        SET project_complete = 1
+        WHERE deadline <![CDATA[ < ]]> CURDATE()
+        AND project_complete = 0
+    </select>
 
     <insert id="insUserProjectList">
         INSERT INTO user_project

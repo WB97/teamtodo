@@ -17,6 +17,9 @@ public class UserInfoGetRes extends ResponseResult {
     @Schema(title = "닉네임")
     private String nickname;
 
+    @Schema(title = "유저 ID")
+    private String userId;
+
     @Schema(title = "상태 메시지")
     private String statusMessage;
 

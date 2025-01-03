@@ -2,6 +2,7 @@ package p1.teamtodo.project;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import p1.teamtodo.common.ResponseCode;
@@ -15,7 +16,9 @@ import p1.teamtodo.project.model.res.ProjectDetailGetRes;
 import p1.teamtodo.project.model.res.ProjectListGetRes;
 import p1.teamtodo.schedule.ScheduleMapper;
 import p1.teamtodo.user.UserMapper;
+import p1.teamtodo.user.model.UserNickname;
 import p1.teamtodo.user.model.dto.UserInfo;
+import p1.teamtodo.user.model.dto.UserProjectInfo;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -36,7 +39,7 @@ public class ProjectService {
         }
 
         ProjectDetailDto projectDetailDto = projectMapper.selProjectDetail(projectNo, signedUserNo);
-        List<UserInfo> projectUserList = projectMapper.selProjectUsers(projectNo);
+        List<UserProjectInfo> projectUserList = projectMapper.selProjectUsers(projectNo);
         List<ScheduleDto> allUserSchedules = projectMapper.selUserSchedules(projectNo);
         if(projectDetailDto == null) {
             return ResponseResult.badRequest(ResponseCode.VALUE_ERROR);
@@ -46,7 +49,8 @@ public class ProjectService {
 
         // 맵에 유저 번호를 key 로 저장
         HashMap<Long, List<ScheduleDto>> map = new HashMap<>();
-        for(UserInfo user : projectUserList) { // 6
+        for(UserProjectInfo user : projectUserList) { // 6
+            user.setNickname(UserNickname.getUserNicknameWithOutNumber(user.getNickname()));
             map.put(user.getUserNo(),new ArrayList<>());
         }
 
@@ -56,7 +60,7 @@ public class ProjectService {
         }
 
         // 맵에서 유저 번호에 맞는 스케쥴리스트 projectUserList 에 세팅
-        for(UserInfo user : projectUserList) {
+        for(UserProjectInfo user : projectUserList) {
             user.setScheduleList(map.get(user.getUserNo()));
         }
 
@@ -135,17 +139,29 @@ public class ProjectService {
         return res;
     }
 
-    ResponseResult userLock(ProjectUserLockReq p){
-        if(userMapper.leaderNo(p.getProjectNo())!=p.getSignedUserNo()){
-            ResponseResult.noPermission();
+    ResponseResult userLock(ProjectUserLockReq p) {
+
+        long leaderNo=userMapper.leaderNo(p.getProjectNo());
+        long signedUserNo = p.getSignedUserNo();
+        long targetUserNo = p.getTargetUserNo();
+
+        // 로그인 유저가 타겟 유저가 아니면서 로그인 유저가 팀장이 아니라면 권한 없음
+        if(signedUserNo != targetUserNo && leaderNo != signedUserNo) {
+            return ResponseResult.badRequest(ResponseCode.NO_FORBIDDEN);
         }
-        projectMapper.userLock(p);
+
+        // 팀장이 자기를 제외하려고 할때
+        if(leaderNo == targetUserNo) {
+            return ResponseResult.badRequest(ResponseCode.VALUE_ERROR);
+        }
+
+        projectMapper.userLock(targetUserNo);
         return ResponseResult.success();
     }
 
-    ResponseResult editUserList(ProjectUserEdit p){
+    ResponseResult editUserList(ProjectUserEdit p) {
         long projectNo = p.getProjectNo();
-        if(p.getSignedUserNo()!=userMapper.leaderNo(projectNo)){
+        if(p.getSignedUserNo()!=userMapper.leaderNo(projectNo)) {
             return ResponseResult.noPermission();
         }
         List<Long> insUserList = p.getInsertUserNoList()!=null ? p.getInsertUserNoList() : new ArrayList<>();
@@ -192,7 +208,7 @@ public class ProjectService {
         return ResponseResult.success();
     }
 
-    ResponseResult completeProject(long projectNo, long signedUserNo){
+    ResponseResult completeProject(long projectNo, long signedUserNo) {
         if(signedUserNo != userMapper.leaderNo(projectNo)){
             return ResponseResult.noPermission();
         }
@@ -219,5 +235,9 @@ public class ProjectService {
         return ResponseResult.success();
     }
 
-
+    //정시에 deadline이 지난 프로젝트를 완료 처리
+    @Scheduled(cron = "0 0 0 * * *")
+    public void checkDeadline() throws Exception {
+        projectMapper.checkDeadline();
+    }
 }

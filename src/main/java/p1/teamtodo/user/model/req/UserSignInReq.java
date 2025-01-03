@@ -19,6 +19,6 @@ public class UserSignInReq {
     private String userId;
 
     @NotBlank
-    @Schema(title = "유저 비밀번호", example = "0426", requiredMode = Schema.RequiredMode.REQUIRED)
+    @Schema(title = "유저 비밀번호", example = "123456789", requiredMode = Schema.RequiredMode.REQUIRED)
     private String password;
 }

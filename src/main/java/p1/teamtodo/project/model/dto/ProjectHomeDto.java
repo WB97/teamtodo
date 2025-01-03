@@ -10,4 +10,5 @@ public class ProjectHomeDto {
     private String title;
     private String startAt;
     private String deadline;
+    private int lock;
 }

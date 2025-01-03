@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 import p1.teamtodo.user.model.dto.UserInfo;
+import p1.teamtodo.user.model.dto.UserProjectInfo;
 
 import java.util.List;
 
@@ -19,8 +20,7 @@ public class ProjectDetailDto {
     private String startAt;
     private String deadLine;
     private String createdAt;
-    private List<UserInfo> memberList;
-    private int signedUserLock;
+    private List<UserProjectInfo> memberList;
 }
 
 /*

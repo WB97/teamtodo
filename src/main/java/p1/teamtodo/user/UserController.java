@@ -27,6 +27,12 @@ public class UserController {
         return userService.signUp(req);
     }
 
+    @GetMapping("/sign-up")
+    @Operation(summary = "아이디 중복 확인")
+    public ResponseResult checkDuplicateUserId(@RequestParam String userId) {
+        return userService.checkDuplicatedUserId(userId);
+    }
+
     @PostMapping("/find-pw")
     @Operation(summary = "비밀번호 재설정", description = "이메일로 인증코드 전송, 이후 인증코드 확인 후 3분간 비밀번호 재설정 가능")
     public ResponseResult changePw(@Valid @RequestBody ChangePwReq req) {

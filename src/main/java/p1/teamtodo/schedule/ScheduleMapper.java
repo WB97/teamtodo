@@ -16,6 +16,7 @@ public interface ScheduleMapper {
     int scheduleComplete(long scheduleNo, int checked);
     //완료 여부 가져오기
     int getChecked(long scheduleNo);
+    long leaderNoFromScheduleNo(long scheduleNo);
 
     //일정 수정
     int scheduleUpdate(SchedulePatch p);

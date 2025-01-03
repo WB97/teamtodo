@@ -10,5 +10,4 @@ public class ProjectSearchUserDto {
     private long userNo;
     private String nickname;
     private String pic;
-    private boolean existSchedule;
 }

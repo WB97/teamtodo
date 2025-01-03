@@ -36,7 +36,8 @@
     </insert>
 
     <select id="getChecked">
-        SELECT A.checked
+        SELECT
+            A.checked
         FROM schedule A
         WHERE schedule_no=#{scheduleNo}
     </select>

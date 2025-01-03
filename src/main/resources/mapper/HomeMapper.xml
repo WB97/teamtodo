@@ -10,6 +10,7 @@
             , P.title AS title
             , P.start_at AS startAt
             , P.deadline AS deadline
+            , UP.lock
         FROM `project` P
         JOIN `user_project` UP
         ON P.project_no = UP.project_no
@@ -23,10 +24,12 @@
 
     <select id="selProjectMembersPic">
         SELECT
-            DISTINCT(U.profile_pic)
+            U.profile_pic AS pic
+            , U.user_no AS userNo
         FROM user U
         JOIN user_project UP
             ON U.user_no = UP.user_no
         WHERE UP.project_no = #{projectNo}
+            AND UP.LOCK = 0
     </select>
 </mapper>

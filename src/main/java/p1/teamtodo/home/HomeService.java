@@ -4,6 +4,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import p1.teamtodo.common.ResponseResult;
+import p1.teamtodo.home.model.UserNoAndPicDto;
 import p1.teamtodo.home.model.res.HomeGetRes;
 import p1.teamtodo.home.model.res.MembersPicGetRes;
 import p1.teamtodo.project.model.dto.ProjectHomeDto;
@@ -28,9 +29,9 @@ public class HomeService {
     }
 
     public ResponseResult getMembersPic(long projectNo) {
-        List<String> membersPic = homeMapper.selProjectMembersPic(projectNo);
+        List<UserNoAndPicDto> membersPic = homeMapper.selProjectMembersPic(projectNo);
         MembersPicGetRes res = new MembersPicGetRes();
-        res.setMembersPic(membersPic);
+        res.setMemberList(membersPic);
         return res;
     }
 }

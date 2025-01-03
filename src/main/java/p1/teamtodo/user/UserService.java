@@ -21,6 +21,8 @@ import p1.teamtodo.user.model.res.UserInfoGetRes;
 import p1.teamtodo.user.model.res.UserSignInRes;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 @Slf4j
 @Service
@@ -35,10 +37,10 @@ public class UserService {
 
         String email = req.getEmail();
 
-        // 이메일 인증 여부
-//        if(!checkEmail(email)) {
-//           return ResponseResult.unauthorized();
-//        }
+//         이메일 인증 여부
+        if(!checkEmail(email)) {
+           return ResponseResult.unauthorized();
+        }
 
         // 이메일 형식 체크
         if (!email.matches("^[a-zA-Z0-9_+&*.-]+@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$")) {
@@ -50,9 +52,6 @@ public class UserService {
         DuplicateCheckResult duplicateCheck = userMapper.checkDuplicates(req); // DTO로 반환
         if (duplicateCheck.getEmailCount() > 0) {
             return ResponseResult.badRequest(ResponseCode.DUPLICATE_EMAIL); // 이메일 중복
-        }
-        if (duplicateCheck.getUserIdCount() > 0) {
-            return ResponseResult.badRequest(ResponseCode.DUPLICATE_ID); // 유저 ID 중복
         }
 
         String password = req.getPassword();
@@ -88,6 +87,13 @@ public class UserService {
             return ResponseResult.databaseError();
         }
 
+        return ResponseResult.success();
+    }
+
+    public ResponseResult checkDuplicatedUserId(String userId) {
+        if(userMapper.checkDuplicateUserId(userId)) {
+            return ResponseResult.badRequest(ResponseCode.DUPLICATE_ID);
+        }
         return ResponseResult.success();
     }
 
@@ -183,6 +189,7 @@ public class UserService {
         // 5. UserInfoGetRes 반환
         UserInfoGetRes response = new UserInfoGetRes();
         response.setEmail(userInfo.getEmail());
+        response.setUserId(userInfo.getUserId());
         response.setNickname(userInfo.getNickname());
         response.setStatusMessage(userInfo.getStatusMessage());
         response.setPic(userInfo.getPic());
@@ -197,9 +204,10 @@ public class UserService {
     public ResponseResult editUser(EditUserPutReq req, MultipartFile pic) {
 
         // 닉네임 중복 체크
-        if(userMapper.checkDuplicateNick(req.getNickname())) {
-            return ResponseResult.badRequest(ResponseCode.DUPLICATE_NICKNAME);
-        }
+        long targetUserNo = req.getTargetUserNo();
+//        if(userMapper.checkDuplicateNickForEditUser(req.getNickname(), targetUserNo)) {
+//            return ResponseResult.badRequest(ResponseCode.DUPLICATE_NICKNAME);
+//        }
 
         // 랜덤 사진 이름
         String savePicName = pic == null ? null : fileUtils.makeRandomFileName(pic);
@@ -213,7 +221,7 @@ public class UserService {
         }
 
         UserDto userDto = new UserDto();
-        userDto.setUserNo(req.getTargetUserNo());
+        userDto.setUserNo(targetUserNo);
         userDto.setNickname(nickname);
         userDto.setPic(savePicName);
         userDto.setStatusMessage(req.getStatusMessage());
@@ -222,10 +230,12 @@ public class UserService {
         if(pic == null) {
             return ResponseResult.success();
         }
-        String folderPath = "user/" + userDto.getUserNo();
-        fileUtils.makeFolders(folderPath);
+        String folderPath = "/user/" + userDto.getUserNo();
+        String deletePath = fileUtils.getUploadPath() + "/" + folderPath;
         try {
-            fileUtils.transferTo(pic,folderPath + "/" + savePicName);
+            fileUtils.deleteFolder(deletePath, true);
+            fileUtils.makeFolders(folderPath);
+            fileUtils.transferTo(pic,folderPath+"/"+savePicName);
         } catch (IOException e) {
             e.printStackTrace();
             return ResponseResult.serverError();

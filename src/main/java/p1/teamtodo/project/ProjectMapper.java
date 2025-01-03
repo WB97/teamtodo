@@ -9,6 +9,7 @@ import p1.teamtodo.schedule.model.dto.ScheduleDto;
 import p1.teamtodo.project.model.req.ProjectCreatePostReq;
 import p1.teamtodo.project.model.req.ProjectListPaging;
 import p1.teamtodo.user.model.dto.UserInfo;
+import p1.teamtodo.user.model.dto.UserProjectInfo;
 
 import java.util.List;
 
@@ -25,7 +26,7 @@ public interface ProjectMapper {
 
     ProjectEditDto selEditProjectDetail(long projectNo);
 
-    List<UserInfo> selProjectUsers(long projectNo);
+    List<UserProjectInfo> selProjectUsers(long projectNo);
 
     List<ScheduleDto> selUserSchedules(long projectNo);
 
@@ -38,8 +39,9 @@ public interface ProjectMapper {
     int delProject(long projectNo);
 
     // 수지
-    int userLock(ProjectUserLockReq p);
+    int userLock(long p);
     int delUserProjectList(long projectNo, List<Long> deleteUserNoList);
     int insUserProjectList(long projectNo, List<Long> insertUserNoList);
     int updProjectComplete(long projectNo);
+    void checkDeadline();
 }
