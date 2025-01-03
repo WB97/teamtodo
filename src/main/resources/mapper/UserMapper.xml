@@ -97,8 +97,10 @@
 
     <update id="editUser">
         UPDATE `user`
-        SET nickname = #{nickname}
-            , profile_pic = #{pic}
+        SET  profile_pic = #{pic}
+        <if test="nickname != null">
+            , nickname = #{nickname}
+        </if>
             , status_message = #{statusMessage}
         WHERE user_no = #{userNo}
     </update>

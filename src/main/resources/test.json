@@ -1,8 +1,9 @@
 {
   "userList" :[
     {
-      "userNo" : 1,
-      "pic" : "image.jpg"
+      "userNo" : "long",
+      "nickname" : "String",
+      "pic" : "String"
     }
   ]
 }

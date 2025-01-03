@@ -213,19 +213,23 @@ public class UserService {
         // 랜덤 사진 이름
         String savePicName = pic == null ? null : fileUtils.makeRandomFileName(pic);
 
-        // 닉네임 #랜덤숫자 붙이기
-        String nickname;
-        while(true) {
-            nickname = UserNickname.createdUserNicknameWithNumber(req.getNickname());
-            boolean isDuplicateNick = userMapper.checkDuplicateNick(nickname);
-            if(!isDuplicateNick) break;
-        }
+        UserInfo userInfo = userMapper.selUserInfo(req.getTargetUserNo());
+        String nickname = UserNickname.getUserNicknameWithOutNumber(userInfo.getNickname());
 
         UserDto userDto = new UserDto();
         userDto.setUserNo(targetUserNo);
-        userDto.setNickname(nickname);
         userDto.setPic(savePicName);
         userDto.setStatusMessage(req.getStatusMessage());
+
+        // 닉네임 #랜덤숫자 붙이기
+        if(!nickname.equals(req.getNickname())) {
+            while(true) {
+                nickname = UserNickname.createdUserNicknameWithNumber(req.getNickname());
+                boolean isDuplicateNick = userMapper.checkDuplicateNick(nickname);
+                if(!isDuplicateNick) break;
+            }
+            userDto.setNickname(nickname);
+        }
         userMapper.editUser(userDto);
 
         if(pic == null) {
