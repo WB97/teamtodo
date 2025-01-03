@@ -69,6 +69,7 @@ public class UserService {
 
         // 닉네임 자동생성 ex) test#1234
         String randomUserNickname;
+
         while(true) {
             randomUserNickname = UserNickname.createRandomUserNickname();
             boolean isDuplicateNick = userMapper.checkDuplicateNick(randomUserNickname);
@@ -183,14 +184,18 @@ public class UserService {
         // 4. 본인 여부 확인
         boolean isMyInfo = (signedUserNo == userInfo.getUserNo());
 
-//        String nickname = UserNickname.getUserNicknameWithOutNumber(fullNickname);
+        String nickname = userInfo.getNickname();
 //        if(nickname == null) return ResponseResult.databaseError();
+
+//        if(p.getPage().equals("edit")) {
+//            nickname = UserNickname.getUserNicknameWithOutNumber(nickname);
+//        }
 
         // 5. UserInfoGetRes 반환
         UserInfoGetRes response = new UserInfoGetRes();
         response.setEmail(userInfo.getEmail());
         response.setUserId(userInfo.getUserId());
-        response.setNickname(userInfo.getNickname());
+        response.setNickname(nickname);
         response.setStatusMessage(userInfo.getStatusMessage());
         response.setPic(userInfo.getPic());
 
@@ -203,11 +208,7 @@ public class UserService {
     @Transactional
     public ResponseResult editUser(EditUserPutReq req, MultipartFile pic) {
 
-        // 닉네임 중복 체크
         long targetUserNo = req.getTargetUserNo();
-//        if(userMapper.checkDuplicateNickForEditUser(req.getNickname(), targetUserNo)) {
-//            return ResponseResult.badRequest(ResponseCode.DUPLICATE_NICKNAME);
-//        }
 
         // 랜덤 사진 이름
         String savePicName = pic == null ? null : fileUtils.makeRandomFileName(pic);

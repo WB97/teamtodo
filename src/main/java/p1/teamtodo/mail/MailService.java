@@ -35,7 +35,7 @@ public class MailService {
         MailHandler mailHandler;
         try {
             mailHandler = new MailHandler(mailSender);
-            mailHandler.setFrom("from", "테스트 발송자");
+            mailHandler.setFrom("from", "team_todo");
             mailHandler.setTo(email);
             mailHandler.setSubject("team todo 인증 코드");
             mailHandler.setText(codes.get(email),true);
