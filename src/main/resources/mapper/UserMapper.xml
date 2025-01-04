@@ -29,13 +29,23 @@
         WHERE email = #{email}
     </select>
 
+<!--    <select id="selUserByNickname">-->
+<!--        SELECT-->
+<!--        u.user_no AS userNo-->
+<!--        , u.nickname AS nickname-->
+<!--        , u.profile_pic AS pic-->
+<!--        FROM USER u-->
+<!--        WHERE nickname = #{nickname}-->
+<!--    </select>-->
+
+<!--    정민 -->
     <select id="selUserByNickname">
         SELECT
-        u.user_no AS userNo
-        , u.nickname AS nickname
-        , u.profile_pic AS pic
+            u.user_no AS userNo
+            , u.nickname AS nickname
+            , u.profile_pic AS pic
         FROM USER u
-        WHERE nickname = #{nickname}
+        WHERE SUBSTRING_INDEX(nickname, '#', 1) like '%${nickname}%'
     </select>
 
     <select id="checkDuplicates">

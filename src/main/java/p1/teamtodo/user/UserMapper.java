@@ -36,7 +36,9 @@ public interface UserMapper {
 
     UserInfo selUserInfo(long targetUserNo);
 
-    ProjectSearchUserDto selUserByNickname(String nickname);
+//    ProjectSearchUserDto selUserByNickname(String nickname);
+    // 정민
+    List<ProjectSearchUserDto> selUserByNickname(String nickname);
 
     List<ProjectEditUserDto> selProjectEditUser(long userNo);
 
@@ -51,4 +53,6 @@ public interface UserMapper {
 
     //스케줄 번호로 리더번호와 실행자 번호 가져오기
     GetLeaderNoAndScheduledNoDto scheduledAndLeaderNoFromScheduleNo(long scheduleNo);
+
+
 }

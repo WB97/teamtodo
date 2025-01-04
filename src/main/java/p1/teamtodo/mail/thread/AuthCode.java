@@ -14,7 +14,7 @@ public class AuthCode implements Runnable {
     @Override
     public void run() {
         try {
-            Thread.sleep(36_000_000);
+            Thread.sleep(180_000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }

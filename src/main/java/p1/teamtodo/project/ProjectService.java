@@ -131,12 +131,26 @@ public class ProjectService {
         return res;
     }
 
-    public ResponseResult searchUserByNickname(String nickname) {
-        ProjectSearchUserDto userDto = userMapper.selUserByNickname(nickname);
-        if(userDto == null) return ResponseResult.badRequest(ResponseCode.NO_EXIST_USER);
-        ProjectSearchUserGetRes res = new ProjectSearchUserGetRes();
-        res.setUser(userDto);
-        return res;
+//    public ResponseResult searchUserByNickname(String nickname) {
+//        List<ProjectSearchUserDto> userDto = userMapper.selUserByNickname(nickname);
+//        if(userDto == null) return ResponseResult.badRequest(ResponseCode.NO_EXIST_USER);
+//        ProjectSearchUserGetRes res = new ProjectSearchUserGetRes();
+//        res.setUser(userDto);
+//        return res;
+//    }
+
+    // 닉네임으로 유저 검색
+    public ProjectSearchUserGetRes searchUserByNickname(String nickname) {
+        // 데이터베이스에서 검색
+        List<ProjectSearchUserDto> userList = userMapper.selUserByNickname(nickname);
+
+        // 유저가 없을 경우 빈 리스트와 실패 코드 반환
+        if (userList == null || userList.isEmpty()) {
+            return new ProjectSearchUserGetRes(ResponseCode.NO_EXIST_USER.getCode(), null);
+        }
+
+        // 유저 리스트와 성공 코드 반환
+        return new ProjectSearchUserGetRes(ResponseCode.OK.getCode(), userList);
     }
 
     ResponseResult userLock(ProjectUserLockReq p) {

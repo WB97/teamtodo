@@ -222,9 +222,16 @@ public class UserService {
         userDto.setStatusMessage(req.getStatusMessage());
 
         // 닉네임 #랜덤숫자 붙이기
-        if(!nickname.equals(req.getNickname())) {
+        String reqNick = req.getNickname();
+        for (char c : reqNick.toCharArray()) {
+            if(c == '#') {
+                return ResponseResult.badRequest(ResponseCode.VALUE_ERROR);
+            }
+        }
+
+        if(!nickname.equals(reqNick)) {
             while(true) {
-                nickname = UserNickname.createdUserNicknameWithNumber(req.getNickname());
+                nickname = UserNickname.createdUserNicknameWithNumber(reqNick);
                 boolean isDuplicateNick = userMapper.checkDuplicateNick(nickname);
                 if(!isDuplicateNick) break;
             }
