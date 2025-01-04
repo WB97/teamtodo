@@ -15,7 +15,7 @@ public class MailCheck implements Runnable {
     @Override
     public void run() {
         try {
-            Thread.sleep(180_000);
+            Thread.sleep(600_000);
             MailService.mailChecked.remove(email);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
