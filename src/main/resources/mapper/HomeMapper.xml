@@ -15,11 +15,6 @@
         JOIN `user_project` UP
         ON P.project_no = UP.project_no
         WHERE UP.user_no = #{userNo}
-        AND (
-            date_format(P.start_at, '%Y-%m') &lt;= #{date}
-            AND
-            date_format(P.deadline , '%Y-%m') &gt;= #{date}
-        )
     </select>
 
     <select id="selProjectMembersPic">

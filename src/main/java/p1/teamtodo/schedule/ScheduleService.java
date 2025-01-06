@@ -99,7 +99,7 @@ public class ScheduleService {
         }
         long doUserNo= patch.getScheduleUserNo();
         long myUserNo=patch.getSignedUserNo();
-        if(myUserNo!=leaderNo && myUserNo!=doUserNo){
+        if(myUserNo!=leaderNo && myUserNo!=doUserNo) {
             return ResponseResult.noPermission();
         }
         String content=patch.getContent();

@@ -60,9 +60,10 @@
         UPDATE schedule
         SET
         user_project_no = (
-        SELECT A.user_project_no FROM user_project A
-        WHERE user_no=#{scheduleUserNo}
-        AND project_no=#{projectNo})
+            SELECT A.user_project_no FROM user_project A
+            WHERE user_no=#{scheduleUserNo}
+            AND project_no=#{projectNo}
+        )
         <if test="content != null and content != '' and detail != null and detail != ''">
             , content = #{content}
             , detail = #{detail}

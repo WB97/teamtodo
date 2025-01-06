@@ -39,7 +39,7 @@ public interface ProjectMapper {
     int delProject(long projectNo);
 
     // 수지
-    int userLock(long p);
+    int userLock(long targetUserNo, long projectNo);
     int delUserProjectList(long projectNo, List<Long> deleteUserNoList);
     int insUserProjectList(long projectNo, List<Long> insertUserNoList);
     int updProjectComplete(long projectNo);

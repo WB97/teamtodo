@@ -181,7 +181,7 @@ public class ProjectService {
             return ResponseResult.badRequest(ResponseCode.VALUE_ERROR);
         }
 
-        projectMapper.userLock(targetUserNo);
+        projectMapper.userLock(targetUserNo, p.getProjectNo());
         return ResponseResult.success();
     }
 
@@ -206,6 +206,7 @@ public class ProjectService {
         }
         if(!delUserList.isEmpty()){
             try {
+
                 int del = projectMapper.delUserProjectList(projectNo,delUserList);
                 if(del==0){
                     return ResponseResult.databaseError();

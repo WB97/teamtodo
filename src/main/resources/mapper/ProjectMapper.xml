@@ -134,6 +134,7 @@
         UPDATE user_project
         SET `lock`='1'
         WHERE user_no=#{targetUserNo}
+            AND project_no = #{projectNo}
     </update>
 
     <update id="updProjectComplete">
@@ -166,12 +167,24 @@
     </insert>
 
     <delete id="delUserProjectList">
+
         DELETE FROM user_project
-        WHERE project_no = #{projectNo}
-        AND user_no IN
-        <foreach collection="deleteUserNoList" item="userNo" separator="," open="(" close=")">
-            #{userNo}
-        </foreach>
+        WHERE user_no IN (
+            SELECT t1.user_no FROM user_project T1
+            JOIN (
+                SELECT up.user_project_no FROM schedule s
+                RIGHT JOIN user_project up
+                    ON up.user_project_no = s.user_project_no
+                WHERE up.user_no IN
+                <foreach collection="deleteUserNoList" item="userNo" separator="," open="(" close=")">
+                    #{userNo}
+                </foreach>
+                    AND up.project_no = #{projectNo}
+                    AND s.schedule_no IS NULL
+            ) AS T2
+            ON T1.user_project_no = T2.user_project_no
+        )
+        AND project_no = #{projectNo}
     </delete>
 
     <delete id="delProject">
