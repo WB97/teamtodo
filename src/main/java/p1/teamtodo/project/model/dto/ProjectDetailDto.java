@@ -20,6 +20,10 @@ public class ProjectDetailDto {
     private String startAt;
     private String deadLine;
     private String createdAt;
+
+    private int userCompletePercent;
+    private int projectCompletePercent;
+
     private List<UserProjectInfo> memberList;
 }
 

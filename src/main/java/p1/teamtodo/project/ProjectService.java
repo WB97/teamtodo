@@ -45,11 +45,23 @@ public class ProjectService {
             return ResponseResult.badRequest(ResponseCode.VALUE_ERROR);
         }
 
-        projectDetailDto.setMemberList(projectUserList);
+
+        // 팀장이 무조건 1번 인덱스에 담기도록 세팅
+        List<UserProjectInfo> dtoMemberList = new ArrayList<>();
+        for(UserProjectInfo member : projectUserList) {
+            if(member.getUserNo() == projectDetailDto.getLeaderNo()) {
+                dtoMemberList.add(member);
+                projectUserList.remove(member);
+                break;
+            }
+        }
+        dtoMemberList.addAll(projectUserList);
+        projectDetailDto.setMemberList(dtoMemberList);
+
 
         // 맵에 유저 번호를 key 로 저장
         HashMap<Long, List<ScheduleDto>> map = new HashMap<>();
-        for(UserProjectInfo user : projectUserList) { // 6
+        for(UserProjectInfo user : projectDetailDto.getMemberList()) { // 6
             user.setNickname(UserNickname.getUserNicknameWithOutNumber(user.getNickname()));
             map.put(user.getUserNo(),new ArrayList<>());
         }
@@ -60,7 +72,7 @@ public class ProjectService {
         }
 
         // 맵에서 유저 번호에 맞는 스케쥴리스트 projectUserList 에 세팅
-        for(UserProjectInfo user : projectUserList) {
+        for(UserProjectInfo user : dtoMemberList) {
             user.setScheduleList(map.get(user.getUserNo()));
         }
 
@@ -181,16 +193,26 @@ public class ProjectService {
         }
         List<Long> insUserList = p.getInsertUserNoList() != null ? p.getInsertUserNoList() : new ArrayList<>();
         List<Long> delUserList = p.getDeleteUserNoList() != null ? p.getDeleteUserNoList() : new ArrayList<>();
-        if(insUserList.size()!=0) {
-            int ins= projectMapper.insUserProjectList(projectNo,insUserList);
-            if(ins==0){
-                return ResponseResult.badRequest(ResponseCode.DATABASE_ERROR);
+        if(!insUserList.isEmpty()) {
+            try {
+                int ins= projectMapper.insUserProjectList(projectNo,insUserList);
+                if(ins==0){
+                    return ResponseResult.badRequest(ResponseCode.DATABASE_ERROR);
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+                return ResponseResult.databaseError();
             }
         }
-        if(delUserList.size()!=0){
-            int del= projectMapper.delUserProjectList(projectNo,delUserList);
-            if(del==0){
-                return ResponseResult.badRequest(ResponseCode.DATABASE_ERROR);
+        if(!delUserList.isEmpty()){
+            try {
+                int del = projectMapper.delUserProjectList(projectNo,delUserList);
+                if(del==0){
+                    return ResponseResult.databaseError();
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+                return ResponseResult.databaseError();
             }
         }
         return ResponseResult.success();

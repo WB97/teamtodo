@@ -28,11 +28,19 @@
             , p.deadline AS deadLine
             , p.created_at AS createdAt
             , up.`lock` AS `lock`
+            , SUM(S.checked)/COUNT(S.schedule_no)*100 AS userCompletePercent
+            , (SELECT SUM(checked)/COUNT(schedule_no)
+        FROM schedule A
+        JOIN user_project B
+        ON A.user_project_no=B.user_project_no
+        AND B.project_no=p.project_no)*100 AS projectCompletePercent
         FROM project p
         JOIN user_project up
         ON p.project_no = up.project_no
         JOIN USER u
         ON u.user_no = up.user_no
+        JOIN schedule S
+        ON S.user_project_no=up.user_project_no
         WHERE p.project_no = #{projectNo}
         AND u.user_no = #{signedUserNo}
     </select>
@@ -54,6 +62,7 @@
             SELECT user_no FROM user_project
             WHERE user_no = #{userNo}
                 AND project_no = #{projectNo}
+                AND `lock` = 0
         )AS RESULT
     </select>
 
@@ -96,6 +105,7 @@
         JOIN user_project UP
             ON P.project_no = UP.project_no
             AND UP.user_no = #{userNo}
+        WHERE UP.`lock` = 0
         ORDER BY projectNo ASC
         LIMIT #{startIdx}, #{size}
     </select>

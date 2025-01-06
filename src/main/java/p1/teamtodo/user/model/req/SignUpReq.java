@@ -22,10 +22,12 @@ public class SignUpReq {
     private String userId;
 
     @NotBlank
+    @Pattern(regexp = "^(?=.*[A-Za-z])(?=.*\\d)(?=.*[@$!%*#?&])[A-Za-z\\d@$!%*#?&]{8,}$")
     @Schema(title = "유저 패스워드", type= "string", example = "123456789", requiredMode = Schema.RequiredMode.REQUIRED)
     private String password;
 
     @NotBlank
+    @Pattern(regexp = "^(?=.*[A-Za-z])(?=.*\\d)(?=.*[@$!%*#?&])[A-Za-z\\d@$!%*#?&]{8,}$")
     @Schema(title = "유저 패스워드 확인", type= "string", example = "123456789", requiredMode = Schema.RequiredMode.REQUIRED)
     private String passwordConfirm;
 }
