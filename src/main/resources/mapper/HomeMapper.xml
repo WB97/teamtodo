@@ -15,6 +15,7 @@
         JOIN `user_project` UP
         ON P.project_no = UP.project_no
         WHERE UP.user_no = #{userNo}
+            AND UP.`lock` = 0
     </select>
 
     <select id="selProjectMembersPic">

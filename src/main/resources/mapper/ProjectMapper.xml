@@ -32,17 +32,17 @@
             , (SELECT SUM(checked)/COUNT(schedule_no)
         FROM schedule A
         JOIN user_project B
-        ON A.user_project_no=B.user_project_no
-        AND B.project_no=p.project_no)*100 AS projectCompletePercent
+            ON A.user_project_no=B.user_project_no
+            AND B.project_no=p.project_no)*100 AS projectCompletePercent
         FROM project p
         JOIN user_project up
-        ON p.project_no = up.project_no
+            ON p.project_no = up.project_no
         JOIN USER u
-        ON u.user_no = up.user_no
+            ON u.user_no = up.user_no
         JOIN schedule S
-        ON S.user_project_no=up.user_project_no
+            ON S.user_project_no=up.user_project_no
         WHERE p.project_no = #{projectNo}
-        AND u.user_no = #{signedUserNo}
+            AND u.user_no = #{signedUserNo}
     </select>
 
 <!--    수정 데이터 요청 -->
