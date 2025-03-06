@@ -111,61 +111,147 @@ Spring + React.js 를 활용한 프로젝트 단위의 일정 관리 사이트�
 4. 통계 및 리포트 기능
 5. 파일 공유 시스템 개선
 
-## | Project Structure
+## | 디렉터리 구조
 
 ```
-teamtodo
-├── .gradle/
-├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   │   └── p1/teamtodo/
-│   │   │       ├── common/
-│   │   │       │   ├── config/
-│   │   │       │   │   ├── SecurityConfig.java
-│   │   │       │   │   ├── SwaggerConfig.java
-│   │   │       │   │   └── WebConfig.java
-│   │   │       │   ├── exception/
-│   │   │       │   │   └── GlobalExceptionHandler.java
-│   │   │       │   └── util/
-│   │   │       │       └── SecurityUtil.java
-│   │   │       ├── home/
-│   │   │       │   ├── controller/
-│   │   │       │   ├── service/
-│   │   │       │   ├── dto/
-│   │   │       │   └── mapper/
-│   │   │       ├── mail/
-│   │   │       │   ├── controller/
-│   │   │       │   │   └── MailController.java
-│   │   │       │   ├── service/
-│   │   │       │   │   └── MailService.java
-│   │   │       │   └── dto/
-│   │   │       │       └── MailDTO.java
-│   │   │       └── project/
-│   │   │           ├── controller/
-│   │   │           │   └── ProjectController.java
-│   │   │           ├── service/
-│   │   │           │   └── ProjectService.java
-│   │   │           ├── dto/
-│   │   │           │   └── ProjectDTO.java
-│   │   │           └── mapper/
-│   │   │               └── ProjectMapper.java
-│   │   └── resources/
-│   │       ├── application.yml
-│   │       ├── application-dev.yml
-│   │       ├── application-prod.yml
-│   │       ├── static/
-│   │       └── templates/
-│   └── test/
-│       └── java/
-│           └── p1/teamtodo/
-├── gradle/
-│   └── wrapper/
-├── .gitignore
-├── .gitattributes
-├── build.gradle
-├── gradlew
-├── gradlew.bat
-├── README.md
-└── settings.gradle
+├─main
+│  ├─java
+│  │  └─p1
+│  │      └─teamtodo
+│  │          │  TeamtodoApplication.java
+│  │          │
+│  │          ├─common
+│  │          │  │  MyFileUtils.java
+│  │          │  │  ResponseCode.java
+│  │          │  │  ResponseResult.java
+│  │          │  │  SwaggerConfiguration.java
+│  │          │  │  WebMvcConfig.java
+│  │          │  │
+│  │          │  ├─config
+│  │          │  │      OctetStreamReadMsgConverter.java
+│  │          │  │      WebConfig.java
+│  │          │  │
+│  │          │  └─exception
+│  │          │          BadRequestExceptionHandler.java
+│  │          │
+│  │          ├─home
+│  │          │  │  HomeController.java
+│  │          │  │  HomeMapper.java
+│  │          │  │  HomeService.java
+│  │          │  │
+│  │          │  └─model
+│  │          │      │  UserNoAndPicDto.java
+│  │          │      │
+│  │          │      └─res
+│  │          │              HomeGetRes.java
+│  │          │              MembersPicGetRes.java
+│  │          │
+│  │          ├─mail
+│  │          │  │  GetEmailAndCodeReq.java
+│  │          │  │  MailController.java
+│  │          │  │  MailHandler.java
+│  │          │  │  MailService.java
+│  │          │  │
+│  │          │  └─thread
+│  │          │          AuthCode.java
+│  │          │          MailCheck.java
+│  │          │
+│  │          ├─project
+│  │          │  │  ProjectController.java
+│  │          │  │  ProjectMapper.java
+│  │          │  │  ProjectService.java
+│  │          │  │
+│  │          │  └─model
+│  │          │      ├─dto
+│  │          │      │      ProjectDetailDto.java
+│  │          │      │      ProjectEditDto.java
+│  │          │      │      ProjectEditUserDto.java
+│  │          │      │      ProjectHomeDto.java
+│  │          │      │      ProjectListDto.java
+│  │          │      │      ProjectSearchUserDto.java
+│  │          │      │
+│  │          │      ├─req
+│  │          │      │      ProjectCreatePostReq.java
+│  │          │      │      ProjectDeleteReq.java
+│  │          │      │      ProjectEditPutReq.java
+│  │          │      │      ProjectListPaging.java
+│  │          │      │      ProjectUserEdit.java
+│  │          │      │      ProjectUserLockReq.java
+│  │          │      │
+│  │          │      └─res
+│  │          │              ProjectDetailGetRes.java
+│  │          │              ProjectEditGetRes.java
+│  │          │              ProjectListGetRes.java
+│  │          │              ProjectSearchUserGetRes.java
+│  │          │
+│  │          ├─schedule
+│  │          │  │  ScheduleController.java
+│  │          │  │  ScheduleMapper.java
+│  │          │  │  ScheduleService.java
+│  │          │  │
+│  │          │  └─model
+│  │          │      ├─dto
+│  │          │      │      GetLeaderNoAndScheduledNoDto.java
+│  │          │      │      ScheduleDto.java
+│  │          │      │
+│  │          │      ├─req
+│  │          │      │      DeleteSchedule.java
+│  │          │      │      ScheduleAddReq.java
+│  │          │      │      SchedulePatch.java
+│  │          │      │
+│  │          │      └─res
+│  │          │              ScheduleAddRes.java
+│  │          │              ScheduleDetail.java
+│  │          │
+│  │          └─user
+│  │              │  UserController.java
+│  │              │  UserMapper.java
+│  │              │  UserService.java
+│  │              │
+│  │              └─model
+│  │                  │  UserNickname.java
+│  │                  │
+│  │                  ├─dto
+│  │                  │      DuplicateCheckResult.java
+│  │                  │      UserDto.java
+│  │                  │      UserInfo.java
+│  │                  │      UserLoginInfo.java
+│  │                  │      UserProjectInfo.java
+│  │                  │
+│  │                  ├─req
+│  │                  │      ChangePwReq.java
+│  │                  │      EditUserPutReq.java
+│  │                  │      SignUpReq.java
+│  │                  │      UserInfoGetReq.java
+│  │                  │      UserSignInReq.java
+│  │                  │
+│  │                  └─res
+│  │                          FindUserIdGetRes.java
+│  │                          UserInfoGetRes.java
+│  │                          UserSignInRes.java
+│  │
+│  └─resources
+│      │  application-prod.yaml
+│      │  application.yaml
+│      │  log4jdbc.log4j2.properties
+│      │  logback-spring.xml
+│      │  test.json
+│      ├─mapper
+│      │      HomeMapper.xml
+│      │      ProjectMapper.xml
+│      │      ScheduleMapper.xml
+│      │      UserMapper.xml
+│      ├─static
+│      └─templates
+└─test
+    └─java
+        └─p1
+            └─teamtodo
+                │  TeamtodoApplicationTests.java
+                │
+                ├─mail
+                │      MailServiceTest.java
+                │
+                └─user
+                        UserServiceTest.java
 ```
