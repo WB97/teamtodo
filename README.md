@@ -38,7 +38,13 @@ Spring + React.js 를 활용한 프로젝트 단위의 일정 관리 사이트�
 ![Gradle](https://img.shields.io/badge/Gradle-02303A?style=flat-square&logo=gradle&logoColor=white)
 ![Swagger](https://img.shields.io/badge/Swagger-85EA2D?style=flat-square&logo=swagger&logoColor=black)
 
-공통 : github, Notion, slack, swagger, docker
+#### 공통
+
+![github](https://img.shields.io/badge/github-181717?style=flat-square&logo=github&logoColor=white)
+![Swagger](https://img.shields.io/badge/Swagger-85EA2D?style=flat-square&logo=swagger&logoColor=black)
+![Notion](https://img.shields.io/badge/notion-000000?style=flat-square&logo=notion&logoColor=white)
+![slack](https://img.shields.io/badge/slack-4A154B?style=flat-square&logo=slack&logoColor=white)
+![docker](https://img.shields.io/badge/docker-2496ED?style=flat-square&logo=docker&logoColor=white)
 
 ## | 진행 일정
 ![image](https://github.com/user-attachments/assets/fc43ad98-45b6-415f-8a3e-264ed5a7ee9c)
